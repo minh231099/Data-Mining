@@ -42,7 +42,7 @@
 - To really capture the intended semantics of the data, RDF Schema and OWL are not just data-description languages, but are actually lightweight *knowledge representation* languages.  
 - They are "logics" that allow the inference of additional information from the explicitly stated information.  
 - RDF Schema is a very low expressivity logic that allows some very simple inferences, such as property inheritance over a hierarchy of types and type-inference of domain and range restrictions.  
-- OWL is smewhat richer logic that allows additional inferences such as equality and inequality, number restrictions, existence of objects and others.  
+- OWL is somewhat richer logic that allows additional inferences such as equality and inequality, number restrictions, existence of objects and others.  
 - Such inferences in RDF Schema and OWL give publishers of information the possibility to create a minimal lowerbound of facts that readers must believe about published data.  
 - OWL gives information publishers the possibility to forbid readers of information to belive certain things about the published data.  
 - Together, performing such inferences over these logics amounts to imposing both a lower bound and an upper bound on the intended semantics of the published data.  
