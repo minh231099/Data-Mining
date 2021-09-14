@@ -27,7 +27,7 @@
 ### **1.1.2 Design Decisions for the Semantic Web**
 - The Semantic Web (or The Web of Data) follows different design principles, which can be summarized as follows:
 	1. Make structured and semi-structured data available in standardized formats on the web;  
-	2. Make not just the datasets, but also the individual data-elements and their relations accessible on the web;  
+	2. Make not just the datasets, but also the individual [data-elements](https://en.wikipedia.org/wiki/Data_element) and their relations accessible on the web;  
 	3. Describe the intended semantics of such data in a formalism, so that this intended semantics can be processed by machines.  
 - The decision to exploit structured and semi-structured data is based on a key observation, namely that underlying the current unstructured "web of text and pictures" is actually a very large amount of structured and semi-structured data.  
 - A key insights is that we would have made major strides towards the vision of a more Semantic Web if only we could publish and interlink the underlying structured datasets (instead of just publishing and interlinking the HTML pages after much of the underlying structure has been lost).  
