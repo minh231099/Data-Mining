@@ -83,3 +83,85 @@ của (W3C)[https://vi.wikipedia.org/wiki/W3C], nâng chúng lên thành các ti
 vừa dưới áp lực của các nhu cầu xã hội và kinh tế. Và sự tăng trưởng của Linked Data Cloud đã dẫn đến hàng tỷ đối tượng và các mối quan hệ của chúng trở nên khả dụng một cách trực tuyến, bằng việc sử dụng các từ vựng và cú pháp được chia sẻ.  
 
 ## **1.2 Semantic Web Technologies**
+### **1.2.1 Explicit Metadata**
+- Hiện tại, nội dung web được định dạng để phù hợp với người đọc, thay vì với những chương trình. Với con người, thông tin được trình một cách phù hợp, nhưng với máy thì tồn tại nhiều vướng mắc.    
+```html
+<h1>Trung tâm vật lý trị liệu Agilitas</h1>
+Chào mừng đến với trung tâm vật lý trị liệu Agilitas
+Bạn cảm thấy đau mỏi? Bạn bị chấn thương? Hãy để nhân viên của chúng tôi
+Lisa Davenport, Kelly Townsend (Thư ký)
+và Steve Matthews giúp đỡ bạn
+<h2>Giờ tư vấn</h2>
+Mon 11am - 7pm<br>
+Tue 11am - 7pm<br>
+Wed 3pm - 7pm<br>
+Thu 11am - 7pm<br>
+Fri 11am - 3pm<p>
+Lưu lý rằng chúng tôi không chúng cấp các giờ tư vấn
+trong các tuần của trò chơi
+<a href=¨. . .¨>State of Origin</a>.
+```
+- Các tìm kiếm dựa trên từ khóa sẽ xác định những từ *vật lý trị liệu* và *giờ tư vấn*. Và một agent thông minh thậm trí xác định đươc cả nhân viên của trung tâm. 
+Nhưng chúng sẽ gặp vấn đề khó khăn trong việc phân biệt các *nhà trị liệu* với *thư ký*, hay khó khăn trong việc tìm *giờ tư vấn* chính xác.  
+- Cách tiếp cận của **Mạng ngữ nghĩa** để giải quyết vấn đề này không phải là sự phát triển của các tác nhân siêu thông minh, mà nó đề xuất tiếp cận vấn đề từ phía 
+trang web. Nếu HTML được thay thế bằng các ngôn ngữ thích hợp hơn, thì các trang web có thể mang nội dung của chúng ở lớp bên ngoài. Ngoài việc chứa các thông tin 
+về định dạng nhằm tạo ra tài liệu cho người đọc, chúng có thể chứa thông tin về nội dung của chúng.  
+- Ở bước đầu tiên theo hướng đi này là **eXtensible Markup Language (XML)**, thứ cho phép ta xác định cấu trúc của thông tin trên các trang web. Ở ví dụ trên chúng 
+ta sẽ có những thông tin như sau:  
+```xml
+<company>
+	<treatmentOffered>Physiotherapy</treatmentOffered>
+	<companyName>Agilitas Physiotherapy Centre</companyName>
+	<staff>
+		<therapist>Lisa Davenport</therapist>
+		<therapist>Steve Matthews</therapist>
+		<secretary>Kelly Townsend</secretary>
+	</staff>
+</company>
+```  
+- Cách biểu diễn này sẽ khiến cho máy dễ dàng xử lý hơn. Đặc biệt, nó hữu ích cho việc trao đổi thông tin trên web, một trong những ứng dụng nổi bật của XML.  
+- Tuy nhiên, XML vẫn còn ở cấp độ cú pháp, vì nó mô tả cấu trúc của thông tin, nhưng không mô tả được *ý nghĩa* của nó. Ngôn ngữ cơ bản của **Web ngữ nghĩa** 
+là RDF, là ngôn ngữ để đưa ra các phát biểu (statement) về các mẩu của thông tin. Trong ví dụ của chúng ta, gồm những phát biểu sau:  
+	Company A offer physiotherapy.  
+	The name of A is "Agitilitas Physiotherapy".  
+	Lisa Davenport is a therapist.  
+	Lisa Davenport works for A.  
+	...  
+- Với người đọc, sự khác biệt giữa cách biểu diễn XML và danh sách những phát biểu RDF có thể rất nhỏ, nhưng chúng hoàn toàn khác nhau về bản chất: XML mô tả 
+cấu trúc còn RDF tạo ra những phát biểu về những mẩu thông tin.  
+- Thuật ngữ *metadata* đề cập đến những thông tin như vậy: dữ liệu về dữ liệu. *Metadata* nắm bắt phần *ý nghĩa* của dữ liệu, và đó là thuật ngữ *ngữ nghĩa* 
+trong **Web ngữ nghĩa**.  
+
+### **1.2.2 Ontologies**
+- Thuật ngữ *bản thể luận (ontology)* là tên của một lĩnh vực triết học, nghiên cứu về bản chất của sự tồn tại, nhánh của siêu hình học liên quan đến việc xác 
+định những thứ thực sự tồn tại và cách mô tả chúng. Ví dụ, nhận xét rằng thế giới được tạo thành từ các đối tượng cụ thể có thể nhóm lại thành các lớp trừu 
+tượng dựa trên các thuộc tính được chia sẻ.  
+- *Bản thể luận* là một đặc tả rõ ràng và chính thức của một khái niệm hóa.  
+- Nói chung, *bản thể luận* mô tả chính thức một miền (domain) của vấn đề đang nói đến. Thông thường, *bản thể luận* bao gồm một danh sách hữu hạn các thuật 
+ngữ (term) và mối quan hệ giữa các thuật ngữ này. Các thuật ngữ biểu thị các khái niệm quan trọng (các lớp đối tượng) của miền.  
+- Các *mối quan hệ (relationship)* thường bao gồm phân cấp của các lớp. Một hệ thống phân cấp chỉ định lớp C1 là một lớp con của một lớp C2 khác, thì mọi đối 
+tượng trong C1 cũng nằm trong C2.  
+- Ngoài các mối quan hệ lớp con, *bản thể luận* còn có thể bao gồm các thông tin như:  
+	- Tính chất (ví dụ: X dạy Y);  
+	- Các ràng buộc giá trị (ví dụ: chỉ giảng viên mới có thể dạy các khóa học);  
+	- Các phát biểu rời rạc (disjointness statments) (ví dụ: giảng viên và nhân viên là rời rạc);  
+	- Đặc tả mối quan hệ logic giữa các đối tượng (ví dụ: mọi khoa phải bao gồm ít nhất 10 giảng viên).  
+- Trong ngữ cảnh web, *bản thể luận* cung cấp sự hiểu biết chung về một miền. Sự chia sẻ như vậy là cần thiết để vượt qua sự khác biệt về thuật ngữ. Mã zip của 
+một ứng dụng (application) có thể giống với mã bưu điện của ứng dụng khác. Hay hai ứng dụng có thể sử dụng cùng một thuật ngữ nhưng khác nhau về ý nghĩa.  
+- Những khác biệt như vậy có thể được khắc phục bằng cách ánh xạ thuật ngữ cụ thể tới *bản thể luận* dùng chung hoặc xác định ánh xạ trực tiếp giữa các *bản thể luận*.  
+- *Bản thể luận* hữu dụng trong việc tổ chức và điều hướng của trang web.  
+- *Bản thể luận* cũng hữu dụng trong việc cải thiện độ chính xác của web tìm kiếm. Các công cụ tìm kiếm có thể tìm kiếm các trang đề cập đến một khái niệm chính 
+xác trong *bản thể luận* thay vì thu thập tất cả các trang trong đó với những từ khóa nhất định, mơ hồ. Bằng cách này, sự khác biệt thuật ngữ giữa các trang web và truy 
+vấn được khắc phục.  
+- Web tìm kiếm có thể khai thác các thông tin tổng quát hoặc chuyên môn. Nếu một truy vấn thất bại trong việc tìm tài liệu thích hợp, công cụ tìm kiếm có thể gợi ý người 
+dùng một truy vấn tổng quát hơn. Thậm chí nó có thể chủ động chạy các truy vấn tổng quát để giảm thời gian tiếp nhận trong trường hợp người dùng chấp nhận một đề xuất. 
+Hoặc nếu quá nhiều câu trả lời được truy xuất, công cụ có thể gợi ý người dùng một số chuyên môn.  
+- Các ngôn ngữ quan trọng của *bản thể luận* là:  
+	- Lược đồ RDF là một ngôn ngữ mô tả từ vựng dùng để mô tả các thuộc tính và lớp của tài nguyên RDF, với ngữ nghĩa để phân cấp tổng quát các thuộc tính và lớp đó. 
+Ngoài ra, miền và phạm vi thuộc tính có thể được xác định.  
+	- OWL là một ngôn ngữ mô tả từ vựng phong phú hơn để mô tả các thuộc tính và lớp, chẳng hạn như quan hệ giữa các lớp (ví dụ: tính rời rạc), số lượng (ví dụ: chính xác một), 
+đồng cấp, cách nhập phong phú hơn của các thuộc tính, đặc điểm của các thuộc tính (ví dụ: đối xứng), và các lớp được liệt kê.  
+
+### **1.2.3 Logic**
+
+
