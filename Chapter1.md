@@ -2,7 +2,7 @@
 # **The Semantic Web Vision**
 
 **Table of Content**
-- [1.1 Introduction)(#11-introduction)
+- [1.1 Introduction](#11-introduction)
 	- 1.1.1 Motivation for the Semantic Web
 	- 1.1.2 Design Decisions for the Semantic Web
 	- 1.1.3 Basic Technology for the Semantic Web
@@ -10,7 +10,7 @@
 	- 1.1.5 The Web Architecture of the Semantic Web
 - [1.2 Semantic Web Technologies](#12-semantic-web-technologies)
 - [1.3 1.3 A layered Approach](#13-a-layered-approach)
-- [1.4 ]()
+- [1.4 Summary](#14-summary)
 ---
 
 ## **1.1 Introduction**
