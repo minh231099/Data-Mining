@@ -9,7 +9,7 @@
 	- 1.1.4 From Data to Knowledge
 	- 1.1.5 The Web Architecture of the Semantic Web
 - [1.2 Semantic Web Technologies](#12-semantic-web-technologies)
-- [1.3 ]()
+- [1.3 1.3 A layered Approach](#13-a-layered-approach)
 - [1.4 ]()
 ---
 
@@ -163,5 +163,48 @@ Ngoài ra, miền và phạm vi thuộc tính có thể được xác định.
 đồng cấp, cách nhập phong phú hơn của các thuộc tính, đặc điểm của các thuộc tính (ví dụ: đối xứng), và các lớp được liệt kê.  
 
 ### **1.2.3 Logic**
+- Đầu tiên, logic cung cấp ngôn ngữ chính thức để diễn đạt tri thức.  
+- Thứ hai, logic cung cấp cho chúng ta dạng dễ hiểu của ngữ nghĩa: ý nghĩa của câu được xác định mà không cần sử dụng tri thức. Thường chúng ta nói về [kiến thức khai báo](https://trainingindustry.com/glossary/declarative-knowledge/#:~:text=Declarative%20knowledge%20refers%20to%20facts,their%20relation%20to%20each%20other.)(declarative knowledge) như sau: 
+Chúng ta mô tả những gì nắm giữ mà không quan tâm đến việc nó có thể được suy luận ra sao.  
+- Thứ ba, bộ suy luận tự động (automated resoners) có thể suy luận những kết luận từ tri thức được cho, làm cho kiến thức tiềm ẩn trở nên rõ ràng.  
+- Logic có thể sử dụng để khai phá tri thức bản thể luận (ontological knowledge). Bằng cách này, logic có thể giúp ta phát hiện ra các mối quan hệ bất ngờ và mâu thuẫn.  
+- Nhưng logic khái quát hơn các *bản thể luận*, nó cũng có thể đực sử dụng bởi các agent thông minh trong việc đưa ra quyết định và lựa chọn các hướng hành động.  
+- Có sự đánh đổi giữa sức mạnh biểu đạt và hiệu quả tính toán. Logic diễn đạt càng rõ ràng thì việc đưa ra các kết luận càng trở nên tốn kém về mặt tính toán. Và việc đưa ra các kết luận 
+nhất định có thể trở nên bất khả thi nếu gặp phải các rào cản không tính toán được. May mắn thay, các tri thức liên quan đến **Mạng ngữ nghĩa** đều ở dạng tương đối đơn giản.  
+- Một ưu điểm quan trọng của logic là cung cấp những lời giải thích (explanations) cho các kết luận (conclusion): chuỗi các bước suy luận có thể truy vết. Hơn nữa, các nhà nghiên cứu AI đã 
+phát triển các cách trình bày những lời giải thích theo cách thân thiện với con người, bằng cách cấu tạo một lập luận (proof) như một phép suy diễn tự nhiên và nhóm một số bước suy luận cấp 
+thấp thành metasteps và con người gọi nó là bước lập luận đơn (single proof step).  
+- Một lời giải thích có thể truy vết câu hỏi ngược về tập sự thật (set of facts) và các quy tắc suy luận đã được sử dụng.  
+- Lời giải thích mang tầm quan trọng trong **Mạng ngữ nghĩa** vì chúng tăng độ tin cậy của người dùng vào các agent **Mạng ngữ nghĩa**.  
+- Lời giải thích cũng cần thiết cho các hoạt động giữa các agent. Khi một vài agent xây dựng kết luận logic, những agent khác sẽ xác thực những bằng chứng, để xác định xem điều agent khác đưa ra có đúng hay không.  
+- Để logic trở nên hữu ích hơn trên web, nó phải có thể sử dụng được có thể dùng được cùng với các dữ liệu khác và phải có thể xử lý bằng máy. Do đó, việc biểu diễn kiến thức logic và chứng mình bằng ngôn ngữ web luôn hiện hữu. Các phương pháp tiếp cận ban đầu hoạt động ở cấp độ XML, nhưng trong tương lai, các quy tắc và chứng minh sẽ cần được biểu diễn ở cấp độ ngôn ngữ RDF và bản thể luận.  
 
+### **1.2.4 Mạng ngữ nghĩa với Trí tuệ nhân tạo**
+- Như chúng ta đã nói, phần lớn những công nghệ để hiện thức hóa **Mạng ngữ nghĩa** đều được xây dựng dựa trên các hoạt động trong lĩnh vực của trí tuệ nhân tạo.  
+- Hiện thực hóa **Mạng ngữ nghĩa** không phụ thuộc vào trí thông minh ở mức độ con người.  
+- Trên **Mạng ngữ nghĩa**, các giải pháp từng phần hoạt động. Kể cả việc agent thông minh không thể đưa ra tất cả các kết luận mà người dùng có thể, agent đó vẫn có thể làm cho một trang web vượt trội nhưng trang web hiện tại.  
+- Nếu mục tiêu của AI là xây dựng một agent thông minh đạt đến tầm hiểu biết của con người (hoặc hơn), thì của **Mạng ngữ nghĩa** chỉ là hỗ trợ những hoạt động online thường ngày của người dùng.  
+- **Mạng ngữ nghĩa** sử dụng những công nghệ của AI và những tiến bộ trong những công nghệ đó sẽ dẫn tới một **Mạng ngữ nghĩa** tốt hơn. Nhưng không cần chờ đến khi AI có những tiến bộ vượt bậc, những công nghệ AI hiện tại đã đủ để thực hiện việc hiện thực hóa tầm nhìn của **Mạng ngữ nghĩa**.  
 
+## **1.3 A layered Approach**
+- Phát triển **Mạng ngữ nghĩa** tiến hành qua nhiều bước, mỗi bước sẽ xây dựng một lớp (layer) lên trên một cái khác.  
+- Bản chất của **Mạng ngữ nghĩa** là các công ty và người dùng phải xây dựng những công cụ, thêm nội dung và sử dụng nội dung đó.  
+- Trong việc xây dựng một lớp của **Mạng ngữ nghĩa** trên một lớp khác, hai quy tắc cần phải bám theo là:  
+	- Khả năng tương thích từ trên xuống. Agent nắm chắc một lớp cũng có thể giải thích và sử dụng thông tin được viết ở các lớp thấp hơn.  
+	- Hiểu rõ từng phần từ dưới lên. Phải thiết kế sao cho các agent nắm chắc về một lớp sẽ có thể tận dụng ít nhất một phần của thông tin ở cấp cao hơn.  
+- Dù những ý tưởng này hấp dẫn về mặt lý thuyết và được sử dụng làm nguyên tắc dẫn lối cho sự phát triển của **Mạng ngữ nghĩa** nhưng việc thực hiện chúng trên thực tế lại trở nên khó khăn và cần phải thực hiện một số thỏa hiệp.  
+![Layer Cake](./pic/layer_cake.png)  
+- "Layer Cake" mô tả những lớp chính khi thiết kế và hình dung **Mạng ngữ nghĩa**.
+- Ở dưới cùng chung ta có XML, ngôn ngữ cho phép ta viết về cấu trúc của tài liệu web với những từ vựng người dùng tự định nghĩa. XML đặc biệt thích hợp để gửi tài liệu trên web. Ngoài ra, các URI được sử dụng trong XML có thể được nhóm theo namespace của chúng, được ký hiệu bởi NS trong sơ đồ.  
+- RDF là một mô hình cơ bản, nhưng là mô hình thực thể-quan hệ (Entity-relationship model), để viết những phát biểu đơn giản về các đối tượng web (tài nguyên). Mô hình dữ liệu RDF không dựa vào XML nhưng RDF lại có cú pháp dựa trên XML. Và đó là tại sao RDF được đặt phái trên lớp XML.  
+- Lược đồ RDF cung cấp các nguyên tắc mô hình hóa để tổ chức các đối tượng web thành các cấu trúc phân cấp. Các thành phần chính ban đầu là các lớp và thuộc tính, lớp con và các mối quan hệ của lớp con, và giới hạn về miền và phạm vi. Lược đồ RDF dựa trên RDF. Lược đồ RDF có thể được xem như một ngôn ngữ nguyên thủy để viết các bản thể luận. Nhưng cần có các ngôn ngữ bản thể luận mạnh mẽ hơn để mở rộng lược đồ RDF và cho phép biểu diễn các mối quan hệ phức tạp hơn giữa các đối tượng web. 
+Lớp logic được sử dụng để nâng cao ngôn ngữ bản thể luận và cho phép diễn tả [declarative knowledge](https://trainingindustry.com/glossary/declarative-knowledge/#:~:text=Declarative%20knowledge%20refers%20to%20facts,their%20relation%20to%20each%20other.) cho ứng dụng.  
+- Lớp lập luận (proof layer) liên quan đến quá trình suy diễn thực tế cũng như việc trình bày các minh chứng bằng ngôn ngữ web (từ các cấp thấp hơn) và xác nhận minh chứng.  
+- Cuối cùng lớp tin cậy (trust layer) sẽ xuất hiện thông quan việc sử dụng chữ ký số và các loại kiến thức khác, dựa trên các khuyến nghị của các agent đáng tin cậy hoặc các cơ quan xếp hạng và chứng nhận và người sử dụng. Đôi khi cụm từ "Web of trust" được sử dụng để chỉ ra rằng sự tin tưởng sẽ được tổ chức theo các phân tán và hỗn loạn như chính những trang web. Nằm ở đỉnh của cái bánh, niềm tin là một khái niệm cấp cao và quan trọng: web sẽ chỉ đạt được hoàn toàn tiềm năng khi người dùng tin tưởng vào hoạt động của nó (bảo mật) và vào chất lượng thông tin được cung cấp.  
+- "Layer cake" hiện tại giờ đã khá lỗi thời. Đặc biệt, một số lựa chọn thay thế cho lớp từ vựng bản thể luận (ontology vocabulary) đã xuất hiện. Ngoài ra, các ngôn ngữ quy tắc đã được xác định trên RDF bỏ qua lớp từ vựng bản thể luận; điều này đặc biệt đúng trong sự thay đổi gần cây từ cấu trúc ngữ nghĩa phong phú sang xử lý một lượng lớn dữ liệu (ngữ nghĩa). Do đó "Layer cake" được đưa vào đây để minh họa cách nhìn về **Mạng ngữ nghĩa**.  
+
+## **1.4 Summary**
+- **Mạng ngữ nghĩa** nhằm cải thiện tình trạng hiện tại của World Wide Web;  
+- Ý tưởng chính là sử dụng thông tin web có thể xử lý bằng máy;  
+- Công nghệ chính bao gồn xuất bảng dữ liệu thành siêu dữ liệu rõ ràng, bản thể luận, logic và suy luận;  
+- Phát triển **Mạng ngữ nghĩa** được tiến hành theo từng lớp.  
