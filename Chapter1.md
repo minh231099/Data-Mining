@@ -9,7 +9,10 @@
 	- 1.1.4 From Data to Knowledge
 	- 1.1.5 The Web Architecture of the Semantic Web
 - [1.2 Semantic Web Technologies](#12-semantic-web-technologies)
-- [1.3 1.3 A layered Approach](#13-a-layered-approach)
+	- 1.2.1 Explicit Metadata
+	- 1.2.2 Ontologies
+	- 1.2.3 Logic
+- [1.3 A layered Approach](#13-a-layered-approach)
 - [1.4 Summary](#14-summary)
 ---
 
