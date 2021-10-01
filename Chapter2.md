@@ -13,6 +13,7 @@
 	- **2.2.6 Đối phó với những dự đoán phong phú hơn**  
 - [**2.3 Cú pháp RDF**](#23-cú-pháp-rdf)  
 
+---
 ## **2.1 Giới thiệu**
 - HTML là một ngôn ngữ tiêu chuẩn dùng để xây dựng nên các trang web. Nó cho phép chúng ta xuất bản tài liệu và đảm bảo rằng tài liệu sẽ được hiển thị chính xác trên bất kỳ trình duyệt web nào.  
 - Gồm có ba phần hợp thành HTML và bất kỳ ngôn ngữ chuyển đổi là là: 

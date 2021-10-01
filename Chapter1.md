@@ -2,18 +2,18 @@
 # **The Semantic Web Vision**
 
 **Table of Content**
-- [1.1 Introduction](#11-introduction)
-	- 1.1.1 Motivation for the Semantic Web
-	- 1.1.2 Design Decisions for the Semantic Web
-	- 1.1.3 Basic Technology for the Semantic Web
-	- 1.1.4 From Data to Knowledge
-	- 1.1.5 The Web Architecture of the Semantic Web
-- [1.2 Semantic Web Technologies](#12-semantic-web-technologies)
-	- 1.2.1 Explicit Metadata
-	- 1.2.2 Ontologies
+- [1.1 Giới thiệu](#11-giới-thiệu)
+	- 1.1.1 Động lực của Semantic Web
+	- 1.1.2 Quyết định thiết kế cho Semantic Web
+	- 1.1.3 Cộng nghệ cơ bản cho Semantic Web
+	- 1.1.4 Từ dữ liệu tới tri thức
+	- 1.1.5 Kiến trúc web của Semantic Web
+- [1.2 Công nghệ Semantic Web](#12-công-nghệ-Semantic-Web)
+	- 1.2.1 Siêu dữ liệu rõ ràng
+	- 1.2.2 Bản thể luận
 	- 1.2.3 Logic
-- [1.3 A layered Approach](#13-a-layered-approach)
-- [1.4 Summary](#14-summary)
+- [1.3 Phương pháp tiếp cận theo lớp](#13-phương-pháp-tiếp-cận-theo-lớp)
+- [1.4 Tổng kết](#14-tổng-kết)
 ---
 
 ## **1.1 Introduction**
