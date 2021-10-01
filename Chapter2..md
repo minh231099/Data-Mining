@@ -3,15 +3,15 @@
 # **RDF**
 
 # **Table of contents**
-- [**2.1 Giới thiệu**](#21-introduction)  
-- [**2.2 RDF: Mô hình dữ liệu**](#22-rdf-data-model)  
+- [**2.1 Giới thiệu**](#21-giới-thiệu)  
+- [**2.2 RDF: Mô hình dữ liệu**](#22-rdf-mô-hình-dữ-liệu)  
 	- **2.2.1 Tài nguyên**  
 	- **2.2.2 Thuộc tính**  
 	- **2.2.3 Phát biểu**  
 	- **2.2.4 Đồ thị**  
 	- **2.2.5 Trỏ tới những Phát biểu và Đồ Thị**  
 	- **2.2.6 Đối phó với những dự đoán phong phú hơn**  
-- [**2.3 Cú pháp RDF**](#23-rdf-syntaxes)  
+- [**2.3 Cú pháp RDF**](#23-cú-pháp-rdf)  
 
 ## **2.1 Giới thiệu**
 - HTML là một ngôn ngữ tiêu chuẩn dùng để xây dựng nên các trang web. Nó cho phép chúng ta xuất bản tài liệu và đảm bảo rằng tài liệu sẽ được hiển thị chính xác trên bất kỳ trình duyệt web nào.  
