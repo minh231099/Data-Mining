@@ -16,7 +16,7 @@
 ---
 ## **2.1 Giới thiệu**
 - HTML là một ngôn ngữ tiêu chuẩn dùng để xây dựng nên các trang web. Nó cho phép chúng ta xuất bản tài liệu và đảm bảo rằng tài liệu sẽ được hiển thị chính xác trên bất kỳ trình duyệt web nào.  
-- Gồm có ba phần hợp thành HTML và bất kỳ ngôn ngữ chuyển đổi là là: 
+- Gồm có ba phần hợp thành HTML (và bất kỳ ngôn ngữ chuyển đổi) là: 
 	- Cú pháp (syntax): Chỉ cho chúng ta cách để biểu diễn dữ liệu;  
 	- Mô hình dữ liệu (data model): Chỉ cho chúng ta về cấu trúc hoặc cách tổ chức của dữ liệu;  
   	- Ngữ nghĩa (semantic): Chỉ cho chúng ta cách thông dịch dữ liệu đó.  
@@ -115,3 +115,52 @@ purchaser(home-sale, Z)
 - Mặc dù vị từ ba đối số sẽ được viết ngắn gọn hơn, nhưng việc dùng các vị từ nhị phân sẽ đơn giản hóa mô hình dữ liệu tổng thể.  
 
 ## **2.3 Cú pháp RDF**
+### **2.3.1 Turtle**
+- Terse RDF Triple Language (Turtle) là một cú pháp dựa trên dạng văn bản cho RDF.  
+- File Turtle có đuôi là `.ttl`.  
+Ví dụ:  
+```Turtle
+<http://www.semanticwebprimer.org/ontology/apartments.ttl#BaronWayBuilding>
+<http://dbpedia.org/ontology/location>
+<http://dbpedia.org/resource/Amsterdam>.
+```  
+- Các URL được đặt trong dấu ngoặc nhọn. Chủ thể, thuộc tính và đối tượng của phát biểu xuất hiện theo thứ tự, theo sau là một dấu chấm.  
+- Chúng ta có thể mô tả toàn bộ đồ thị RDF chỉ bằng cách này.  
+```Turtle
+<http://www.semanticwebprimer.org/ontology/apartments.ttl#>
+<http://www.semanticwebprimer.org/ontology/apartments.ttl#isPartOf>
+<http://www.semanticwebprimer.org/ontology/apartments.ttl#BaronWayBuilding>.
+<http://www.semanticwebprimer.org/ontology/apartments.ttl#BaronWayBuilding>
+<http://dbpedia.org/ontology/location>
+<http://dbpedia.org/resource/Amsterdam>.
+```  
+
+#### **2.3.1.1 Trực nghĩa**
+- Chúng ta đã định nghĩa rằng phát biểu là thứ liên kết những tài nguyên lại với nhau. Như đã nói ở trên phát biểu còn có thể bao gồm cả trực nghĩa, nó là một atomic value trong RDF.  
+- Trong Turtle, ta biểu diễn trực nghĩa trong cặp nháy kép và kèm theo đó là kiểu dữ liệu.  
+- Kiểu dữ liệu cho chúng ta biết liệu chúng ta có nên diễn giải một giá trị với string, một ngày, số nguyên hay một kiểu dữ liệu khác.  
+- Các kiểu dữ liệu lại được biểu diễn dưới dạng URL. Nên sử dụng những kiểu dữ liệu được định nghĩa bằng Lược đồ XML, khi này các giá trị sẽ tuân theo định nghĩa Lược đồ XML.  
+- Nếu không có kiểu dữ liệu được khai báo phía sau một trực nghĩa, nó sẽ được coi là một string.  
+```Turtle
+string - "Baron Way"
+integers - "1"^^<http://www.w3.org/2001/XMLSchema#integer>
+decimals - "1.23" <http://www.w3.org/2001/XMLSchema#decimal>
+dates - "1982-08-30"^^<http://www.w3.org/2001/XMLSchema#date>
+time - "11:24:00"^^<http://www.w3.org/2001/XMLSchema#time>
+date with a time - "1982-08-30T11:24:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+```  
+- Giả sử nếu ta muốn thêm vào đồ thị rằng Căn hộ Baron Way có ba phòng ngủ. Ta sẽ thêm một phát biểu trong Turtle vào đồ thị như sau:  
+```Turtle
+<http://www.semanticwebprimer.org/ontology/apartments.ttl#BaronWayApartment>
+<http://www.semanticwebprimer.org/ontology/apartments.ttl#hasNumberOfBedrooms>
+"3"^^<http://www.w3.org/2001/XMLSchema#integer>.
+
+<http://www.semanticwebprimer.org/ontology/apartments.ttl#BaronWayApartment>
+<http://www.semanticwebprimer.org/ontology/apartments.ttl#isPartOf>
+<http://www.semanticwebprimer.org/ontology/apartments.ttl#BaronWayBuilding>.
+
+<http://www.semanticwebprimer.org/ontology/apartments.ttl#BaronWayBuilding>
+<http://dbpedia.org/ontology/location>
+<http://dbpedia.org/resource/Amsterdam>.
+```  
+
