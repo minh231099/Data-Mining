@@ -16,8 +16,8 @@
 	- **2.3.2 Các cú pháp khác**  
 - [**2.4 RDFS: Thêm ngữ nghĩa**](#24-thêm-ngữ-nghĩa)  
 	- **2.4.1 Lớp và thuộc tính**  
-	-
-	-
+	- **2.4.2 Hệ thống phân cấp và kế thừa**  
+	- **2.4.3 Phân cấp thuộc tính**
 	
 
 ---
@@ -334,3 +334,32 @@ The Baron Way Flat has <span property="swp:hasNumberOfBedrooms">3</span> bedroo
 
 ### 2.4.1 Lớp và thuộc tính
 - Để chúng ta có thể diễn tả một miền cụ thể, đầu tiên ta cần phải xác định được "thứ" chúng ta đang nói đến. Ở đây điều chúng ta sẽ làm đầu tiên - sự khác biệt cơ bản.  
+- Chúng ta muốn nói chi tiết về căn hộ, chẳng hạn như Apartment và các địa điểm cụ thể như Amsterdam. Chúng ta đã làm như vậy trong RDF. Nhưng chúng ta cũng muốn nói về căn hộ, tòa nhà, đất nước, thành phố và những thứ khác. Vậy khác biệt là gì?  
+- Trong trường hợp đầu tiên, chúng ta nói đến các đối tượng riêng lẻ (tài nguyên), và trường hợp thứ hai ta nó về các *lớp* (class) thứ định nghĩa kiểu (type) của đối tượng.  
+- Một lớp có thể coi là một tập hợp các phần tử. Các đối tượng riêng lẻ thuộc về một lớp được gọi là các instance của lớp đó.  
+- RDF cung cấp cho chúng ta một các để định nghĩa quan hệ giữa các instance và các lớp sử dụng một thuộc tính đặc biệt `rdf:type`.  
+- Một công dụng quan trọng của lớp là áp đặt các hạn chế đối với những gì có thể được nêu ra trong tài liệu RDF bằng các sử dụng lược đồ.  
+- Trong lập trình, ép kiểu dữ liệu được sử dụng để tránh những thứ vô lý được viết ra (ví dụ như A + 1, với A là một mảng; chúng ta chỉ định rằng đối số của phép + phải là một số). Tương tự như trong RDF, chúng ta sẽ không cho phép tồn tại những tuyên bố như:  
+"Baron Way Aparment rents Jeff Meyer"  
+"Amsterdam has number of bedroom 3"  
+- Ở phát biểu thứ nhất, sự vô lý nằm ở việc một tòa nhà không thể thuê con người. Điều này đặt ra một hạn chế với giá trị của thuộc tính "rents". Trong mặt toán học, chúng ta sẽ hạn chế phạm vi của thuộc tính.  
+- Ở phát biểu thứ hai, thành phố thì không thể có phòng ngủ. Nó cũng đặt ra một hạn chế cho đối tượng với những thuộc tính mà nó có thể áp dụng. Trong toán học, chúng ta hạn chế miền của thuộc tính.  
+
+### 2.4.2 Hệ thống phân cấp và kế thừa
+- Một khi chúng ta đã có các lớp, chúng ta cũng sẽ cần phải thiết lập các mối quan hệ giữa chúng. Ví dụ chúng ta có những lớp như:  
+unit
+residential unit	commercial unit  
+house & apartment	office
+- Những lớp này có liên quan đến nhau. Ví dụ như, mỗi một residential unit (Đơn vị cư trú) là một unit. Ta nói rằng "residential unit" là một *lớp con* (sub class) của "unit", hoặc "unit" là một *lớp cha* (superclass) của "residential unit". Quan hệ lớp con xác định một hệ thống phân cấp của các lớp.  
+- Một lớp A được coi là lớp con của B khi mọi instance của A cũng là instance của B. Không có yêu cầu nào trong lược đồ RDF rằng các lớp cùng nhau tạo thành một hệ thống phân cấp nghiêm ngặt. Nói cách khác, một đồ thị con không cần phải là một cây. Một lớp có thể có nhiều lớp cha. Nếu lớp A là con của cả B1 và B2, điều này có nghĩa là mọi instance của A đều là instance của B1 và B2.  
+
+![Hệ thống phân cấp của các lớp](./pic/A_hierachy_of_classes.png)  
+
+- Một tổ chức phâp cấp các lớp có một ý nghĩa rất quan trọng. Xem xét hạn chế phạm vi "People can only rent residential units". Giả sử Baron Way Apartment được định nghĩa là một căn hộ. Sau đó, theo hạn chế trên, nó không đạt tiêu chuẩn là một Residential Unit bởi vì chưa có một phát biểu nào xác định rằng Baron Way Apartment cũng là một residential unit. Nó sẽ phản trực giác khi bạn khắc phục vấn đề này bằng cách thêm phát biểu đó vào mô tả của chúng ta. Thay vào đó, chúng ta muốn Baron Way Apartment *kế thừa* khả năng cho thuê từ lớp residential units. Điều này được thực hiện chính xác trong Lược đồ RDF.  
+- Với cách làm như vậy, Lược đồ RDF *sửa ngữ nghĩa* của "là một lớp con của". Giờ đây, nó không phụ thuộc vào một ứng dụng để giải thích "là một lớp con của" mà thay vào đó, ý nghĩa dự định của nó sẽ được sử dụng bởi tất cả các phần mềm xử lý RDF. Bằng cách đưa ra các định nghĩa ngữ nghĩa như vậy, RDFS là một ngôn ngữ (vẫn còn hạn chế) để xác định ngữ nghĩa của các miền cụ thể, RDFS là một ngôn ngữ bản thể học nguyên thủy.  
+  
+- Các lớp, kế thừa và thuộc tính được biết đến ở những lĩnh vực khác của tin học, ví dụ như: trong lập trình hướng đối tượng. Nhưng khi có nhiều thứ giống nhau, vẫn tồn tại những thứ khác biệt. Trong lập trình hướng đối tượng, một lớp đối tượng xác định nhiều thuộc tính áp dụng cho nó. Để thêm một thuộc tính mới trong lớp cần phải chỉnh sửa lớp đó.  
+- Ở RDFS, thuộc tính được định nghĩa toàn cụ (globally). Có nghĩa là, chúng không được đóng gói dưới dạng các thuộc tính trong các lớp. Có thể định nghĩa một thuộc tính mới áp dụng vào một lớp đang tồn tại mà không cần thay đổi lớp đó.  
+- Đây là một cơ chế mạnh mẽ với những hệ quả sâu rộng: ta có thể sử dụng các lớp do người khác định nghĩa và điểu chỉnh chúng theo nhu cầu của bản thân thông qua những thuộc tính mới. Mặt khác, việc xử lý các thuộc tính này khác với các tiếp cận tiêu chuẩn đã xuất hiện trong lĩnh vực mô hình hóa và lập trình hướng đối tượng. Đó là một tính năng khác biệt của RDF/RDFS.  
+
+### 2.4.3 Phân cấp thuộc tính
