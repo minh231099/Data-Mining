@@ -386,11 +386,11 @@ Nhưng điều ngược lại có thể không chính xác. Ví dụ như *p* l�
 - Bản thân lược đồ trên được viết bằng một ngôn ngữ chính thức RDF Schema, có thể diễn đạt các thành phần của nó: subClassOf, Class, Property, subPropertyOf, Resource, ... .  
 
 ## 2.5 RDF Schema: Ngôn ngữ
-RDF Schema cung cấp các nguyên tắc mô hình hóa để thể hiện thông tin. Và ngôn ngữ chính thức được sử dụng sẽ là RDF.  
-RDF cho phép một người diễn tả bất kỳ một phát biểu nào về bất kỳ tài nguyên nào, và bất kỳ thứ gì có URI đều có thể là tài nguyên. Vậy nên, nếu ta muốn nói rằng lớp "apartment" là một lớp con của "residential unit", ta cần:  
+- RDF Schema cung cấp các nguyên tắc mô hình hóa để thể hiện thông tin. Và ngôn ngữ chính thức được sử dụng sẽ là RDF.  
+- RDF cho phép một người diễn tả bất kỳ một phát biểu nào về bất kỳ tài nguyên nào, và bất kỳ thứ gì có URI đều có thể là tài nguyên. Vậy nên, nếu ta muốn nói rằng lớp "apartment" là một lớp con của "residential unit", ta cần:  
 	1. Xác định tài nguyên cần thiết cho apartment, residential unit và subClassOf;  
 	2. Định nghĩa subClassOf là một thuộc tính;  
 	3. Viết thành bộ ba (apartment subClassOf residential unit).  
-Tất cả các bước trên đều nằm trong khả năng của RDF. Vậy nên, một tài liệu RDFS chỉ đơn giản là một tài liệu RDF, và chúng ta sử dụng một trong những cú pháp tiêu chuẩn của RDF.  
-Bây giờ, chúng ta sẽ định nghĩa nguyên tắc mô hình hóa của RDF Schema.  
+- Tất cả các bước trên đều nằm trong khả năng của RDF. Vậy nên, một tài liệu RDFS chỉ đơn giản là một tài liệu RDF, và chúng ta sử dụng một trong những cú pháp tiêu chuẩn của RDF.  
+- Bây giờ, chúng ta sẽ định nghĩa nguyên tắc mô hình hóa của RDF Schema.  
 
