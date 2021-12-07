@@ -49,18 +49,18 @@ mô tả các đồ thị này.
 	2. Sử dụng *Định danh Web* (web identifiers - Uniform Resource Identifiers - URI) để định danh các mục dữ liệu riêng biệt ([data-items](https://www.pcmag.com/encyclopedia/term/data-item)) 
 và mối quan hệ của chúng ở trong bộ dữ liệu (datasets). Và điều này cũng được biểu diễn bằng RDF.  
 	3. Sử dụng những *Ontology* (Hệ thống từ vựng phân cấp về kiểu và quan hệ) làm mô hình dữ liệu chính thức thể hiện ngữ nghĩa dự định 
-của dữ liệu. Các hình thức như Lược đồ RDF (RDF Schema) và Ngôn ngữ bản thể học Web (The Web Ontology Language - OWL) được sử dụng cho mục đích 
+của dữ liệu. Các hình thức như RDF Schema và Ngôn ngữ bản thể học Web (The Web Ontology Language - OWL) được sử dụng cho mục đích 
 này, một lần nữa sử dụng URI để đại diện cho các kiểu và thuộc tính của chúng.  
 
 ### **1.1.4 From Data to Knowledge**
-- Để có thể nắm bắt toàn bộ ngữ nghĩa của dữ liệu, các hình thức như là Lược đồ RDF và OWL không chỉ là ngôn ngữ biểu diễn dữ liệu, mà con là *ngôn 
+- Để có thể nắm bắt toàn bộ ngữ nghĩa của dữ liệu, các hình thức như là RDF Schema và OWL không chỉ là ngôn ngữ biểu diễn dữ liệu, mà con là *ngôn 
 ngữ biển diễn tri thức nhẹ* (lightweight knowledge representation languages). Chúng là "những logic" cho phép suy luận thêm thông tin từ các thông 
 tin đã được đưa ra.  
 	- Lược đồ Schema biểu diễn logic rất nghèo nàn chỉ cho phép một số suy luận đơn giản, chẳng hạn như thừa kế thuộc tính qua hệ thống phân cấp các kiểu 
 và suy luận về kiểu của các giới hạn về và phạm vị.  
 	- OWL phong phú hơn về logic (nhưng vẫn rất nhẹ) cho phép các suy luận bổ sung như bình đẳng và bất bình đẳng, giới hạn số lượng, sự tồn tại của các 
 đối tượng và những thứ khác.  
-	- Những suy luận như vậy trong Lược đồ RDF và OWL cung cấp cho các nhà phát hành (Publisher) thông tin khả năng tạo ra một giới hạn (lower-bound) tổi 
+	- Những suy luận như vậy trong RDF Schema và OWL cung cấp cho các nhà phát hành (Publisher) thông tin khả năng tạo ra một giới hạn (lower-bound) tổi 
 thiểu của các dữ kiện mà người đọc phải tin vào dữ liệu đã phát hành. Ngoài ra, OWL còn cung cấp cho các nhà pháp hành thông tin khả năng ngăn cả người đọc 
 tin một số điều nhất định về dữ liệu đã phát hành.  
 - Cùng với nhau, việc thực hiện các suy luận như vậy đối với các logic này đặt ra cả giới hạn dươi (lower-bound) và giới hạn trên (upper bound) trên ngữ nghĩa 
@@ -160,7 +160,7 @@ vấn được khắc phục.
 dùng một truy vấn tổng quát hơn. Thậm chí nó có thể chủ động chạy các truy vấn tổng quát để giảm thời gian tiếp nhận trong trường hợp người dùng chấp nhận một đề xuất. 
 Hoặc nếu quá nhiều câu trả lời được truy xuất, công cụ có thể gợi ý người dùng một số chuyên môn.  
 - Các ngôn ngữ quan trọng của *bản thể luận* là:  
-	- Lược đồ RDF là một ngôn ngữ mô tả từ vựng dùng để mô tả các thuộc tính và lớp của tài nguyên RDF, với ngữ nghĩa để phân cấp tổng quát các thuộc tính và lớp đó. 
+	- RDF Schema là một ngôn ngữ mô tả từ vựng dùng để mô tả các thuộc tính và lớp của tài nguyên RDF, với ngữ nghĩa để phân cấp tổng quát các thuộc tính và lớp đó. 
 Ngoài ra, miền và phạm vi thuộc tính có thể được xác định.  
 	- OWL là một ngôn ngữ mô tả từ vựng phong phú hơn để mô tả các thuộc tính và lớp, chẳng hạn như quan hệ giữa các lớp (ví dụ: tính rời rạc), số lượng (ví dụ: chính xác một), 
 đồng cấp, cách nhập phong phú hơn của các thuộc tính, đặc điểm của các thuộc tính (ví dụ: đối xứng), và các lớp được liệt kê.  
@@ -200,7 +200,7 @@ thấp thành metasteps và con người gọi nó là bước lập luận đơ
 - "Layer Cake" mô tả những lớp chính khi thiết kế và hình dung **Mạng ngữ nghĩa**.
 - Ở dưới cùng chung ta có XML, ngôn ngữ cho phép ta viết về cấu trúc của tài liệu web với những từ vựng người dùng tự định nghĩa. XML đặc biệt thích hợp để gửi tài liệu trên web. Ngoài ra, các URI được sử dụng trong XML có thể được nhóm theo namespace của chúng, được ký hiệu bởi NS trong sơ đồ.  
 - RDF là một mô hình cơ bản, nhưng là mô hình thực thể-quan hệ (Entity-relationship model), để viết những phát biểu đơn giản về các đối tượng web (tài nguyên). Mô hình dữ liệu RDF không dựa vào XML nhưng RDF lại có cú pháp dựa trên XML. Và đó là tại sao RDF được đặt phái trên lớp XML.  
-- Lược đồ RDF cung cấp các nguyên tắc mô hình hóa để tổ chức các đối tượng web thành các cấu trúc phân cấp. Các thành phần chính ban đầu là các lớp và thuộc tính, lớp con và các mối quan hệ của lớp con, và giới hạn về miền và phạm vi. Lược đồ RDF dựa trên RDF. Lược đồ RDF có thể được xem như một ngôn ngữ nguyên thủy để viết các bản thể luận. Nhưng cần có các ngôn ngữ bản thể luận mạnh mẽ hơn để mở rộng lược đồ RDF và cho phép biểu diễn các mối quan hệ phức tạp hơn giữa các đối tượng web. 
+- RDF Schema cung cấp các nguyên tắc mô hình hóa để tổ chức các đối tượng web thành các cấu trúc phân cấp. Các thành phần chính ban đầu là các lớp và thuộc tính, lớp con và các mối quan hệ của lớp con, và giới hạn về miền và phạm vi. RDF Schema dựa trên RDF. RDF Schema có thể được xem như một ngôn ngữ nguyên thủy để viết các bản thể luận. Nhưng cần có các ngôn ngữ bản thể luận mạnh mẽ hơn để mở rộng RDF Schema và cho phép biểu diễn các mối quan hệ phức tạp hơn giữa các đối tượng web. 
 Lớp logic được sử dụng để nâng cao ngôn ngữ bản thể luận và cho phép diễn tả [declarative knowledge](https://trainingindustry.com/glossary/declarative-knowledge/#:~:text=Declarative%20knowledge%20refers%20to%20facts,their%20relation%20to%20each%20other.) cho ứng dụng.  
 - Lớp lập luận (proof layer) liên quan đến quá trình suy diễn thực tế cũng như việc trình bày các minh chứng bằng ngôn ngữ web (từ các cấp thấp hơn) và xác nhận minh chứng.  
 - Cuối cùng lớp tin cậy (trust layer) sẽ xuất hiện thông quan việc sử dụng chữ ký số và các loại kiến thức khác, dựa trên các khuyến nghị của các agent đáng tin cậy hoặc các cơ quan xếp hạng và chứng nhận và người sử dụng. Đôi khi cụm từ "Web of trust" được sử dụng để chỉ ra rằng sự tin tưởng sẽ được tổ chức theo các phân tán và hỗn loạn như chính những trang web. Nằm ở đỉnh của cái bánh, niềm tin là một khái niệm cấp cao và quan trọng: web sẽ chỉ đạt được hoàn toàn tiềm năng khi người dùng tin tưởng vào hoạt động của nó (bảo mật) và vào chất lượng thông tin được cung cấp.  
