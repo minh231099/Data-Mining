@@ -20,11 +20,19 @@
 	- **2.4.3 Phân cấp thuộc tính**  
 	- **2.4.4 RDF so với các lớp RDFS**  
 - [**2.5 RDF Schema: Ngôn ngữ**](#25-rdf-schema-ngôn-ngữ)
-	-
-	-
-	-
-	-
-	
+	- **2.5.1 Các lớp cốt lõi**  
+	- **2.5.2 Các thuộc tính cốt lõi dùng để xác định quan hệ**  
+	- **2.5.3 Thuộc tính cốt lõi để hạn chế thuộc tính**  
+	- **2.5.4 Các thuộc tính hữu ích trong việc cải tiến**  
+	- **2.5.5 Các lớp Container**  
+	- **2.5.6 Các thuộc tính tiện ích**  
+	- **2.5.7 Ví dụ: Nhà ở**  
+	- **2.5.8 Ví dụ: Phương tiện**  
+- [**2.6 RDF và RDF Schema trong lược đồ RDF**](#26-rdf-và-rdf-schema-trong-lược-đồ-rdf)  
+	- **2.6.1 RDF**  
+	- **2.6.2 RDF Schema**  
+- [**2.7 Ngữ nghĩa tiên đề cho RDF và RDF Schema**](#27-ngữ-nghĩa-tiên-đề-cho-rdf-và-rdf-schema)  
+	- 
 
 ---
 ## **2.1 Giới thiệu**
@@ -394,3 +402,189 @@ Nhưng điều ngược lại có thể không chính xác. Ví dụ như *p* l�
 - Tất cả các bước trên đều nằm trong khả năng của RDF. Vậy nên, một tài liệu RDFS chỉ đơn giản là một tài liệu RDF, và chúng ta sử dụng một trong những cú pháp tiêu chuẩn của RDF.  
 - Bây giờ, chúng ta sẽ định nghĩa nguyên tắc mô hình hóa của RDF Schema.  
 
+### 2.5.1 Các lớp cốt lõi
+Các lớp cốt lõi là:  
+- rdfs:Resource, lớp của mọi tài nguyên  
+- rdfs:Class, lớp của mọi lớp  
+- rdfs:Literal, lớp của mọi trực nghĩa (các string)  
+- rdfs:Property, lớp của mọi thuộc tính  
+- rdfs:Statement, lớp của mọi phát biểu cụ thể  
+
+### 2.5.2 Các thuộc tính cốt lõi dùng để xác định quan hệ  
+Các thuộc tính cốt lõi dùng để xác định quan hệ là:  
+- rdf:type, liên kết một tài nguyên với lớp của nó. Tài nguyên được khai báo là một instance của lớp đó.  
+- rdfs:subClassOf, liên kết một lớp với lớp cha của nó. Tất cả instance của một lớp sẽ là instance của lớp cha. Lưu ý rằng một lớp có thể là lớp con của nhiều lớp. Ví dụ: lớp *femaleProfessor* là lớp con của *female* và *professor*.  
+- rdfs:subPropertyOf, liên kết một thuộc tính tới thuộc tính cha của nó.  
+Ví dụ: All apartments are residential units  
+swp:apartment rdfs:subClassOf swp:ResidentialUnit  
+
+Lưu ý rằng rdfs:subClassOf và rdfs:subPropertyOf có tính bắc cầu. Ngoài ra, rdfs:Class còn lớp lớp con của rdfs:Resource (mọi lớp đề là một tài nguyên) và rdfs:Resource là một instance của rdfs:Class (rdfs:Resource là lớp của tất cả các tài nguyên, và nó cũng là một lớp). Và tương tự, mọi lớp đều là instance của rdfs:Class.  
+
+### 2.5.3 Thuộc tính cốt lõi để hạn chế thuộc tính
+Thuộc tính cốt lõi dùng để hạn chế thuộc tính là:  
+- rdfs:domain, dùng để chỉ định miền của một thuộc tính P và nói rằng bất kỳ một tài nguyên nào chứa thuộc tính sẽ là các instance của các lớp miền.  
+- rdfs:range, dùng để chỉ rõ miền của một thuộc tính P và nói rằng giá trị của một thuộc tính là các instance của lớp phạm vi.  
+
+Ví dụ:  Any resource has an address, it is a unit and that its value is a literal  
+swp:address rdfs:domain swp:Unit.  
+swp:address rdfs:range rdf:Literal.  
+
+### 2.5.4 Các thuộc tính hữu ích trong việc cải tiến
+- rdf:subject, liên kết một phát biểu cụ thể với chủ thể của nó  
+- rdf:predicate, liên kết một phát biểu với thuộc tính của nó  
+- rdf:object, liên kết một phát biểu với đối tượng của nó  
+  
+### 2.5.5 Các lớp Container
+RDF cho phép các vùng chứa (container) được biểu diễn theo cách tiêu chuẩn.  
+- rdf:Bag, lớp túi
+- rdf:Seq, lớp chuỗi  
+- rdf:Alt, lớp lựa chọn  
+- rdfs:Container, một lớp cha của tất cả các lớp container khác, bao gồm cả 3 cái trên.  
+  
+### 2.5.6 Các thuộc tính tiện ích
+Một tài nguyên có thể được định nghĩa và mô tả ở nhiều nơi trên trang web. Thuộc tính dưới đây sẽ cho phép chúng ta định nghĩa các liên kết với những địa chỉ đó:  
+- rdfs:seeAlso, liên kết một tài nguyên A với tài nguyên B (mà B sẽ giải thích về A).  
+- rdfs:isDefinedBy, là một thuộc tính con của rdfs:seeAlso và liên kết một tài nguyên tới nơi nó được định nghĩa, thường là một lược đồ RDF.  
+
+Thường nó hữu ích cho việc cung cấp thêm thông tin dành cho người đọc. Nó có thể được xử lý với những thuộc tính dưới đây:  
+- rdfs:comment, chú thích, thường là những văn bản, có thể được liên kết với một tài nguyên  
+- rdfs:label, một nhãn (tên) thân thiện với con người được gán vào một tài nguyên. Trong số các mục đích khác, nó có thể đóng vai trò là tên của một nút trong việc biểu diễn đồ thị của tài liệu RDF.  
+
+### 2.5.7 Ví dụ: Nhà ở
+Ta sẽ tham khảo ví dụ về nhà ở và cung cấp mô hình khái niệm về miền hay là một ontology (bản thể luận).  
+
+```Turtle
+@prefix swp: <http://www.semanticwebprimer.org/ontology/apartments.ttl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+swp:Person rdf:type rdfs:Class.
+swp:Person rdfs:comment "The class of people".
+
+swp:Unit rdf:type rdfs:Class.
+swp:Unit rdfs:comment "A self-contained section of accommodations in a larger building or group of buildings".
+
+swp:ResidentialUnit rdf:type rdfs:Class.
+swp:ResidentialUnit rdfs:subClass swp:Unit.
+swp:ResidentialUnit rdfs:comment "The class of all units or plcaes where people live".
+
+swp:Apartment rdf:type rdfs:Class.
+swp:Apartment rdfs:subClassOf swp:ResidentialUnit.
+swp:Apartment rdfs:comment "The class of apartments".
+
+swp:House rdf:type rdfs:Class.
+swp:House rdfs:subClassOf swp:ResidentialUnit.
+swp:House rdfs:comment "The class of houses".
+
+swp:residesAt rdf:type rdfs:Property.
+swp:residesAt rdfs:comment "Relates persons to their residence".
+swp:residesAt rdfs:domain swp:Person.
+swp:residesAt rdfs:range swp:ResidentialUnit.
+
+swp:rents rdf:type rdfs:Property.
+swp:rents rdfs:comment "It inherits its domain (swp:Person) and range (swp:ResidentialUnit) from its superproperty (swp:residesAt)".
+swp:rents rdfs:subPropertyOf swp:residesAt.
+
+swp:address rdf:type rdfs:Property.
+swp:address rdfs:comment "Is a property of units and takes literals as its value".
+swp:address rdfs:domain swp:Unit.
+swp:address rdfs:range rdf:Literal.
+```  
+
+### 2.5.8 Ví dụ: Phương tiện xe máy
+
+![Hệ thống phân cấp lớp cho ví dụ phương tiện](./pic/Motor_vehicles.png)
+
+```Turtle
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<#miniVan> a rdfs:Class ; rdfs:subClassOf <#passengerVehicle>, <#van>.  
+<#motorVehicle> a rdfs:Class.
+<#passengerVehicle> a rdfs:Class ; rdfs:subClassOf <#motorVehicle>.
+
+<#truck> a rdfs:Class ; rdfs:subClassOf <#motorVehicle>.
+
+<#van> a rdfs:Class ; rdfs:subClassOf <#motorVehicle>.
+```  
+
+## 2.6 RDF và RDF Schema trong lược đồ RDF
+Giờ ta đã biết các thành phần chính của ngôn ngữ RDF và RDFS, nó có thể mang tính hướng dẫn khi xem các định nghĩa của RDF và RDFS. Các định nghĩa này được thể hiện trong ngôn ngữ của RDF Schema. Một nhiệm vụ là xem xem hiện tại chúng có thể dễ dàng đọc ra sao khi ý nghĩa của mỗi thành phần đã được làm rõ.  
+Các định nghĩa sau đây chỉ là một phần của đặc tả ngôn ngữ. Các phần còn lại được tìm thấy trong những tên không gian được xác định trong rdf:RDF. Chúng tôi cung cấp trung dưới dạng cú pháp XML ban đầu của chúng.  
+
+### 2.6.1 RDF
+```XML
+<?xml version="1.0" encoding="UTF-16"?>
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#¨>
+	<rdfs:Class rdf:ID="Statement"
+		rdfs:comment="The class of triples consisting of a predicate, a subject and an object (that is, a reified statement)"/>
+
+	<rdfs:Class rdf:ID="Property"
+		rdfs:comment="The class of properties"/>
+
+	<rdfs:Class rdf:ID="Bag"
+		rdfs:comment="The class of unordered collections"/>
+
+	<rdfs:Class rdf:ID="Seq"
+		rdfs:comment="The class of ordered collections"/>
+
+	<rdfs:Class rdf:ID="Alt"
+		rdfs:comment="The class of collections of alternatives"/>
+
+	<rdf:Property rdf:ID="predicate"
+		rdfs:comment="Identifies the property used in a statement when representing the statement in reified form¨>
+		<rdfs:domain rdf:resource="#Statement"/>
+		<rdfs:range rdf:resource="#Property"/>
+	</rdf:Property>
+
+	<rdf:Property rdf:ID="subject"
+		rdfs:comment="Identifies the resource that a statement is describing when representing the statement in reified form¨>
+		<rdfs:domain rdf:resource="#Statement"/>
+	</rdf:Property>
+	
+	<rdf:Property rdf:ID="object"
+		rdfs:comment="Identifies the object of a statement when representing the statement in reified form"/>
+	<rdf:Property rdf:ID="type"
+		rdfs:comment="Identifies the class of a resource. The resource is an instance of that class."/>
+</rdf:RDF>
+```  
+
+### 2.6.2 RDF Schema
+```XML
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#¨>
+
+	<rdfs:Class rdf:ID="Resource"
+		rdfs:comment="The most general class"/>
+	
+	<rdfs:Class rdf:ID="comment"
+		rdfs:comment="Use this for descriptions¨>
+		<rdfs:domain rdf:resource="#Resource"/>
+		<rdfs:range rdf:resource="#Literal"/>
+	</rdfs:Class>
+
+	<rdfs:Class rdf:ID="Class"
+		rdfs:comment="The concept of classes All classes are resources.¨>
+		<rdfs:subClassOf rdf:resource="#Resource"/>
+	</rdfs:Class>
+
+	<rdf:Property rdf:ID="subClassOf¨>
+		<rdfs:domain rdf:resource="#Class"/>
+		<rdfs:range rdf:resource="#Class"/>
+	</rdf:Property>
+
+	<rdf:Property rdf:ID="subPropertyOf¨>
+		<rdfs:domain rdf:resource="&rdf;Property"/>
+		<rdfs:range rdf:resource="&rdf;Property"/>
+	</rdf:Property>
+
+</rdf:RDF>
+```  
+
+- Tên không gian không cung cấp đủ đặc tả về RDF và RDF Schema. Xém xét ví dụ, rdfs:subClasOf. Tên không gian chỉ định chỉ xác định rằng nó áp dụng cho các lớp và có một lớp làm giá trị. Ý nghĩa của việc trở thành một lớp con, cụ thể là, tất cả các instance của một lớp cũng là instance của lớp cha, không được nhắc đến ở bất kỳ đâu.  
+- Trên thực tế, nó không thể được thể hiện ở một tài liệu RDF. Vì nếu vậy, nó không cần thiết phải định nghĩa RDF Schema.  
+
+## 2.7 Ngữ nghĩa tiên đề cho RDF và RDF Schema
