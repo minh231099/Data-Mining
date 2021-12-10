@@ -613,4 +613,4 @@ Ta sử dụng logic vị từ một cách bình đẳng. Tên biến bắt đ�
 Những vị từ đơn giản là:  
 *PropVal(P, R, V)* là một vị từ với 3 tham số, được sử dụng để đại diện cho một phát biểu RDF với tài nguyên R, thuộc tính P và giá trị V.  
 *Type(R, T)*, một cách ngắn gọn của *PropVal(type, R, T)*, dùng để xác định rằng tài nguyên R có kiểu dữ liệu T.  
-*Type(?r, ?t)* &harr *PropVal(type, ?r, ?t)*  
+*Type(?r, ?t)* &harr; *PropVal(type, ?r, ?t)*  
