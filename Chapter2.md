@@ -364,11 +364,9 @@ The Baron Way Flat has <span property="swp:hasNumberOfBedrooms">3</span> bedroo
 
 ### 2.4.2 Hệ thống phân cấp và kế thừa
 - Một khi chúng ta đã có các lớp, chúng ta cũng sẽ cần phải thiết lập các mối quan hệ giữa chúng. Ví dụ chúng ta có những lớp như:  
-unit  
-residential unit  	
-commercial unit  
-house & apartment  
-office  
+&emsp; unit  
+&emsp; residential unit &emsp; commercial unit  
+&emsp; house & apartment &emsp;office  
 - Những lớp này có liên quan đến nhau. Ví dụ như, mỗi một residential unit (Đơn vị cư trú) là một unit. Ta nói rằng "residential unit" là một *lớp con* (sub class) của "unit", hoặc "unit" là một *lớp cha* (superclass) của "residential unit". Quan hệ lớp con xác định một hệ thống phân cấp của các lớp.  
 - Một lớp A được coi là lớp con của B khi mọi instance của A cũng là instance của B. Không có yêu cầu nào trong RDF Schema rằng các lớp cùng nhau tạo thành một hệ thống phân cấp nghiêm ngặt. Nói cách khác, một đồ thị con không cần phải là một cây. Một lớp có thể có nhiều lớp cha. Nếu lớp A là con của cả B1 và B2, điều này có nghĩa là mọi instance của A đều là instance của B1 và B2.  
 
@@ -407,17 +405,17 @@ Nhưng điều ngược lại có thể không chính xác. Ví dụ như *p* l�
 
 ### 2.5.1 Các lớp cốt lõi
 Các lớp cốt lõi là:  
-- rdfs:Resource, lớp của mọi tài nguyên  
-- rdfs:Class, lớp của mọi lớp  
-- rdfs:Literal, lớp của mọi trực nghĩa (các string)  
-- rdfs:Property, lớp của mọi thuộc tính  
-- rdfs:Statement, lớp của mọi phát biểu cụ thể  
+&emsp; rdfs:Resource, lớp của mọi tài nguyên  
+&emsp; rdfs:Class, lớp của mọi lớp  
+&emsp; rdfs:Literal, lớp của mọi trực nghĩa (các string)  
+&emsp; rdfs:Property, lớp của mọi thuộc tính  
+&emsp; rdfs:Statement, lớp của mọi phát biểu cụ thể  
 
 ### 2.5.2 Các thuộc tính cốt lõi dùng để xác định quan hệ  
 Các thuộc tính cốt lõi dùng để xác định quan hệ là:  
-- rdf:type, liên kết một tài nguyên với lớp của nó. Tài nguyên được khai báo là một instance của lớp đó.  
-- rdfs:subClassOf, liên kết một lớp với lớp cha của nó. Tất cả instance của một lớp sẽ là instance của lớp cha. Lưu ý rằng một lớp có thể là lớp con của nhiều lớp. Ví dụ: lớp *femaleProfessor* là lớp con của *female* và *professor*.  
-- rdfs:subPropertyOf, liên kết một thuộc tính tới thuộc tính cha của nó.  
+&emsp; rdf:type, liên kết một tài nguyên với lớp của nó. Tài nguyên được khai báo là một instance của lớp đó.  
+&emsp; rdfs:subClassOf, liên kết một lớp với lớp cha của nó. Tất cả instance của một lớp sẽ là instance của lớp cha. Lưu ý rằng một lớp có thể là lớp con của nhiều lớp. Ví dụ: lớp *femaleProfessor* là lớp con của *female* và *professor*.  
+&emsp; rdfs:subPropertyOf, liên kết một thuộc tính tới thuộc tính cha của nó.  
 Ví dụ: All apartments are residential units  
 swp:apartment rdfs:subClassOf swp:ResidentialUnit  
 
@@ -433,25 +431,25 @@ swp:address rdfs:domain swp:Unit.
 swp:address rdfs:range rdf:Literal.  
 
 ### 2.5.4 Các thuộc tính hữu ích trong việc cải tiến
-- rdf:subject, liên kết một phát biểu cụ thể với chủ thể của nó  
-- rdf:predicate, liên kết một phát biểu với vị từ của nó  
-- rdf:object, liên kết một phát biểu với đối tượng của nó  
+&emsp; rdf:subject, liên kết một phát biểu cụ thể với chủ thể của nó  
+&emsp; rdf:predicate, liên kết một phát biểu với vị từ của nó  
+&emsp; rdf:object, liên kết một phát biểu với đối tượng của nó  
   
 ### 2.5.5 Các lớp Container
 RDF cho phép các vùng chứa (container) được biểu diễn theo cách tiêu chuẩn.  
-- rdf:Bag, lớp túi
-- rdf:Seq, lớp chuỗi  
-- rdf:Alt, lớp lựa chọn  
-- rdfs:Container, một lớp cha của tất cả các lớp container khác, bao gồm cả 3 cái trên.  
+&emsp; rdf:Bag, lớp túi
+&emsp; rdf:Seq, lớp chuỗi  
+&emsp; rdf:Alt, lớp lựa chọn  
+&emsp; rdfs:Container, một lớp cha của tất cả các lớp container khác, bao gồm cả 3 cái trên.  
   
 ### 2.5.6 Các thuộc tính tiện ích
 Một tài nguyên có thể được định nghĩa và mô tả ở nhiều nơi trên trang web. Thuộc tính dưới đây sẽ cho phép chúng ta định nghĩa các liên kết với những địa chỉ đó:  
-- rdfs:seeAlso, liên kết một tài nguyên A với tài nguyên B (mà B sẽ giải thích về A).  
-- rdfs:isDefinedBy, là một thuộc tính con của rdfs:seeAlso và liên kết một tài nguyên tới nơi nó được định nghĩa, thường là một lược đồ RDF.  
+&emsp; rdfs:seeAlso, liên kết một tài nguyên A với tài nguyên B (mà B sẽ giải thích về A).  
+&emsp; rdfs:isDefinedBy, là một thuộc tính con của rdfs:seeAlso và liên kết một tài nguyên tới nơi nó được định nghĩa, thường là một lược đồ RDF.  
 
 Thường nó hữu ích cho việc cung cấp thêm thông tin dành cho người đọc. Nó có thể được xử lý với những thuộc tính dưới đây:  
-- rdfs:comment, chú thích, thường là những văn bản, có thể được liên kết với một tài nguyên  
-- rdfs:label, một nhãn (tên) thân thiện với con người được gán vào một tài nguyên. Trong số các mục đích khác, nó có thể đóng vai trò là tên của một nút trong việc biểu diễn đồ thị của tài liệu RDF.  
+&emsp; rdfs:comment, chú thích, thường là những văn bản, có thể được liên kết với một tài nguyên  
+&emsp; rdfs:label, một nhãn (tên) thân thiện với con người được gán vào một tài nguyên. Trong số các mục đích khác, nó có thể đóng vai trò là tên của một nút trong việc biểu diễn đồ thị của tài liệu RDF.  
 
 ### 2.5.7 Ví dụ: Nhà ở
 Ta sẽ tham khảo ví dụ về nhà ở và cung cấp mô hình khái niệm về miền hay là một ontology (bản thể luận).  
@@ -598,13 +596,13 @@ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#¨>
 ### 2.7.1 Tiếp cận
 Tất cả ngôn ngữ nguyên thủy trong RDF và RDF Schema được đại diện bởi các hằng số: *Resource, Class, Property, subClassOf, ...*. Một vài vị từ xác định trước được sử dụng làm nền tảng để thể hiện mối quan hệ giữa các hằng số.  
 Một lý thuyết bổ trợ về những danh sách được sử dụng. Nó có các ký hiệu chức năng (function symbols):  
-- *nil* (danh sách rỗng);  
-- *cons(x, l)* (thêm một phần tử vào đầu của danh sách);  
-- *first(l)* (trả về phần tử đầu của danh sách);  
-- *rest(l)* (trả về phần còn lại của danh sách);  
+&emsp;*nil* (danh sách rỗng);  
+&emsp;*cons(x, l)* (thêm một phần tử vào đầu của danh sách);  
+&emsp;*first(l)* (trả về phần tử đầu của danh sách);  
+&emsp;*rest(l)* (trả về phần còn lại của danh sách);  
 và ký hiệu vị từ (predicate symbols)  
-- *item(x,l)* (trả về true nếu một phần tử có xuất hiện trong danh sách);  
-- *list(l)* (trả về true nếu *l* là một danh sách).  
+&emsp;*item(x,l)* (trả về true nếu một phần tử có xuất hiện trong danh sách);  
+&emsp;*list(l)* (trả về true nếu *l* là một danh sách).  
   
 Danh sách được sử dụng để đại diện cho các vùng chứa (container) trong RDF. Chúng cần thiết để nắp bắt các ý nghĩa của các cấu trúc nhất định (chẳng hạn như cách ràng buộc về số lượng) trong các ngôn ngữ bản thể học phong phú hơn.  
 Hầu hết các tiên đề cung cấp thông tin có định kiểu. Ví dụ: *Type(subClassOf, Property)* nói rằng subClassOf là một thuộc tính (property).  
@@ -615,20 +613,20 @@ Những vị từ đơn giản là:
 *PropVal(P, R, V)* là một vị từ với 3 tham số, được sử dụng để đại diện cho một phát biểu RDF với tài nguyên R, thuộc tính P và giá trị V.  
 *Type(R, T)*, một cách ngắn gọn của *PropVal(type, R, T)*, dùng để xác định rằng tài nguyên R có kiểu dữ liệu T.  
   
-*Type(?r, ?t) &harr; PropVal(type, ?r, ?t)*  
+&emsp;*Type(?r, ?t) &harr; PropVal(type, ?r, ?t)*  
 
 ### 2.7.3 RDF
 Một phát biểu RDF *(bộ ba)(R, P, V)* được đại diện bằng *PropVal(P, R, V).  
 **Các lớp**  
 Trong ngôn ngữ của chúng ta có các hằng số *Class, Resource, Property* và *Literal*. Tất cả các lớp là instance của *Class*; chúng có kiểu dữ liệu là *Class*:  
-- **Type(Class, Class)**  
-- **Type(Resource, Class)**  
-- **Type(Property, Class)**  
-- **Type(Literal, Class)**  
+&emsp;**Type(Class, Class)**  
+&emsp;**Type(Resource, Class)**  
+&emsp;**Type(Property, Class)**  
+&emsp;**Type(Literal, Class)**  
   
 *Resource* là lớp bao quát nhất: tất cả các đối tượng là một tài nguyên. Vì vậy, mỗi một class và thuộc tính là một tài nguyên:  
-	*Type(?p, Property) &rarr; Type(?p, Resource)*  
-	*Type(?c, Class) &rarr; Type(?c, Resource)*  
+&emsp; *Type(?p, Property) &rarr; Type(?p, Resource)*  
+&emsp;*Type(?c, Class) &rarr; Type(?c, Resource)*  
 
 Cuối cùng, vị từ trong phát biểu RDF phải là một thuộc tính:  
-	*PropVal(?p, ?r, ?v) &rarr; Type(?p, Property)*  
+&emsp;*PropVal(?p, ?r, ?v) &rarr; Type(?p, Property)*  
