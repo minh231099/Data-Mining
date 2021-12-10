@@ -625,6 +625,7 @@ Trong ngôn ngữ của chúng ta có các hằng số *Class, Resource, Propert
 - **Type(Resource, Class)**  
 - **Type(Property, Class)**  
 - **Type(Literal, Class)**  
+  
 *Resource* là lớp bao quát nhất: tất cả các đối tượng là một tài nguyên. Vì vậy, mỗi một class và thuộc tính là một tài nguyên:  
 	*Type(?p, Property) &rarr; Type(?p, Resource)*  
 	*Type(?c, Class) &rarr; Type(?c, Resource)*  
