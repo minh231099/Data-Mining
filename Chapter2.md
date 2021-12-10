@@ -637,8 +637,9 @@ Cuối cùng, vị từ trong phát biểu RDF phải là một thuộc tính:
 &emsp; &emsp; *Type(type, Property)*  
   
 Lưu ý rằng nó tương đương với *PropVal(type, type, Propery)*: kiểu dữ liệu của *type* là *Property*, *type* có thể áp dụng cho các tài nguyên và có một lớp làm giá trị của nó:  
-&emsp; *Type(?r, ?c) &rarr; (Type(?r, Resource) ^ Type(?c, Class))*  
+&emsp; *Type(?r, ?c) &rarr; (Type(?r, Resource) &and; Type(?c, Class))*  
 
 **Thuộc tính phụ trợ FuncProp**  
 Một thuộc tính chức năng (functional property) là một thuộc tính có chức năng: Nó liên kết tài nguyên với tối đa một giá trị. Các thuộc tính chức năng không phải một khái niệm trong RDF nhưng được sử dụng trong tiền đề hóa các nền tảng khác.  
 Hằng số FuncProp đại diện cho lớp của tất cả các thuộc tính chức năng. P là một thuộc tính chức năng khi và chỉ khi nó là một thuộc tính và không tồn tại *x*, *y<sub>1</sub>* và *y<sub>2</sub>* sao cho *P(x, y<sub>1</sub>)*, P(x, y<sub>2</sub>) và *y<sub>1</sub>* &#8800; *y<sub>2</sub>*.  
+&emsp; *Type(?p, FuncProp) &harr; (Type(?p, Property) &and; &forall;?r&forall;?v1&forall;?v2(PropVal(?p, ?r, ?v1) &and; PropVal(?p, ?r, ?v2) &rarr; ?v1 = ?v2))*  
