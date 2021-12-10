@@ -35,6 +35,7 @@
 	- **2.7.1 Tiếp cận**  
 	- **2.7.2 Những vị từ cơ bản**  
 	- **2.7.3 RDF**  
+	- **2.7.4 RDF Schema**  
 	- 
 
 ---
@@ -409,7 +410,7 @@ Các lớp cốt lõi là:
 &emsp; rdfs:Class, lớp của mọi lớp  
 &emsp; rdfs:Literal, lớp của mọi trực nghĩa (các string)  
 &emsp; rdfs:Property, lớp của mọi thuộc tính  
-&emsp; rdfs:Statement, lớp của mọi phát biểu cụ thể  
+&emsp; rdfs:Statement, lớp của mọi phát biểu đã được cụ thể hóa (reified statement).  
 
 ### 2.5.2 Các thuộc tính cốt lõi dùng để xác định quan hệ  
 Các thuộc tính cốt lõi dùng để xác định quan hệ là:  
@@ -630,16 +631,52 @@ Trong ngôn ngữ của chúng ta có các hằng số *Class, Resource, Propert
 
 Cuối cùng, vị từ trong phát biểu RDF phải là một thuộc tính:  
 &emsp;*PropVal(?p, ?r, ?v) &rarr; Type(?p, Property)*  
-
+  
 **Thuộc tính *type* **
 
 *type* là một thuộc tính:  
-&emsp; &emsp; *Type(type, Property)*  
+&emsp; *Type(type, Property)*  
   
 Lưu ý rằng nó tương đương với *PropVal(type, type, Propery)*: kiểu dữ liệu của *type* là *Property*, *type* có thể áp dụng cho các tài nguyên và có một lớp làm giá trị của nó:  
 &emsp; *Type(?r, ?c) &rarr; (Type(?r, Resource) &and; Type(?c, Class))*  
-
+  
 **Thuộc tính phụ trợ FuncProp**  
 Một thuộc tính chức năng (functional property) là một thuộc tính có chức năng: Nó liên kết tài nguyên với tối đa một giá trị. Các thuộc tính chức năng không phải một khái niệm trong RDF nhưng được sử dụng trong tiền đề hóa các nền tảng khác.  
 Hằng số FuncProp đại diện cho lớp của tất cả các thuộc tính chức năng. P là một thuộc tính chức năng khi và chỉ khi nó là một thuộc tính và không tồn tại *x*, *y<sub>1</sub>* và *y<sub>2</sub>* sao cho *P(x, y<sub>1</sub>)*, P(x, y<sub>2</sub>) và *y<sub>1</sub>* &#8800; *y<sub>2</sub>*.  
 &emsp; *Type(?p, FuncProp) &harr; (Type(?p, Property) &and; &forall;?r&forall;?v1&forall;?v2(PropVal(?p, ?r, ?v1) &and; PropVal(?p, ?r, ?v2) &rarr; ?v1 = ?v2))*  
+  
+**Phát biểu đã được cụ thể hóa (reified statement)**  
+Hằng số *Statement* đại diện cho lớp của tất cả phát biểu đã được cụ thể hóa. Tất cả những phát biểu đã được cụ thể hóa là những tài nguyên, và *Statement* là một instance của *Class*:  
+&emsp; *Type(?s, Statement) &rarr; Type(?s, Resource)*  
+&emsp; *Type(Statement, Class)  
+Một phát biểu được cụ thể hóa có thể được phân tách thành 3 phần của một bộ ba RDF:  
+&emsp; *Type(?st, Statement) &rarr; &exist;?p&exist;?r&exist;?v(PropVal(Predicate, ?st, ?p) &and; PropVal(Subject, ?st, ?r) &and; PropVal(Object, ?st, ?v))*  
+
+*Subject*, *Predicate* và *Object* là những thuộc tính chức năng. Vậy nên, mỗi phát biểu có đúng một chủ thể, một vị từ và một đối tượng:  
+&emsp; *Type(Subject, FuncProp)*  
+&emsp; *Type(Predicate, FuncProp)*  
+&emsp; *Type(Object, FuncProp)*  
+  
+Thông tin có định kiểu của chúng là  
+&emsp; PropVal(Subject, ?st, ?r) &rarr; (Type(?st, Statement) &and; Type(?r, Resource))  
+&emsp; PropVal(Predicate, ?st, ?p) &rarr; (Type(?st, Statement) &and; Type(?p, Property))  
+&emsp; PropVal(Object, ?st, ?v) &rarr; (Type(?st, Statement) &and; (Type(?v, Resource) &or; Type(?v, Literal)))  
+  
+Tiên đề cuối cùng nói, nếu *Object* xuất hiện như là một thuộc tính trong một phát biểu của RDF, thì nó phải được ứng dụng với một phát biểu đã được cụ thể hóa và giá trị của nó là một tài nguyên hoặc một trực nghĩa.  
+
+**Kho chứa (Containers)**  
+Tất cả kho chứa đề là tài nguyên:  
+&emsp; *Type(?c, Container) &rarr; Type(?c, Resource)*  
+Các kho chứa là các danh sách:  
+&emsp; *Type(?c, Container) &rarr; list(?c)*  
+Các kho chứa là túi (Bag) hoặc chuỗi (Sequence) hoặc lựa chọn (Alternative):  
+&emsp; *Type(?c, Container) &rarr; (Type(?c, Bag) &or; Type(?c, Seq) &or; Type(?c, Alt))*  
+Túi và chuỗi không giao nhau:  
+&emsp; *&not;(Type(?x, Bag) &or; Type(?x, Seq))*  
+
+Với mỗi số tự nhiên *n &gt; 0*, tồn tại bộ chọn *_n* lựa chọn phần tử thứ *n* của một kho chứa. Nó là một thuộc tính chức năng  
+&emsp; *Type(_n, FuncProp)*  
+và chỉ áp dụng với kho chứa:  
+&emsp; *PropVal(_n, ?c, ?o) &rarr; Type(?c, Container)*  
+
+### 2.7.4 RDF Schema
