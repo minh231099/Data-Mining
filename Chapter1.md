@@ -56,7 +56,7 @@ này, một lần nữa sử dụng URI để đại diện cho các kiểu và 
 - Để có thể nắm bắt toàn bộ ngữ nghĩa của dữ liệu, các hình thức như là RDF Schema và OWL không chỉ là ngôn ngữ biểu diễn dữ liệu, mà con là *ngôn 
 ngữ biển diễn tri thức nhẹ* (lightweight knowledge representation languages). Chúng là "những logic" cho phép suy luận thêm thông tin từ các thông 
 tin đã được đưa ra.  
-	- Lược đồ Schema biểu diễn logic rất nghèo nàn chỉ cho phép một số suy luận đơn giản, chẳng hạn như thừa kế thuộc tính qua hệ thống phân cấp các kiểu 
+	- Lược đồ Schema biểu diễn logic rất nghèo nàn chỉ cho phép một số suy luận đơn giản, chẳng hạn như thừa kế qua hệ thống phân cấp các kiểu 
 và suy luận về kiểu của các giới hạn về và phạm vị.  
 	- OWL phong phú hơn về logic (nhưng vẫn rất nhẹ) cho phép các suy luận bổ sung như bình đẳng và bất bình đẳng, giới hạn số lượng, sự tồn tại của các 
 đối tượng và những thứ khác.  
@@ -169,7 +169,7 @@ Ngoài ra, miền và phạm vi thuộc tính có thể được xác định.
 - Đầu tiên, logic cung cấp ngôn ngữ chính thức để diễn đạt tri thức.  
 - Thứ hai, logic cung cấp cho chúng ta dạng dễ hiểu của ngữ nghĩa: ý nghĩa của câu được xác định mà không cần sử dụng tri thức. Thường chúng ta nói về [kiến thức khai báo](https://trainingindustry.com/glossary/declarative-knowledge/#:~:text=Declarative%20knowledge%20refers%20to%20facts,their%20relation%20to%20each%20other.)(declarative knowledge) như sau: 
 Chúng ta mô tả những gì nắm giữ mà không quan tâm đến việc nó có thể được suy luận ra sao.  
-- Thứ ba, bộ suy luận tự động (automated resoners) có thể suy luận những kết luận từ tri thức được cho, làm cho kiến thức tiềm ẩn trở nên rõ ràng.  
+- Thứ ba, trình suy luận tự động (automated resoners) có thể suy luận những kết luận từ tri thức được cho, làm cho kiến thức tiềm ẩn trở nên rõ ràng.  
 - Logic có thể sử dụng để khai phá tri thức bản thể luận (ontological knowledge). Bằng cách này, logic có thể giúp ta phát hiện ra các mối quan hệ bất ngờ và mâu thuẫn.  
 - Nhưng logic khái quát hơn các *bản thể luận*, nó cũng có thể đực sử dụng bởi các agent thông minh trong việc đưa ra quyết định và lựa chọn các hướng hành động.  
 - Có sự đánh đổi giữa sức mạnh biểu đạt và hiệu quả tính toán. Logic diễn đạt càng rõ ràng thì việc đưa ra các kết luận càng trở nên tốn kém về mặt tính toán. Và việc đưa ra các kết luận 

@@ -32,6 +32,8 @@
 	- **2.6.1 RDF**  
 	- **2.6.2 RDF Schema**  
 - [**2.7 Ngữ nghĩa tiên đề cho RDF và RDF Schema**](#27-ngữ-nghĩa-tiên-đề-cho-rdf-và-rdf-schema)  
+	- **2.7.1 Tiếp cận**  
+	- **2.7.2 Những vị từ cơ bản**  
 	- 
 
 ---
@@ -213,7 +215,7 @@ swp:BaronWayApartment swp:hasNumberOfBedrooms "3"^^<xsd:integer>;
 swp:BaronWayBuilding dbpedia-owl:location dbpedia:Amsterdam.
 ```  
   
-- Nếu cả chủ thể và vị ngữ được sử dụng nhiều lần, ta có thể sử dụng dấu phẩy ở cuối phát biểu.  
+- Nếu cả chủ thể và vị từ được sử dụng nhiều lần, ta có thể sử dụng dấu phẩy ở cuối phát biểu.  
 **Ví dụ:** Nếu mở rộng ví dụ của chúng ta và nói rằng: "Baron Way Building is not only located in Amsterdam but also in the Netherlands", ta sẽ viết chúng trong Turtle như sau:  
 ```Turtle
 @prefix swp: <http://www.semanticwebprimer.org/ontology/apartments.ttl>.
@@ -271,7 +273,7 @@ swp:BaronWayBuilding dbpedia-owl:location dbpedia:Amsterdam,
 
 #### 2.3.2.1 RDF/XML
 - RDF/XML là một mã hóa của RDF bằng ngôn ngữ XML. Nó cho phép RDF có thể sử dụng với các công cụ xử lý XML. Ban đầu, RDF/XML là ngôn ngữ tiêu chuẩn duy nhất cho RDF. Tuy nhiên, Turtle được chấp nhận là một tiêu chuẩn bổ sung vì chúng thường dễ dàng hơn trong việc đọc.  
-- Với RDF/XML, chủ thể được biểu dễ bằng rdf:about với rdf:Decription element(được đặt trong ngoặc). Thuộc tính và đối tượng liên quan đến chủ thể được đặt trong rdf:Description element. Tên không gian có thể sử dụng thông qua kiến trúc XML namespace (xmlns:). Tất cả RDF/XML có thể được đặt trong một phần tử rdf:RDF.  
+- Với RDF/XML, chủ thể được biểu dễ bằng rdf:about với rdf:Decription element(được đặt trong ngoặc). Vị từ và đối tượng liên quan đến chủ thể được đặt trong rdf:Description element. Tên không gian có thể sử dụng thông qua kiến trúc XML namespace (xmlns:). Tất cả RDF/XML có thể được đặt trong một phần tử rdf:RDF.  
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF xmlns:dbpedia-owl="http://dbpedia.org/ontology/"
@@ -431,7 +433,7 @@ swp:address rdfs:range rdf:Literal.
 
 ### 2.5.4 Các thuộc tính hữu ích trong việc cải tiến
 - rdf:subject, liên kết một phát biểu cụ thể với chủ thể của nó  
-- rdf:predicate, liên kết một phát biểu với thuộc tính của nó  
+- rdf:predicate, liên kết một phát biểu với vị từ của nó  
 - rdf:object, liên kết một phát biểu với đối tượng của nó  
   
 ### 2.5.5 Các lớp Container
@@ -588,3 +590,27 @@ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#¨>
 - Trên thực tế, nó không thể được thể hiện ở một tài liệu RDF. Vì nếu vậy, nó không cần thiết phải định nghĩa RDF Schema.  
 
 ## 2.7 Ngữ nghĩa tiên đề cho RDF và RDF Schema
+- Trong phần này, chúng ta hình thức hóa ý nghĩa của các mô hình hóa ban đầu của RDF và RDF Schema. Như thế, chúng ta sẽ nắm bắt được những ngữ nghĩa của RDF và RDFS.  
+- Ngôn ngữ chính thức ta sử dụng sẽ là *logic vị từ* (predicate logic), thứ được chấp nhận như là nền tảng của tất cả các biểu diễn tri thức. Các công thức được sử dụng trong quá trình hình thức hóa này được gọi là *tiên đề* (axiom).  
+- Bằng cách mô tả ngữ nghĩa của RDF và RDFS bằng một ngôn ngữ hình thức như logic, chúng ta làm cho ngữ nghĩa trở nên rõ ràng và máy móc có thể truy cập được. Ngoài ra, ta cung cấp cơ sở cho việc hỗ trợ lập luận bằng cách các trình lập luận tự động vận dụng các công thức logic.  
+
+### 2.7.1 Tiếp cận
+Tất cả ngôn ngữ nguyên thủy trong RDF và RDF Schema được đại diện bởi các hằng số: *Resource, Class, Property, subClassOf, ...*. Một vài vị từ xác định trước được sử dụng làm nền tảng để thể hiện mối quan hệ giữa các hằng số.  
+Một lý thuyết bổ trợ về những danh sách được sử dụng. Nó có các ký hiệu chức năng (function symbols):  
+- *nil* (danh sách rỗng);  
+- *cons(x, l)* (thêm một phần tử vào đầu của danh sách);  
+- *first(l)* (trả về phần tử đầu của danh sách);  
+- *rest(l)* (trả về phần còn lại của danh sách);  
+và ký hiệu vị từ (predicate symbols)  
+- *item(x,l)* (trả về true nếu một phần tử có xuất hiện trong danh sách);  
+- *list(l)* (trả về true nếu *l* là một danh sách).  
+  
+Danh sách được sử dụng để đại diện cho các vùng chứa (container) trong RDF. Chúng cần thiết để nắp bắt các ý nghĩa của các cấu trúc nhất định (chẳng hạn như cách ràng buộc về số lượng) trong các ngôn ngữ bản thể học phong phú hơn.  
+Hầu hết các tiên đề cung cấp thông tin có định kiểu. Ví dụ: *Type(subClassOf, Property)* nói rằng subClassOf là một thuộc tính (property).  
+Ta sử dụng logic vị từ một cách bình đẳng. Tên biến bắt đầu với dấu ?. Tất cả các tiên đề đều được định lượng một cách ngầm định.  
+
+### 2.7.2 Những vị từ cơ bản
+Những vị từ đơn giản là:  
+*PropVal(P, R, V)* là một vị từ với 3 tham số, được sử dụng để đại diện cho một phát biểu RDF với tài nguyên R, thuộc tính P và giá trị V.  
+*Type(R, T)*, một cách ngắn gọn của *PropVal(type, R, T)*, dùng để xác định rằng tài nguyên R có kiểu dữ liệu T.  
+*Type(?r, ?t)* &harr *PropVal(type, ?r, ?t)*  
