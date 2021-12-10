@@ -34,6 +34,7 @@
 - [**2.7 Ngữ nghĩa tiên đề cho RDF và RDF Schema**](#27-ngữ-nghĩa-tiên-đề-cho-rdf-và-rdf-schema)  
 	- **2.7.1 Tiếp cận**  
 	- **2.7.2 Những vị từ cơ bản**  
+	- **2.7.3 RDF**  
 	- 
 
 ---
@@ -613,4 +614,20 @@ Ta sử dụng logic vị từ một cách bình đẳng. Tên biến bắt đ�
 Những vị từ đơn giản là:  
 *PropVal(P, R, V)* là một vị từ với 3 tham số, được sử dụng để đại diện cho một phát biểu RDF với tài nguyên R, thuộc tính P và giá trị V.  
 *Type(R, T)*, một cách ngắn gọn của *PropVal(type, R, T)*, dùng để xác định rằng tài nguyên R có kiểu dữ liệu T.  
-*Type(?r, ?t)* &harr; *PropVal(type, ?r, ?t)*  
+  
+*Type(?r, ?t) &harr; PropVal(type, ?r, ?t)*  
+
+### 2.7.3 RDF
+Một phát biểu RDF *(bộ ba)(R, P, V)* được đại diện bằng *PropVal(P, R, V).  
+**Các lớp**  
+Trong ngôn ngữ của chúng ta có các hằng số *Class, Resource, Property* và *Literal*. Tất cả các lớp là instance của *Class*; chúng có kiểu dữ liệu là *Class*:  
+- **Type(Class, Class)**  
+- **Type(Resource, Class)**  
+- **Type(Property, Class)**  
+- **Type(Literal, Class)**  
+*Resource* là lớp bao quát nhất: tất cả các đối tượng là một tài nguyên. Vì vậy, mỗi một class và thuộc tính là một tài nguyên:  
+	*Type(?p, Property) &rarr; Type(?p, Resource)*  
+	*Type(?c, Class) &rarr; Type(?c, Resource)*  
+
+Cuối cùng, vị từ trong phát biểu RDF phải là một thuộc tính:  
+	*PropVal(?p, ?r, ?v) &rarr; Type(?p, Property)*  
