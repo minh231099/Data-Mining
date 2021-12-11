@@ -22,7 +22,7 @@
 - [**2.5 RDF Schema: Ngôn ngữ**](#25-rdf-schema-ngôn-ngữ)
 	- **2.5.1 Các lớp cốt lõi**  
 	- **2.5.2 Các thuộc tính cốt lõi dùng để xác định quan hệ**  
-	- **2.5.3 Thuộc tính cốt lõi để hạn chế thuộc tính**  
+	- **2.5.3 Thuộc tính cốt lõi để ràng buộc thuộc tính**  
 	- **2.5.4 Các thuộc tính hữu ích trong việc cải tiến**  
 	- **2.5.5 Các lớp Container**  
 	- **2.5.6 Các thuộc tính tiện ích**  
@@ -356,12 +356,12 @@ The Baron Way Flat has <span property="swp:hasNumberOfBedrooms">3</span> bedroo
 - Trong trường hợp đầu tiên, chúng ta nói đến các đối tượng riêng lẻ (tài nguyên), và trường hợp thứ hai ta nó về các *lớp* (class) thứ định nghĩa kiểu (type) của đối tượng.  
 - Một lớp có thể coi là một tập hợp các phần tử. Các đối tượng riêng lẻ thuộc về một lớp được gọi là các instance của lớp đó.  
 - RDF cung cấp cho chúng ta một cách để định nghĩa quan hệ giữa các instance và các lớp sử dụng một thuộc tính đặc biệt `rdf:type`.  
-- Một công dụng quan trọng của lớp là áp đặt các hạn chế đối với những gì có thể được nêu ra trong tài liệu RDF bằng các sử dụng lược đồ.  
+- Một công dụng quan trọng của lớp là áp đặt các ràng buộc đối với những gì có thể được nêu ra trong tài liệu RDF bằng các sử dụng lược đồ.  
 - Trong lập trình, ép kiểu dữ liệu được sử dụng để tránh những thứ vô lý được viết ra (ví dụ như A + 1, với A là một mảng; chúng ta chỉ định rằng đối số của phép + phải là một số). Tương tự như trong RDF, chúng ta sẽ không cho phép tồn tại những tuyên bố như:  
 "Baron Way Aparment rents Jeff Meyer"  
 "Amsterdam has number of bedroom 3"  
-- Ở phát biểu thứ nhất, sự vô lý nằm ở việc một tòa nhà không thể thuê con người. Điều này đặt ra một hạn chế với giá trị của thuộc tính "rents". Trong mặt toán học, chúng ta sẽ hạn chế phạm vi của thuộc tính.  
-- Ở phát biểu thứ hai, thành phố thì không thể có phòng ngủ. Nó cũng đặt ra một hạn chế cho đối tượng với những thuộc tính mà nó có thể áp dụng. Trong toán học, chúng ta hạn chế miền của thuộc tính.  
+- Ở phát biểu thứ nhất, sự vô lý nằm ở việc một tòa nhà không thể thuê con người. Điều này đặt ra một ràng buộc với giá trị của thuộc tính "rents". Trong mặt toán học, chúng ta sẽ ràng buộc phạm vi của thuộc tính.  
+- Ở phát biểu thứ hai, thành phố thì không thể có phòng ngủ. Nó cũng đặt ra một ràng buộc cho đối tượng với những thuộc tính mà nó có thể áp dụng. Trong toán học, chúng ta ràng buộc miền của thuộc tính.  
 
 ### 2.4.2 Hệ thống phân cấp và kế thừa
 - Một khi chúng ta đã có các lớp, chúng ta cũng sẽ cần phải thiết lập các mối quan hệ giữa chúng. Ví dụ chúng ta có những lớp như:  
@@ -373,7 +373,7 @@ The Baron Way Flat has <span property="swp:hasNumberOfBedrooms">3</span> bedroo
 
 ![Hệ thống phân cấp của các lớp](./pic/A_hierachy_of_classes.png)  
 
-- Một tổ chức phâp cấp các lớp có một ý nghĩa rất quan trọng. Xem xét hạn chế phạm vi "People can only rent residential units". Giả sử Baron Way Apartment được định nghĩa là một căn hộ. Sau đó, theo hạn chế trên, nó không đạt tiêu chuẩn là một Residential Unit bởi vì chưa có một phát biểu nào xác định rằng Baron Way Apartment cũng là một residential unit. Nó sẽ phản trực giác khi bạn khắc phục vấn đề này bằng cách thêm phát biểu đó vào mô tả của chúng ta. Thay vào đó, chúng ta muốn Baron Way Apartment *kế thừa* khả năng cho thuê từ lớp residential units. Điều này được thực hiện chính xác trong RDF Schema.  
+- Một tổ chức phâp cấp các lớp có một ý nghĩa rất quan trọng. Xem xét ràng buộc phạm vi "People can only rent residential units". Giả sử Baron Way Apartment được định nghĩa là một căn hộ. Sau đó, theo ràng buộc trên, nó không đạt tiêu chuẩn là một Residential Unit bởi vì chưa có một phát biểu nào xác định rằng Baron Way Apartment cũng là một residential unit. Nó sẽ phản trực giác khi bạn khắc phục vấn đề này bằng cách thêm phát biểu đó vào mô tả của chúng ta. Thay vào đó, chúng ta muốn Baron Way Apartment *kế thừa* khả năng cho thuê từ lớp residential units. Điều này được thực hiện chính xác trong RDF Schema.  
 - Với cách làm như vậy, RDF Schema *sửa ngữ nghĩa* của "là một lớp con của". Giờ đây, nó không phụ thuộc vào một ứng dụng để giải thích "là một lớp con của" mà thay vào đó, ý nghĩa dự định của nó sẽ được sử dụng bởi tất cả các phần mềm xử lý RDF. Bằng cách đưa ra các định nghĩa ngữ nghĩa như vậy, RDFS là một ngôn ngữ (vẫn còn hạn chế) để xác định ngữ nghĩa của các miền cụ thể, RDFS là một ngôn ngữ bản thể học nguyên thủy.  
   
 - Các lớp, kế thừa và thuộc tính được biết đến ở những lĩnh vực khác của tin học, ví dụ như: trong lập trình hướng đối tượng. Nhưng khi có nhiều thứ giống nhau, vẫn tồn tại những thứ khác biệt. Trong lập trình hướng đối tượng, một lớp đối tượng xác định nhiều thuộc tính áp dụng cho nó. Để thêm một thuộc tính mới trong lớp cần phải chỉnh sửa lớp đó.  
@@ -422,8 +422,8 @@ swp:apartment rdfs:subClassOf swp:ResidentialUnit
 
 Lưu ý rằng rdfs:subClassOf và rdfs:subPropertyOf có tính bắc cầu. Ngoài ra, rdfs:Class còn lớp lớp con của rdfs:Resource (mọi lớp đề là một tài nguyên) và rdfs:Resource là một instance của rdfs:Class (rdfs:Resource là lớp của tất cả các tài nguyên, và nó cũng là một lớp). Và tương tự, mọi lớp đều là instance của rdfs:Class.  
 
-### 2.5.3 Thuộc tính cốt lõi để hạn chế thuộc tính
-Thuộc tính cốt lõi dùng để hạn chế thuộc tính là:  
+### 2.5.3 Thuộc tính cốt lõi để ràng buộc thuộc tính
+Thuộc tính cốt lõi dùng để ràng buộc thuộc tính là:  
 - rdfs:domain, dùng để chỉ định miền của một thuộc tính P và nói rằng bất kỳ một tài nguyên nào chứa thuộc tính sẽ là các instance của các lớp miền.  
 - rdfs:range, dùng để chỉ rõ miền của một thuộc tính P và nói rằng giá trị của một thuộc tính là các instance của lớp phạm vi.  
 
@@ -680,3 +680,36 @@ và chỉ áp dụng với kho chứa:
 &emsp; *PropVal(_n, ?c, ?o) &rarr; Type(?c, Container)*  
 
 ### 2.7.4 RDF Schema
+  
+**Lớp con và thuộc tính con**  
+subClassOf là một thuộc tính:  
+&emsp; *Type(subClassOf, Property)*  
+Nếu một lớp *C* là một lớp con của một lớp *C'* thì mọi instance của *C* cũng là instance của *C'*:  
+&emsp; *PropVal(subClassOf, ?c, ?c') &larr; (Type(?c, Class) &and; Type(?c', Class) &and; &forall;?x(Type(?x, ?c) &rarr; Type(?x, ?c')))*  
+
+Tương tự với subPropertyOf: *P* là một thuộc tính con của *P'* nếu *P'(x, y)* khi *P(x, y)*:  
+&emsp; *Type(subPropertyOf, Property)*  
+&emsp; *PropVal(subPropertyOf, ?p, ?p') &harr; (Type(?p, Property) &and; Type(?p', Property) &and; &forall;?r&forall;?v(PropVal(?p, ?r, ?v) &rarr; PropVal(?p', ?r, ?v)))*  
+  
+**Những ràng buộc**  
+Mọi tài nguyên ràng buộc đều là tài nguyên:  
+&emsp; *PropVal(subClassOf, ConstraintResource, Resource)*  
+Thuộc tính hạn chế là tất cả các thuộc tính là tài nguyên ràng buộc:  
+&emsp; *Type(?cp, ConstraintProperty) &harr; (Type(?cp, ConstraintResource) &and; Type(?cp, Property))*  
+miền (domain) và phạm vi (range) là những thuộc tính ràng buộc:  
+&emsp; *Type(domain, ConstraintProperty)*  
+&emsp; *Type(range, ConstraintProperty)*  
+miền và phạm vi xác định tương ứng miền và phạm vị của thuộc tính.  
+Miền của thuộc tính *P* là tập hợp tất cả các đối tượng là *P* áp dụng. Nếu miền của *P* là *D*, thì mới mọi *P(x, y), x &isin; D*.  
+&emsp; *PropVal(domain, ?p, ?d) &rarr; &forall;?x&forall;?y(PropVal(?p, ?x, ?y) &rarr; Type(?x, ?d))*  
+Phạm vi của thuộc tính *P* là tập hợp của tất cả giá trị mà *P* có thể nhận. Nếu phạm vi của *P* là *R* thì với mọi *P(x, y), y &isin; R*.  
+&emsp; *PropVal(range, ?p, ?r) &rarr; &forall;?x&forall;?y(PropVal(?p, ?x, ?y) &rarr; Type(?y, ?r))*  
+  
+Các công thức được suy ra:  
+&emsp; *PropVal(domain, range, Property)*  
+&emsp; *PropVal(range, range, Class)*  
+&emsp; *PropVal(domain, domain, Property)*  
+&emsp; *PropVal(range, range, Class)*  
+  
+Như vậy, ta đã thực thể hóa ngữ nghĩa của RDF và RDFS. Phần mềm được trang vị những tri thức này có thể đưa ra những kết luận thú vị.  
+Ví dụ: cho phạm vi của *rents* là *ResidentialUnit*, biết rằng *ResidentailUnit* là lớp con của *Unit*, và *rents(JeffMeyer, BaronWayApartment)*, agent có thể tự động suy luận *Unit(BaronWayApartment)* sử dụng các ngữ nghĩa logic vị từ hoặc một trong các hệ thống chứng minh logic vị từ.  
