@@ -36,7 +36,8 @@
 	- **2.7.2 Những vị từ cơ bản**  
 	- **2.7.3 RDF**  
 	- **2.7.4 RDF Schema**  
-	- 
+- [**2.8 Hệ thống suy luận trực tiếp cho RDF và RDFS**](#28-hệ-thống-suy-luận-trực-tiếp-cho-rdf-và-rdfs)  
+- [**2.9 Tổng kết**](#29-tổng-kết)  
 
 ---
 ## **2.1 Giới thiệu**
@@ -590,7 +591,7 @@ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#¨>
 - Trên thực tế, nó không thể được thể hiện ở một tài liệu RDF. Vì nếu vậy, nó không cần thiết phải định nghĩa RDF Schema.  
 
 ## 2.7 Ngữ nghĩa tiên đề cho RDF và RDF Schema
-- Trong phần này, chúng ta hình thức hóa ý nghĩa của các mô hình hóa ban đầu của RDF và RDF Schema. Như thế, chúng ta sẽ nắm bắt được những ngữ nghĩa của RDF và RDFS.  
+- Trong phần này, chúng ta hình thức hóa ý nghĩa của các mô hình hóa nguyên thủy của RDF và RDF Schema. Như thế, chúng ta sẽ nắm bắt được những ngữ nghĩa của RDF và RDFS.  
 - Ngôn ngữ chính thức ta sử dụng sẽ là *logic vị từ* (predicate logic), thứ được chấp nhận như là nền tảng của tất cả các biểu diễn tri thức. Các công thức được sử dụng trong quá trình hình thức hóa này được gọi là *tiên đề* (axiom).  
 - Bằng cách mô tả ngữ nghĩa của RDF và RDFS bằng một ngôn ngữ hình thức như logic, chúng ta làm cho ngữ nghĩa trở nên rõ ràng và máy móc có thể truy cập được. Ngoài ra, ta cung cấp cơ sở cho việc hỗ trợ lập luận bằng cách các trình lập luận tự động vận dụng các công thức logic.  
 
@@ -713,3 +714,41 @@ Các công thức được suy ra:
   
 Như vậy, ta đã thực thể hóa ngữ nghĩa của RDF và RDFS. Phần mềm được trang vị những tri thức này có thể đưa ra những kết luận thú vị.  
 Ví dụ: cho phạm vi của *rents* là *ResidentialUnit*, biết rằng *ResidentailUnit* là lớp con của *Unit*, và *rents(JeffMeyer, BaronWayApartment)*, agent có thể tự động suy luận *Unit(BaronWayApartment)* sử dụng các ngữ nghĩa logic vị từ hoặc một trong các hệ thống chứng minh logic vị từ.  
+
+## 2.8 Hệ thống suy luận trực tiếp cho RDF và RDFS
+Như đã nói, ngữ nghĩa tiên đề có thể được sử dụng để lập luận tự động với RDF và RDFS. Tuy nhiên, nó yêu cầu một hệ thống chứng minh logic bậc nhất thể làm điều đó. Nó là một yêu cầu rất khó khăn và không có khả năng mở rộng khi có hàng triệu (thâm chí hàng tỷ) câu lệnh có liên quan (Ví dụ: hàng triệu câu lệnh có dạng *Type(?r, ?c)*).  
+Ví lý do này, RDF cũng được cung cấp một ngữ nghĩa (và một hệ thống suy luận phù hợp và hoàn chỉnh cho ngữ nghĩa này) trực tiếp dưới dạng bộ ba RDF thay vì trình bày lại RDF dưới dạng logic bật nhất.  
+Hệ thống suy luận này bao gồm các quy tắc dạng:  
+&emsp; IF &emsp;&emsp; E chứa một số bộ ba nhất định  
+&emsp; THEN &emsp;&ensp; thêm vào E một số bộ ba bổ sung nhất định  
+(trong đó E là tập hợp của các bộ ba RDF tùy ý)  
+  
+Ví dụ cơ bản:  
+&emsp; IF &emsp;&emsp; E chứa bộ ba *(?x, ?p, ?y)*  
+&emsp; THEN &emsp;&ensp; E cũng sẽ chứa bộ ra *(?p, rdf : type, rdf : property)*  
+điều này nói rằng bất kỳ tài nguyên *?p* nào được sử dụng như là thuộc tính trong bộ ba có thể được suy ra là thành viên của lớp rdf:Property.  
+Một ví dụ thú vị hơn:  
+&emsp; IF &emsp;&emsp; E chứa các bộ ba *(?u, rdfs : subClassOf, ?v)* và *(?v, rdfs : subClassOf, ?w)*  
+&emsp; THEN &emsp;&ensp; E cũng chứa bộ ba *(?u, rdfs : subClassOf, ?w)*  
+tính bắc cầu của quan hệ lớp con.  
+  
+Liên quan chặt chẽ là các quy tắc
+&emsp; IF &emsp;&emsp; E chứa các bộ ba *(?x, rdf : type, ?u)* và *(?u, rdfs : subClassOf, ?v)*  
+&emsp; THEN &emsp;&ensp; E cũng chứa bộ ba *(?x, rdf : type, ?v)*  
+định nghĩa cơ bản về ý nghĩa của rdfs:subClassOf.  
+
+Ví dụ cuối cùng thường gây bất ngờ với những người lần đầu nhìn vào RDF Schema:  
+&emsp; IF &emsp;&emsp; E chứa các bộ ba *(?x, ?p, ?y)* và *(?p, rdfs : range, ?u)*  
+&emsp; THEN &emsp;&ensp; E cũng chứa bộ ba *(?y, rdf : type, ?u)*  
+Quy tắc nói rằng bất kỳ tài nguyên ?y nào xuất hiện như là giá trị của thuộc tính ?p có thể suy ra đó là một phần tử trong phạm vi của ?p. Điều này chỉ ra rằng xác định phạm vị trong RDF Schema không được sử dụng để *hạn chế* phạm vi của thuộc tính, mà là để *suy luận* ra thành phần của phạm vi.  
+  
+Tổng số tập hợp của những quy tắc đóng này không lớn hơn vài chục và có thể được thực hiện một cách hiệu quả mà không cần công nghe chứng minh định lý phức tạp.  
+  
+
+## 2.9 Tổng kết  
+- RDF cung cấp nền tảng để trình bày và xử lý dữ liệu máy có thể hiểu được.  
+- RDF có mô hình dữ liệu dự trên đồ thị (graph-based data model). Các khái niệm chính của nó là tài nguyên, thuộc tính, phát biểu và đồ thị. Một phát biểu là một bộ ba tài nguyên-thuộc tính-giá trị.  
+- RDF có ba cú pháp tiêu chuẩn (Turtle, RDF/XML và RDFa) để hỗ trợ khả năng tương tác cú pháp.  
+- RDF có triết lý phi tập trung và cho phép tăng cường xây dựng kiến thức, chia sẻ và tái sử dụng.  
+- RDF không phụ thuộc vào miền. RDFS cung cấp một cơ chế để mô tả các miền cụ thể.  
+- RDFS là một ngôn ngữ bản thể học. Nó cung cấp một số mô hình hóa nguyên thủy với ý nghĩa cố định. Các khái niệm chính của RDFS là lớp, quan hệ lớp con, thuộc tính, quan hệ thuộc tính con, ràng buộc miền và phạm vị.  
