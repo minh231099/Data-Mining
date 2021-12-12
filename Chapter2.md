@@ -40,7 +40,7 @@
 - [**2.9 Tổng kết**](#29-tổng-kết)  
 
 ---
-## **2.1 Giới thiệu**
+## 2.1 Giới thiệu
 - HTML là một ngôn ngữ tiêu chuẩn dùng để xây dựng nên các trang web. Nó cho phép chúng ta xuất bản tài liệu và đảm bảo rằng tài liệu sẽ được hiển thị chính xác trên bất kỳ trình duyệt web nào.  
 - Gồm có ba phần hợp thành HTML (và bất kỳ ngôn ngữ chuyển đổi) là: 
 	- Cú pháp (syntax): Chỉ cho chúng ta cách để biểu diễn dữ liệu;  
@@ -80,8 +80,8 @@ Ví dụ như:
 	- RDFS - Ngữ nghĩa;  
 	- Turtle/ RDFa/ RDF-XML - Cú pháp.  
 
-## **2.2 RDF: Mô hình dữ liệu**
-### **2.2.1 Tài nguyên**
+## 2.2 RDF: Mô hình dữ liệu
+### 2.2.1 Tài nguyên
 - Chúng ta có thể nghĩ rằng tài nguyên chính là đối tượng, thứ mà chúng ta muốn nhắc tới. Tài nguyên có thể là địa điểm, con người, truy xuất tìm kiếm, ... .  
 - Mỗi một tài nguyên sẽ có một URI. Một URI có thể là URL (Uniform Resource Locator, hay địa chỉ web) hoặc một các gì đấy dùng để định danh. 
 - URI cung cấp một cơ chế để xác định rõ ràng "thứ" mà chúng ta muốn nói đến. Vì vậy, khi ta nói swimming pool, chúng ta sẽ sử dụng URI gán cho swimming pool và nó sẽ không bị nhầm lẫn với billiards (pool) hay a group of people (the pool of programmers). Đây gọi là vấn đề đồng âm.   
@@ -89,12 +89,12 @@ Ví dụ như:
 - Việc sử dụng URI là một trong những quyết định thiết kế quan trọng đằng sau RDF. Nó cho phép kế hoạch đặt tên một cách toàn cầu, và mỗi tên là duy nhất trên toàn thế giới diễn ra.  
 - Việc sử dụng một kế hoạch như vậy giảm thiểu đáng kể về vấn đề đồng âm - thứ cản trở việc biểu diễn dữ liệu phân tán cho đến nay.  
 
-### **2.2.2 Thuộc tính**
+### 2.2.2 Thuộc tính
 - Thuộc tính là một loại đặc biệt của tài nguyên; chúng mô tả mối quan hệ giữa các tài nguyên khác - ví dụ như: "bạn của", "được viết bởi" và "đặt tại".  
 - Như tất cả các tài nguyên, thuộc tính cũng được định danh bằng URI.  
 - Chúng ta có thể tham chiếu các URL thuộc tính để tìm các mô tả của chúng.  
 
-### **2.2.3 Phát biểu**
+### 2.2.3 Phát biểu
 - Phát biểu xác nhận những thuộc tính của tài nguyên.  
 - Một phát triểu là một bộ ba thực thể-thuộc tính-giá trị gồm một tài nguyên, một thuộc tính và một giá trị.  
 - Giá trị có thể là một tài nguyên hoặc là một trực nghĩa (nghĩa đen - literals).  
@@ -108,7 +108,7 @@ Ta sẽ viết thành:
 <http://dbpedia.org/resource/Amsterdam>
 ```  
 
-### **2.2.4 Đồ thị**
+### 2.2.4 Đồ thị
 - Chúng ta cũng có thể viết cùng một phát biểu dưới dạng đồ thị.  
 ![Đồ thị ví dụ 1](./pic/RDF_graph_1.png)
 
@@ -123,14 +123,14 @@ Ta sẽ viết thành:
 	4. Bao gồm liên kết tới các URI khác để họ có thể khám phá nhiều thứ hơn.  
 - Khi mô hình dữ liệu RDF không yêu cầu ta tuân theo những tiêu chuẩn này, nhưng nếu đi theo tiêu chuẩn, ta có thể tận dụng tri thức được đóng góp từ người khác.  
 
-### **2.2.5 Trỏ tới những Phát biểu và Đồ thị** 
+### 2.2.5 Trỏ tới những Phát biểu và Đồ thị
 - Đôi khi rất hữu ích khi có thể trỏ tới những phát biểu cụ thể và những phần của đồ thị, chẳng hạn như khi ấn định mức độ tin tưởng vào một phát biểu hoặc xác định nguồn gốc của phát biểu. Ví dụ như: ta muốn nói rằng phát biểu về vị trí của Baron Way Building được tạo ra bởi một người tên Frank. RDF cung cấp hai cơ chế để làm điều này.  
 - Cái thứ nhất được gọi là *reification(cải tổ)*. Ý tưởng chính đằng sau reification là đưa vào một đối tượng bổ trợ cẳng hạn như LocationStatement và liên hệ nó với từng phần trong ba phần của phát biểu ban đầu thông qua các thuộc tính chủ thể, vị từ và đối tượng.  
 ![Đồ thị *reification*](./pic/reification_graph_1.png)  
 - Trong ví dụ trước, chủ thể của *LocationStatement* sẽ là *BaronWayBuilding*, vị từ sẽ là *location* và đối tượng sẽ là Amsterdam. Sau đó, ta có thể dẫn tới phát biểu trong chủ thể của bộ ba khác điều đó xác định người tạo ra (creator).  
 - Việc tiếp cận này khá rườm rà này là cần thiết vì bộ ba chỉ nằm trong RDF; vậy nên ta không thể thêm một định danh trực tiếp vào một bộ ba. Do chi phí sửa đổi lớn, trong phiên bản mới hơn của RDF, khái niệm về các đồ thị được đặt tên đã được đưa ra. Ở đây, một định danh rõ ràng (một URL) được cấp cho một phát biểu hoặc một tập hợp những phát biểu. Mã định danh này sau đó có thể được tham chiếu trong bộ ba thông thường. Đây là một cơ chế đơn giản hơn để xác định các phát biểu cũng như đồ thị. Nói một cách đơn giản, một đồ thị được đặt tên cho phép ta khoanh tròn một tập hợp các phát biểu RDF và cung cấp cho các phát biểu này một mã định danh.  
 
-### **2.2.6 Đối phó với những dự đoán phong phú hơn**
+### 2.2.6 Đối phó với những dự đoán phong phú hơn
 - Ta có thể nghĩ rằng bộ ba *(x, P, y)* là một biểu thức logic *P(x, y)*, khi đó vị từ nhị phân (binary predicate) P liên hệ đối tượng x tới đối tượng y. Thực tế, RDF chỉ cung cấp vị từ nhị phân (các thuộc tính). Tuy nhiên, vài trường hợp ta có thể cần vị từ có nhiều hơn 2 đối số. May thay, các vị từ như vậy có thể mô phỏng bởi một số vị từ nhị phân.  
 Ví dụ như sau: broker(X, Y, Z) nghĩa là "X is broker in home sale between seller Y and purchaser Z".  
 Bây giờ ta cần thêm một tài nguyên phụ trợ mới *home-sale* và một vị từ nhị phân *broker*, *seller* và *purchaser*. Sau đó ta biểu diễn broker(X, Y, Z) như sau:  
@@ -140,8 +140,8 @@ purchaser(home-sale, Z)
 
 - Mặc dù vị từ ba đối số sẽ được viết ngắn gọn hơn, nhưng việc dùng các vị từ nhị phân sẽ đơn giản hóa mô hình dữ liệu tổng thể.  
 
-## **2.3 Cú pháp RDF**
-### **2.3.1 Turtle**
+## 2.3 Cú pháp RDF
+### 2.3.1 Turtle
 - Terse RDF Triple Language (Turtle) là một cú pháp dựa trên dạng văn bản cho RDF.  
 - File Turtle có đuôi là `.ttl`.  
 Ví dụ:  
@@ -161,7 +161,7 @@ Ví dụ:
 	<http://dbpedia.org/resource/Amsterdam>.
 ```  
 
-#### **2.3.1.1 Trực nghĩa**
+#### 2.3.1.1 Trực nghĩa
 - Chúng ta đã định nghĩa rằng phát biểu là thứ liên kết những tài nguyên lại với nhau. Như đã nói ở trên phát biểu còn có thể bao gồm cả trực nghĩa, nó là một atomic value trong RDF.  
 - Trong Turtle, ta biểu diễn trực nghĩa trong cặp nháy kép và kèm theo đó là kiểu dữ liệu.  
 - Kiểu dữ liệu cho chúng ta biết liệu chúng ta có nên diễn giải một giá trị với string, một ngày, số nguyên hay một kiểu dữ liệu khác.  
@@ -190,7 +190,7 @@ date with a time - "1982-08-30T11:24:00"^^<http://www.w3.org/2001/XMLSchema#date
 <http://dbpedia.org/resource/Amsterdam>.
 ```  
 
-#### **2.3.1.2 Viết tắt**
+#### 2.3.1.2 Viết tắt
 - Thông thường khi chúng ta định nghĩa một từ vựng, chúng ta cũng làm vậy với URI. Trong ví dụ phía trên, tài nguyên Baron Way Apartment và Baron Way Building đều cùng được định nghĩa tại URL http://www.semanticwebprimer.org/ontology/apartments.ttl. URL này định nghĩa tên không gian (namespace) của những tài nguyên. Turtle tận dụng những quy ước này để chop phép các URL được viết tắt. Nó cung cấp cú pháp @prefix để định nghĩa một cách viết tắt cho một tên không gian cụ thể.  
 **Ví dụ:** Ta có thể nói rằng swp là một từ viết tắt cho http://www.semanticwebprimer.org/ontology/apartments.ttl, từ viết tắt như vậy được gọi là *tên tiêu chuẩn* (qualified name). Và ta sẽ viết lại ví dụ trên sử dụng prefix.  
 ```Turtle
@@ -248,7 +248,7 @@ swp:BaronWayBuilding dbpedia-owl:location dbpedia:Amsterdam,
 
 #### 2.3.1.3 Đồ thị được đặt tên
 - Chúng ta đã nói đến khả năng tập trỏ đến một tập hợp các phát biểu. Trig là một Turtle extension cho phép ta thể hiện một khái niệm như vậy.  
-**Ví dụ: ** chúng ta có thể muốn nói rằng phát biểu của chúng ta về Baron Way Apartment được tạo ra bởi một người tên Frank, được định danh bằng URL "http://www.cs.vu.nl/frankh". Chúng ta làm điều này bằng cách đặt tập hợp phát biểu vào trong một ngoặc nhọn ({}) và cung cấp cho tập phát biểu đó một URL.  
+**Ví dụ:** chúng ta có thể muốn nói rằng phát biểu của chúng ta về Baron Way Apartment được tạo ra bởi một người tên Frank, được định danh bằng URL "http://www.cs.vu.nl/frankh". Chúng ta làm điều này bằng cách đặt tập hợp phát biểu vào trong một ngoặc nhọn ({}) và cung cấp cho tập phát biểu đó một URL.  
 ```Turtle
 @prefix swp: <http://www.semanticwebprimer.org/ontology/apartments.ttl>.
 @prefix dbpedia: <http://dbpedia.org/resource/>.
@@ -606,7 +606,7 @@ và ký hiệu vị từ (predicate symbols)
 &emsp;*item(x,l)* (trả về true nếu một phần tử có xuất hiện trong danh sách);  
 &emsp;*list(l)* (trả về true nếu *l* là một danh sách).  
   
-Danh sách được sử dụng để đại diện cho các vùng chứa (container) trong RDF. Chúng cần thiết để nắp bắt các ý nghĩa của các cấu trúc nhất định (chẳng hạn như cách ràng buộc về số lượng) trong các ngôn ngữ bản thể học phong phú hơn.  
+Danh sách được sử dụng để đại diện cho các vùng chứa (container) trong RDF. Chúng cần thiết để nắm bắt các ý nghĩa của các cấu trúc nhất định (chẳng hạn như cách ràng buộc về số lượng) trong các ngôn ngữ bản thể học phong phú hơn.  
 Hầu hết các tiên đề cung cấp thông tin có định kiểu. Ví dụ: *Type(subClassOf, Property)* nói rằng subClassOf là một thuộc tính (property).  
 Ta sử dụng logic vị từ một cách bình đẳng. Tên biến bắt đầu với dấu ?. Tất cả các tiên đề đều được định lượng một cách ngầm định.  
 
@@ -633,7 +633,7 @@ Trong ngôn ngữ của chúng ta có các hằng số *Class, Resource, Propert
 Cuối cùng, vị từ trong phát biểu RDF phải là một thuộc tính:  
 &emsp;*PropVal(?p, ?r, ?v) &rarr; Type(?p, Property)*  
   
-**Thuộc tính *type* **
+**Thuộc tính *type***
 
 *type* là một thuộc tính:  
 &emsp; *Type(type, Property)*  
@@ -673,7 +673,7 @@ Các kho chứa là các danh sách:
 Các kho chứa là túi (Bag) hoặc chuỗi (Sequence) hoặc lựa chọn (Alternative):  
 &emsp; *Type(?c, Container) &rarr; (Type(?c, Bag) &or; Type(?c, Seq) &or; Type(?c, Alt))*  
 Túi và chuỗi không giao nhau:  
-&emsp; *&not;(Type(?x, Bag) &or; Type(?x, Seq))*  
+&emsp; *&not;(Type(?x, Bag) &and; Type(?x, Seq))*  
 
 Với mỗi số tự nhiên *n &gt; 0*, tồn tại bộ chọn *_n* lựa chọn phần tử thứ *n* của một kho chứa. Nó là một thuộc tính chức năng  
 &emsp; *Type(_n, FuncProp)*  
@@ -710,7 +710,7 @@ Các công thức được suy ra:
 &emsp; *PropVal(domain, range, Property)*  
 &emsp; *PropVal(range, range, Class)*  
 &emsp; *PropVal(domain, domain, Property)*  
-&emsp; *PropVal(range, range, Class)*  
+&emsp; *PropVal(range, domain, Class)*  
   
 Như vậy, ta đã thực thể hóa ngữ nghĩa của RDF và RDFS. Phần mềm được trang vị những tri thức này có thể đưa ra những kết luận thú vị.  
 Ví dụ: cho phạm vi của *rents* là *ResidentialUnit*, biết rằng *ResidentailUnit* là lớp con của *Unit*, và *rents(JeffMeyer, BaronWayApartment)*, agent có thể tự động suy luận *Unit(BaronWayApartment)* sử dụng các ngữ nghĩa logic vị từ hoặc một trong các hệ thống chứng minh logic vị từ.  
@@ -720,29 +720,29 @@ Như đã nói, ngữ nghĩa tiên đề có thể được sử dụng để l�
 Ví lý do này, RDF cũng được cung cấp một ngữ nghĩa (và một hệ thống suy luận phù hợp và hoàn chỉnh cho ngữ nghĩa này) trực tiếp dưới dạng bộ ba RDF thay vì trình bày lại RDF dưới dạng logic bật nhất.  
 Hệ thống suy luận này bao gồm các quy tắc dạng:  
 &emsp; IF &emsp;&emsp; E chứa một số bộ ba nhất định  
-&emsp; THEN &emsp;&ensp; thêm vào E một số bộ ba bổ sung nhất định  
+&emsp; THEN &emsp; thêm vào E một số bộ ba bổ sung nhất định  
 (trong đó E là tập hợp của các bộ ba RDF tùy ý)  
   
 Ví dụ cơ bản:  
 &emsp; IF &emsp;&emsp; E chứa bộ ba *(?x, ?p, ?y)*  
-&emsp; THEN &emsp;&ensp; E cũng sẽ chứa bộ ra *(?p, rdf : type, rdf : property)*  
+&emsp; THEN &emsp; E cũng sẽ chứa bộ ba *(?p, rdf : type, rdf : property)*  
 điều này nói rằng bất kỳ tài nguyên *?p* nào được sử dụng như là thuộc tính trong bộ ba có thể được suy ra là thành viên của lớp rdf:Property.  
 Một ví dụ thú vị hơn:  
 &emsp; IF &emsp;&emsp; E chứa các bộ ba *(?u, rdfs : subClassOf, ?v)* và *(?v, rdfs : subClassOf, ?w)*  
-&emsp; THEN &emsp;&ensp; E cũng chứa bộ ba *(?u, rdfs : subClassOf, ?w)*  
+&emsp; THEN &emsp; E cũng chứa bộ ba *(?u, rdfs : subClassOf, ?w)*  
 tính bắc cầu của quan hệ lớp con.  
   
-Liên quan chặt chẽ là các quy tắc
+Liên quan chặt chẽ là các quy tắc  
 &emsp; IF &emsp;&emsp; E chứa các bộ ba *(?x, rdf : type, ?u)* và *(?u, rdfs : subClassOf, ?v)*  
-&emsp; THEN &emsp;&ensp; E cũng chứa bộ ba *(?x, rdf : type, ?v)*  
+&emsp; THEN &emsp; E cũng chứa bộ ba *(?x, rdf : type, ?v)*  
 định nghĩa cơ bản về ý nghĩa của rdfs:subClassOf.  
 
 Ví dụ cuối cùng thường gây bất ngờ với những người lần đầu nhìn vào RDF Schema:  
 &emsp; IF &emsp;&emsp; E chứa các bộ ba *(?x, ?p, ?y)* và *(?p, rdfs : range, ?u)*  
-&emsp; THEN &emsp;&ensp; E cũng chứa bộ ba *(?y, rdf : type, ?u)*  
+&emsp; THEN &emsp; E cũng chứa bộ ba *(?y, rdf : type, ?u)*  
 Quy tắc nói rằng bất kỳ tài nguyên ?y nào xuất hiện như là giá trị của thuộc tính ?p có thể suy ra đó là một phần tử trong phạm vi của ?p. Điều này chỉ ra rằng xác định phạm vị trong RDF Schema không được sử dụng để *hạn chế* phạm vi của thuộc tính, mà là để *suy luận* ra thành phần của phạm vi.  
   
-Tổng số tập hợp của những quy tắc đóng này không lớn hơn vài chục và có thể được thực hiện một cách hiệu quả mà không cần công nghe chứng minh định lý phức tạp.  
+Tổng số tập hợp của những quy tắc đóng này không lớn hơn vài chục và có thể được thực hiện một cách hiệu quả mà không cần công nghệ chứng minh định lý phức tạp.  
   
 
 ## 2.9 Tổng kết  
