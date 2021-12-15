@@ -1,5 +1,5 @@
-# **Chapter 1**
-# **The Semantic Web Vision**
+# Chapter 1
+# The Semantic Web Vision
 
 **Table of Content**
 - [1.1 Giới thiệu](#11-giới-thiệu)
@@ -16,8 +16,8 @@
 - [1.4 Tổng kết](#14-tổng-kết)
 ---
 
-## **1.1 Introduction**
-### **1.1.1 Motivation for the Semantic Web**
+## 1.1 Introduction
+### 1.1.1 Motivation for the Semantic Web
 - Tầm nhìn khái quát của "Mạng ngữ nghĩa" là: *Làm cho máy tính dễ dàng truy cập web hơn*.  
 - Máy tính đóng vai trò rất *hạn chế* trong trang web hiện nay: lập chỉ mục từ khóa, và đưa thông tin từ server đến clients, và chỉ có vậy.  
 - Những công việc thông minh (chọn lọc, kết hợp, tổng hợp, ...) đều được xử lý bởi người đọc.  
@@ -31,7 +31,7 @@ vì cố định các liên kết giống nhau cho tất cả các người dùn
 người dùng phải tạo ra một "mental copy-paste" (sao chép tinh thần) mỗi khi tìm kiếm thông tin ở một trang và muốn kết hợp với thông tin 
 ở trang khác.  
 
-### **1.1.2 Design Decisions for the Semantic Web**
+### 1.1.2 Design Decisions for the Semantic Web
 - **Mạng ngữ nghĩa** tuân theo các nguyên tắc thiết kế khác nhau, có thể tóm gọn lại như sau:  
 	1. Cung cấp dữ liệu có cấu trúc và bán câu trúc ở các định dạng chuẩn hóa trên web;  
 	2. Không chỉ với các bộ dữ liệu, mà cả các phần tử dữ liệu riêng lẻ ([data-element](https://en.wikipedia.org/wiki/Data_element)) 
@@ -41,7 +41,7 @@ dự định này.
 - Chúng ta sẽ đạt được bước tiến lớn đối với tầm nhìn của **Mạng ngữ nghĩa** khi mà chúng ta có thể xuất bản và liên kết với các bộ dữ 
 liệu có cấu trúc cơ sở.  
 
-### **1.1.3 Basic Technology for the Semantic Web**
+### 1.1.3 Basic Technology for the Semantic Web
 - Những nguyên tắc ở trên đã được chuyển về những công nghệ thực tế như sau:
 	1. Sử dụng *Đồ thị có nhãn** (labeled graphs) làm mô hình dữ liệu (data model) cho đối tượng và mối quan hệ của chúng, với đối 
 tượng là các node và các đường đi là mối quan hệ của chúng. RDF (Resource Description Framework) là phương thức chính được sử dụng để 
@@ -52,7 +52,7 @@ và mối quan hệ của chúng ở trong bộ dữ liệu (datasets). Và đi�
 của dữ liệu. Các hình thức như RDF Schema và Ngôn ngữ bản thể học Web (The Web Ontology Language - OWL) được sử dụng cho mục đích 
 này, một lần nữa sử dụng URI để đại diện cho các kiểu và thuộc tính của chúng.  
 
-### **1.1.4 From Data to Knowledge**
+### 1.1.4 From Data to Knowledge
 - Để có thể nắm bắt toàn bộ ngữ nghĩa của dữ liệu, các hình thức như là RDF Schema và OWL không chỉ là ngôn ngữ biểu diễn dữ liệu, mà con là *ngôn 
 ngữ biển diễn tri thức nhẹ* (lightweight knowledge representation languages). Chúng là "những logic" cho phép suy luận thêm thông tin từ các thông 
 tin đã được đưa ra.  
@@ -67,7 +67,7 @@ tin một số điều nhất định về dữ liệu đã phát hành.
 dự định của dữ liệu được phát hành. Bằng cách tinh chỉnh các Ontology, các giới hạn này có thể di chuyển tạm thời gần nhau, do đó xác định được chính xác hết 
 ngữ nghĩa dự định của dữ liệu, trong phạm vi yêu cần của cá trường hợp sử dụng.  
 
-### **1.1.5 The Web Architecture of the Semantic Web** 
+### 1.1.5 The Web Architecture of the Semantic Web
 - Trên web truyền thống, nôi dung của nó được phân phố cả về vị trí lẫn người sở hữu: các trang web liên kết với nhau thường nằm ở những máy chủ khác nhau và các 
 máy chủ này vị trí địa lý cũng khác nhau và được sở hữu bởi những nhóm khác nhau.  
 - *Bất kỳ ai cũng có thể tham khảo trang web của bất kỳ ai mà không cần phải thương lượng trước về quyền hoặc yêu cầu về địa chỉ hoặc định danh phù hợp để sử dung. 
@@ -75,7 +75,7 @@ Một cơ chế tương tự hoạt động trong Semantic Web: Bên thứ nhấ
 thứ ba có thể quyết định chú thích đối tượng của bên thứ nhất bằng một thuật ngữ do bên thứ hai xuất bản mà không cần xin phép một trong hai bên và trên thực tế, 
 một trong hai bên kia cũng không cần biết về điều đó. Chính sự phân tách này là bản chất của đặc tính giống như web của **Mạng ngữ nghĩa**.  
 
-### **1.1.6 How to Get There from Here**
+### 1.1.6 How to Get There from Here
 - Tất nhiên, cần có một số bước quan trọng để biến tầm nhìn và các quy tắc kiến trúc trên thành sự thật:  
 	1. Chúng ta cần đồng thuận về cú pháp tiêu chuẩn để đại diện cho dữ liệu và siêu dữ liệu (metadata).  
 	2. Chúng ta cần phải có đủ thỏa thuận về từ vựng siêu dữ liệu để chia sẻ ngữ nghĩa dự định của dữ liệu.  
@@ -85,8 +85,8 @@ của (W3C)[https://vi.wikipedia.org/wiki/W3C], nâng chúng lên thành các ti
 - Hàng nghìn từ vựng được phát hành bằng các định dạng này và sự hội tụ của các từ vựng này bắt đầu xảy ra, vừa là kết quả của công nghệ lập ánh xạ bản thể học tự động (automated ontology mapping technology) 
 vừa dưới áp lực của các nhu cầu xã hội và kinh tế. Và sự tăng trưởng của Linked Data Cloud đã dẫn đến hàng tỷ đối tượng và các mối quan hệ của chúng trở nên khả dụng một cách trực tuyến, bằng việc sử dụng các từ vựng và cú pháp được chia sẻ.  
 
-## **1.2 Semantic Web Technologies**
-### **1.2.1 Explicit Metadata**
+## 1.2 Semantic Web Technologies
+### 1.2.1 Explicit Metadata
 - Hiện tại, nội dung web được định dạng để phù hợp với người đọc, thay vì với những chương trình. Với con người, thông tin được trình một cách phù hợp, nhưng với máy thì tồn tại nhiều vướng mắc.    
 ```html
 <h1>Trung tâm vật lý trị liệu Agilitas</h1>
@@ -135,7 +135,7 @@ cấu trúc còn RDF tạo ra những phát biểu về những mẩu thông tin
 - Thuật ngữ *metadata* đề cập đến những thông tin như vậy: dữ liệu về dữ liệu. *Metadata* nắm bắt phần *ý nghĩa* của dữ liệu, và đó là thuật ngữ *ngữ nghĩa* 
 trong **Web ngữ nghĩa**.  
 
-### **1.2.2 Ontologies**
+### 1.2.2 Ontologies
 - Thuật ngữ *bản thể luận (ontology)* là tên của một lĩnh vực triết học, nghiên cứu về bản chất của sự tồn tại, nhánh của siêu hình học liên quan đến việc xác 
 định những thứ thực sự tồn tại và cách mô tả chúng. Ví dụ, nhận xét rằng thế giới được tạo thành từ các đối tượng cụ thể có thể nhóm lại thành các lớp trừu 
 tượng dựa trên các thuộc tính được chia sẻ.  
@@ -165,7 +165,7 @@ Ngoài ra, miền và phạm vi thuộc tính có thể được xác định.
 	- OWL là một ngôn ngữ mô tả từ vựng phong phú hơn để mô tả các thuộc tính và lớp, chẳng hạn như quan hệ giữa các lớp (ví dụ: tính rời rạc), số lượng (ví dụ: chính xác một), 
 đồng cấp, cách nhập phong phú hơn của các thuộc tính, đặc điểm của các thuộc tính (ví dụ: đối xứng), và các lớp được liệt kê.  
 
-### **1.2.3 Logic**
+### 1.2.3 Logic
 - Đầu tiên, logic cung cấp ngôn ngữ chính thức để diễn đạt tri thức.  
 - Thứ hai, logic cung cấp cho chúng ta dạng dễ hiểu của ngữ nghĩa: ý nghĩa của câu được xác định mà không cần sử dụng tri thức. Thường chúng ta nói về [kiến thức khai báo](https://trainingindustry.com/glossary/declarative-knowledge/#:~:text=Declarative%20knowledge%20refers%20to%20facts,their%20relation%20to%20each%20other.)(declarative knowledge) như sau: 
 Chúng ta mô tả những gì nắm giữ mà không quan tâm đến việc nó có thể được suy luận ra sao.  
@@ -182,14 +182,14 @@ thấp thành metasteps và con người gọi nó là bước lập luận đơ
 - Lời giải thích cũng cần thiết cho các hoạt động giữa các agent. Khi một vài agent xây dựng kết luận logic, những agent khác sẽ xác thực những bằng chứng, để xác định xem điều agent khác đưa ra có đúng hay không.  
 - Để logic trở nên hữu ích hơn trên web, nó phải có thể sử dụng được có thể dùng được cùng với các dữ liệu khác và phải có thể xử lý bằng máy. Do đó, việc biểu diễn kiến thức logic và chứng mình bằng ngôn ngữ web luôn hiện hữu. Các phương pháp tiếp cận ban đầu hoạt động ở cấp độ XML, nhưng trong tương lai, các quy tắc và chứng minh sẽ cần được biểu diễn ở cấp độ ngôn ngữ RDF và bản thể luận.  
 
-### **1.2.4 Mạng ngữ nghĩa với Trí tuệ nhân tạo**
+### 1.2.4 Mạng ngữ nghĩa với Trí tuệ nhân tạo
 - Như chúng ta đã nói, phần lớn những công nghệ để hiện thức hóa **Mạng ngữ nghĩa** đều được xây dựng dựa trên các hoạt động trong lĩnh vực của trí tuệ nhân tạo.  
 - Hiện thực hóa **Mạng ngữ nghĩa** không phụ thuộc vào trí thông minh ở mức độ con người.  
 - Trên **Mạng ngữ nghĩa**, các giải pháp từng phần hoạt động. Kể cả việc agent thông minh không thể đưa ra tất cả các kết luận mà người dùng có thể, agent đó vẫn có thể làm cho một trang web vượt trội nhưng trang web hiện tại.  
 - Nếu mục tiêu của AI là xây dựng một agent thông minh đạt đến tầm hiểu biết của con người (hoặc hơn), thì của **Mạng ngữ nghĩa** chỉ là hỗ trợ những hoạt động online thường ngày của người dùng.  
 - **Mạng ngữ nghĩa** sử dụng những công nghệ của AI và những tiến bộ trong những công nghệ đó sẽ dẫn tới một **Mạng ngữ nghĩa** tốt hơn. Nhưng không cần chờ đến khi AI có những tiến bộ vượt bậc, những công nghệ AI hiện tại đã đủ để thực hiện việc hiện thực hóa tầm nhìn của **Mạng ngữ nghĩa**.  
 
-## **1.3 A layered Approach**
+## 1.3 A layered Approach
 - Phát triển **Mạng ngữ nghĩa** tiến hành qua nhiều bước, mỗi bước sẽ xây dựng một lớp (layer) lên trên một cái khác.  
 - Bản chất của **Mạng ngữ nghĩa** là các công ty và người dùng phải xây dựng những công cụ, thêm nội dung và sử dụng nội dung đó.  
 - Trong việc xây dựng một lớp của **Mạng ngữ nghĩa** trên một lớp khác, hai quy tắc cần phải bám theo là:  
@@ -206,7 +206,7 @@ Lớp logic được sử dụng để nâng cao ngôn ngữ bản thể luận 
 - Cuối cùng lớp tin cậy (trust layer) sẽ xuất hiện thông quan việc sử dụng chữ ký số và các loại kiến thức khác, dựa trên các khuyến nghị của các agent đáng tin cậy hoặc các cơ quan xếp hạng và chứng nhận và người sử dụng. Đôi khi cụm từ "Web of trust" được sử dụng để chỉ ra rằng sự tin tưởng sẽ được tổ chức theo các phân tán và hỗn loạn như chính những trang web. Nằm ở đỉnh của cái bánh, niềm tin là một khái niệm cấp cao và quan trọng: web sẽ chỉ đạt được hoàn toàn tiềm năng khi người dùng tin tưởng vào hoạt động của nó (bảo mật) và vào chất lượng thông tin được cung cấp.  
 - "Layer cake" hiện tại giờ đã khá lỗi thời. Đặc biệt, một số lựa chọn thay thế cho lớp từ vựng bản thể luận (ontology vocabulary) đã xuất hiện. Ngoài ra, các ngôn ngữ quy tắc đã được xác định trên RDF bỏ qua lớp từ vựng bản thể luận; điều này đặc biệt đúng trong sự thay đổi gần cây từ cấu trúc ngữ nghĩa phong phú sang xử lý một lượng lớn dữ liệu (ngữ nghĩa). Do đó "Layer cake" được đưa vào đây để minh họa cách nhìn về **Mạng ngữ nghĩa**.  
 
-## **1.4 Summary**
+## 1.4 Summary
 - **Mạng ngữ nghĩa** nhằm cải thiện tình trạng hiện tại của World Wide Web;  
 - Ý tưởng chính là sử dụng thông tin web có thể xử lý bằng máy;  
 - Công nghệ chính bao gồn xuất bảng dữ liệu thành siêu dữ liệu rõ ràng, bản thể luận, logic và suy luận;  
