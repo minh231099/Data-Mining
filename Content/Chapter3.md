@@ -48,7 +48,7 @@ WHERE {
 Tương tự Turtle, từ khóa PREFIX biểu thị các chữ viết tắt cho các URL. Từ khóa SELECT chỉ ra những biến được quan tâm. Mẫu đồ thị được xuất hiện trong cặp dấu ngoặc nhọn ({}) sau từ khóa WHERE. Kết quả của truy vấn sẽ được trả về trong một tập hợp các ánh xạ được gọi là các *liên kết* biểu thị những phần từ nào tương ứng với biến nào. Mỗi hàng trong bảng là một kết quả hay liên kết. Vậy kết quả của truy vấn này sẽ là:  
 
 |?location|  
-|---------|  
+|:-------:|  
 |http://dbpedia.org/resources/Amsterdam.|  
 |http://dbpedia.org/resources/Netherlands.|  
 
@@ -78,10 +78,11 @@ WHERE {
 }
 ```  
 Nó sẽ trả về kết quả sau:  
-|?p|?o|  
-|--|--|  
+|?p |?o |  
+|:-:|:-:|  
 |swp:hasNumberOfBedrooms|3|  
 |swp:isPartOf|swp:BaronWayBuilding|  
+
 Một lần nữa mỗi hàng trong bảng sẽ là một kết quả tương ứng với mẫu đồ thị. Với tập dữ liệu khá nhỏ của ta, tất cả câu trả lời đều có thể được trả về dễ dàng. Tuy nhiên, ở bộ dữ liệu lớn hơn, ta không thể biết được có bao nhiêu kết quả hoặc truy vấn của ta có thể trả về cả bộ dữ liệu. Thật vậy, có thể dễ dàng viết truy vấn trả về một triệu bộ ba. Do đó, bạn nên hạn chế số lượng câu trả lời mà truy vấn trả về, đặc biệt là khi sử dụng điểm cuối công khai (public endpoint). Nó có thể dễ dàng sử lý bằng việc sử dụng từ khóa LIMIT.  
 ```SPARQL
 PREFIX swp: <http://www.semanticwebprimer.org/ontology/apartments.ttl#>.
@@ -149,7 +150,7 @@ WHERE {
 ```  
 Kết quả:  
 |?apartment|  
-|----------|  
+|:--------:|  
 |swp:BaronWayApartment|  
 
 Ít hơn, nhỏ hơn và bằng đều được hỗ trợ cho các kiểu dữ liệu số (ví dụ như integer, decimal) và cả date/time/ SPARQL cũng cho phép lọc trên các chuỗi (string).  
@@ -216,7 +217,7 @@ WHERE {
 ```  
 Kết quả của truy vấn là:  
 |?apartment|?label|  
-|----------|------|  
+|:--------:|:----:|  
 |swp:BaronWayApartment|Baron Way Apartment for Rent|  
 |swp: FloridaAveStudio||  
 
@@ -251,8 +252,8 @@ ORDER BY DESC(?bedrooms)
 ```  
 Kết quả trả về sẽ là:  
 |?apartment|?bedrooms|  
-|----------|---------|  
-|swp:BaronWayApartment|3|
+|:--------:|:-------:|  
+|swp:BaronWayApartment|3|  
 |swp:FloridaAveStudio|1|  
 
 DESC nghĩa là giảm dần, ngược lại, ASC sẽ là tăng dần. Ngoài ra, việc sắp xếp một chuỗi hay url cũng được thực hiện theo thứ tự trong bảng chữ cái.  
@@ -272,6 +273,7 @@ Nó sẽ trả về:
 |?avgNumRooms|  
 |:----------:|  
 |2|  
+
 Hàm tổng hợp được kết hợp với từ khóa AS để biểu thị biến trong tập kết quả. Chúng ta không bị giới hạn về việc áp dụng những hàm tổng hợp này trên toàn bộ bộ kết quả. Ta cũng có thể tổng hợp cho các nhóm cụ thể bằng việc sử dụng GROUP BY.  
 SPARQL do đó cung cấp các cơ thế mạnh mẽ để tổ chức kết quả theo cách phù hợp nhất với ứng dụng hiện có.  
 
