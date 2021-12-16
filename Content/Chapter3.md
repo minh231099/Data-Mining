@@ -1,12 +1,16 @@
 # Chapter 3
 # Truy Vấn Mạng Ngữ Nghĩa (Querying the Semantic Web)
 
-**Table of Content**
+**Table of Content**  
 - [**3.1 Cơ sở hạ tầng SPARQL**](#31-cơ-sở-hạ-tầng-sparql)  
 - [**3.2 Khái niệm cơ bản: Mẫu phù hợp**](#32-khái-niệm-cơ-bản-mẫu-phù-hợp)  
 - [**3.3 Bộ lọc**](#33-bộ-lọc)  
 - [**3.4 Các cấu trúc để xử lý với một Thế Giới Mở**](#34-các-cấu-trúc-để-xử-lý-với-một-thế-giới-mở)  
-- [**3.5 Tổ chức các bộ kết quả**](#35-tổ-chức-các-bộ-kết-quả)
+- [**3.5 Tổ chức các bộ kết quả**](#35-tổ-chức-các-bộ-kết-quả)  
+- [**3.6 Các hình thức truy vấn khác của SPARQL**](#36-các-hình-thức-truy-vấn-khác-của-sparql)  
+- [**3.7 Lược đồ truy vấn**](#37-lược-đồ-truy-vấn)  
+- [**3.8 Thêm một thông tin bằng SPARQL Update**](#38-thêm-một-thông-tin-bằng-SPARQL-update)  
+- [**3.9 Làm theo nguyên tắc mũi của bạn**](#39-làm-theo-nguyên-tắc-mũi-của-bạn)  
 ---  
 
 ## 3.1 Cơ sở hạ tầng SPARQL
@@ -18,7 +22,7 @@ Khi đã có các cơ sở hạ tầng này chúng ta có thể bắt đầu vi�
 
 ## 3.2 Khái niệm cơ bản: Mẫu phù hợp
 Ở chương trước, RDF mô tả về căn hộ Baron Way và vị trí của nó:  
-```turtle
+```Turtle
 @prefix swp: <http://www.semanticwebprimer.org/ontology/apartments.ttl#>.
 @prefix dbpedia: <http://dbpedia.org/resource/>.
 @prefix dbpedia-owl: <http://dbpedia.org/ontology/>.
@@ -277,7 +281,127 @@ Nó sẽ trả về:
 Hàm tổng hợp được kết hợp với từ khóa AS để biểu thị biến trong tập kết quả. Chúng ta không bị giới hạn về việc áp dụng những hàm tổng hợp này trên toàn bộ bộ kết quả. Ta cũng có thể tổng hợp cho các nhóm cụ thể bằng việc sử dụng GROUP BY.  
 SPARQL do đó cung cấp các cơ thế mạnh mẽ để tổ chức kết quả theo cách phù hợp nhất với ứng dụng hiện có.  
 
+## 3.6 Các hình thức truy vấn khác của SPARQL
+Đến nay, ta đã tập trung vào việc lựa chọn những giá trị nhất định từ một bộ của RDF. SPARQL cũng hỗ trợ vài hình thức khác của các truy vấn. Hai truy vấn được sử dụng phổ biến bên lạnh SELECT là ASK và CONSTRUCT.  
+Hình thức truy vấn ASK đơn giản là kiểm tra xem liệu mẫu đồ thị có tồn tại trong bộ dữ liệu không thay vì trả về một kết quả. Ví dụ, truy vấn dưới đây sẽ trả về *true*.  
+```SPARQL
+PREFIX swp: <http://www.semanticwebprimer.org/ontology/apartments.ttl#>.
+PREFIX dbpedia: <http://dbpedia.org/resource/>.
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>.
 
+ASK ?apartment
+WHERE {
+	?apartment swp:hasNumberOfBedrooms 3.
+}
+```  
+
+Các truy vấn ASK được sử dụng bởi vì chúng tính toán nhanh hơn tìm toàn bộ bộ kết quả.  
+Hình thức truy vấn COUNSTRUCT được sử dụng để lấy ra một đồ thị RDF từ một bộ RDF lớn hơn. Do đó, ta có thể truy vấn một triple store và lấy ra một đồ thị RDF chứ không phải một danh sách các liên kết biến. Ví dụ, ta có thể tạo một đồ thị với có nhãn là "big apartments" với những các có hơn 2 phòng ngủ.  
+```SPARQL
+PREFIX ex: <http://www.example.org/>.
+PREFIX dbpedia: <http://dbpedia.org/resource/>.
+PREFIX geo: <http://www.geonames.org/ontology#>.
+
+CONSTRUCT {?apartment swp:hasNumberOfBedrooms ?bedrooms. ?apartment swp:isBigApartment true.}
+WHERE{
+	?apartment swp:hasNumberOfBedrooms ?bedrooms.
+}
+FILTER (?bedrooms > 2)
+```  
+Nó sẽ trả về đồ thị dưới đây:  
+```Turtle
+@prefix swp: <http://www.semanticwebprimer.org/ontology/apartments.ttl#>.
+@prefix dbpedia: <http://dbpedia.org/resource/>.
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+swp:BaronWayApartment swp:hasNumberOfBedrooms 3.
+swp:BaronWayApartment swp:isBigApartment true.
+```  
+Các truy vấn CONSTRUCT thường được sử dụng để phiên dịch giữa các lược đồ bằng cách truy vấn các mẫu cụ thể và thay thế trong các thuộc tính từ lược đồ được nhắm tới.  
+
+## 3.7 Lược đồ truy vấn
+Một điều quan trọng rằng, vì thông tin lược đồ được biểu diễn bằng RDF, SPARQL có thể được sử dụng để truy vấn thông tin về chính lược đồ. Ví dụ, tiếp theo sẽ là một phần của bản thể luận nhà ở từ chương trước.  
+```Turtle
+@prefix swp: <http://www.semanticwebprimer.org/ontology/apartments.ttl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+swp:Unit rdf:type rdfs:Class.
+
+swp:ResidentialUnit rdf:type rdfs:Class.
+swp:ResidentialUnit rdfs:subClassOf swp:Unit.
+
+swp:Apartment rdf:type rdfs:Class.
+swp:Apartment rdfs:subClassOf swp:ResidentialUnit.
+```  
+
+Sử dụng SPARQL, ta có thể xác định Residential Units trong cơ bộ dữ liệu bằng cách truy vấn cả dữ liệu instance và lược đồ cùng một lúc:  
+```SPARQL
+PREFIX swp: <http://www.semanticwebprimer.org/ontology/apartments.ttl#>.
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+SELECT ?apartment
+WHERE{
+	?apartment a ?unitType.
+	?unitType rdfs:subClassOf swp:ResidentialUnit.
+}
+```  
+Ở đây, ta sử dụng một cách viết tắt tương tự như trong Turtle, *a* nghĩa là rdf:type. Khả năng truy vấn đến lược đồ vô cùng quan trọng với SPARQL và RDF, nó cho phép ta không chỉ lấy thông tin mà còn truy vấn đến ngữ nghĩa của thông tin.  
+
+## 3.8 Thêm một thông tin bằng SPARQL Update
+Như đã đề cập ở 3.1, SPARQL cũng định nghĩa một phương thức để cập nhật nội dung của một triple store. Đó là phương thức SPARQL Update. Về bản chất, nó thêm một loạt từ khóa mới vào SPARQL cho phép chèn (insert), tải (load), và xóa (delete) các bộ ba.  
+  
+**Chèn và Tải các bộ ba:* Chèn một phát biểu rằng Luxury Apartment là một lớp con của Apartment. Nó sẽ thêm một bộ ba vào bất kỳ nội dung nào nằm trong triple store.  
+```SPARQL
+PREFIX swp: <http://www.semanticwebprimer.org/ontology/apartments.ttl#>.
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+INSERT DATA
+{
+	swp:LuxuryApartment rdfs:subClassOf swp:Apartment.
+}
+```  
+
+Lưu ý rằng bản chất dữ liệu cũng chỉ là cú pháp Turtle.  
+Nếu bạn có một file lớn chứa RDF có sẵn trên web, bạn có thể tải nó vào một triple store bằng câu lệnh sau:  
+```SPARQL
+LOAD <http://example.com/apartment.rdf>
+```  
+  
+**Xóa các bộ ba:** Có nhiều cách để xóa bộ ba từ một triple store. Một là xác định chính xác bộ ba bạn muốn xóa bằng từ khóa DELETE DATA. Xóa một bộ ba sẽ như sau:  
+```SPARQL
+PREFIX swp: <http://www.semanticwebprimer.org/ontology/apartments.ttl#>.
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+DELETE DATA
+{
+	swp:LuxuryApartment rdfs:subClassOf swp:Apartment.
+}
+```  
+
+Với hình thức này sẽ không có biến được truyền vào và tất cả bộ ba phải được xác định rõ ràng.  
+Một hình thức linh hoạt hơn, là sử dụng cấu trúc DELETE WHERE. Nó xóa các bộ ba tương ứng với mẫu đồ thị được đưa ra. Các câu lệnh dưới đây sẽ xóa tất cả các bộ ba chứa thông tin về các căn hộ với nhiều hơn 2 phòng ngủ.  
+
+```SPARQL
+PREFIX swp: <http://www.semanticwebprimer.org/ontology/apartments.ttl#>.
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+WHERE{
+?apartment swp:hasNumberOfBedrooms ?bedrooms.
+	FILTER (?bedrooms > 2)
+}
+```  
+
+Trong cả 2 trường hợp, nếu mẫu không phù hợp hoặc các bộ ba không nằm trong triple store thì không có gì xảy ra cả.  
+Cuối cùng, để xóa toàn bộ các nội dung của một triple store cấu trúc CLEAR được sử dụng như sau:  
+```SPARQL
+CLEAR ALL
+```  
+
+SPARQL Update cung cấp vài cấu trúc khác để quản lý các phần của triple store.  Các thao tác cập nhật thực sự hữu ích nếu ta thêm dần các dữ liệu vào triple store.  
+
+## 3.9 Làm theo nguyễn tắc mũi của bạn
 
 
 
