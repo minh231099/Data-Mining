@@ -1,8 +1,7 @@
-# **Chapter 2**
-# **Describing Web Resources**
-# **RDF**
+# Chapter 2
+# Describing Web Resources: RDF
 
-# **Table of contents**
+**Table of contents**
 - [**2.1 Giới thiệu**](#21-giới-thiệu)  
 - [**2.2 RDF: Mô hình dữ liệu**](#22-rdf-mô-hình-dữ-liệu)  
 	- **2.2.1 Tài nguyên**  

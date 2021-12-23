@@ -11,6 +11,7 @@
 - [**3.7 Lược đồ truy vấn**](#37-lược-đồ-truy-vấn)  
 - [**3.8 Thêm một thông tin bằng SPARQL Update**](#38-thêm-một-thông-tin-bằng-SPARQL-update)  
 - [**3.9 Làm theo nguyên tắc mũi của bạn**](#39-làm-theo-nguyên-tắc-mũi-của-bạn)  
+- [**3.10 Tổng kết**](#310-tổng-kết)  
 ---  
 
 ## 3.1 Cơ sở hạ tầng SPARQL
@@ -401,7 +402,18 @@ CLEAR ALL
 
 SPARQL Update cung cấp vài cấu trúc khác để quản lý các phần của triple store.  Các thao tác cập nhật thực sự hữu ích nếu ta thêm dần các dữ liệu vào triple store.  
 
-## 3.9 Làm theo nguyễn tắc mũi của bạn
+## 3.9 Làm theo nguyễn tắc mũi thuyền của bạn
+SPARQL cung cấp các cơ sở để truy vấn và cập nhật triple store. Nhưng làm cách nào để triple store được lưu trữ? Như đã đề cập dến trước đây, nhiều nhà cung cấp dữ liệu cung cấp dữ liệu thông qua các điểm cuối SPARQL. Tuy nhiên, những nhà cung cấp những liệu khác chỉ cung cấp dữ liệu của họ dưới dạng Dữ liệu được liên kết (Linked Data). Tức là, dữ liệu RDF được cung cấp dưới dạng tệp trên web hoặc được nhúng trong các trang web. Chúng ta có thể chèn các bộ ba này vào triple store cục bộ của mình. Tuy nhiên, Mạng Ngữ Nghĩa cho phép bất kỳ nhà cung cấp nào mô tả thông tin của họ sử dụng tài nguyên và thông tin khác trên web. Trong những trường hợp này, nguyên tắc mũi thuyền có thể áp dụng: Đưa ra 1 URL trỏ đến một vài RDF, ta có thể tham chiếu URL đó và tải dữ liệu tương ứng. Ta cứ làm như vậy cho đến khi có đủ bộ ba để trả lời truy vấn được đưa ra.  
+Một vài công cụ truy vấn như [SQUIN](http://squin.sourceforge.net/index.shtml) triển khai tính năng này. Tất nhiên, phiên bản mới nhất của SPARQL có chứa các lệnh cho truy vấn liên kết như vậy. Tuy nhiên, nhưng truy vấn liên kết đó thường tốn nhiều thời gian vì dữ liệu phải được thu thập tại thời điểm truy vấn.  
+
+## 3.10 Tổng kết
+Trong chương này, ta đã giới thiệu về SPARQL, cả phần truy vấn và cập nhật của nó, cũng như các cơ sở hạ tầng cơ bản hỗ trợ SPARQL.  
+- SPARQL lựa chọn thông tin bằng cách ánh xạ với mẫu đồ thị, và cung cấp phương thức để lọc dựa trên cả so sánh số và chuỗi.  
+- Các truy vấn SPARQL đi theo một cú pháp tương tự với Turtle.  
+- Cả dữ liệu và lược đồ đều có thể được truy vấn sử dụng SPARQL.  
+- UNION và OPTIONAL là cấu trúc cho phép SPARQL dễ tương tác hơn với thế giới mở.  
+- SPARQL Update cung cấp cơ chế để cập nhật và xóa thông tin từ triple stores.  
+
 
 
 
