@@ -8,7 +8,7 @@
 	- **4.2.2 Ngữ nghĩa học chính thức**  
 	- **4.2.3 Sự thể hiện**  
 	- **4.2.4. Hỗ trợ suy luận**  
-- [**4.3 Khả năng tương thích của OWL2 với RDF/RDFS**](#43-khả-năng-tương-thích-của-owl2-với-rdf/rdfs)  
+- [**4.3 Khả năng tương thích của OWL2 với RDF/RDFS**](#43-khả-năng-tương-thích-của-owl2-với-rdfrdfs)  
 	- **4.3.1 Hai ngữ nghĩa**  
 	
 ---
