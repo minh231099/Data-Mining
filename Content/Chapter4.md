@@ -11,6 +11,9 @@
 - [**4.3 Khả năng tương thích của OWL2 với RDF/RDFS**](#43-khả-năng-tương-thích-của-owl2-với-rdfrdfs)  
 	- **4.3.1 Hai ngữ nghĩa**  
 - [**4.4 Ngôn ngữ OWL**](#44-ngôn-ngữ-owl)  
+	- **4.4.1 Cú pháp**  
+	- **4.4.2 Những tài liệu bản thể học**  
+	- **4.4.3 Các kiểu thuộc tính**  
 	- 
 ---
 # 4.1 Giới thiệu
@@ -93,10 +96,10 @@ Một trong những mục đích chính đằng sau kiến trúc phân lớp c�
 
 Phần này giới thiệu về các nguyên mẫu ngôn ngữ của OWL2. Do có mối liên hệ chặt chẽ với logic hình thức, nên việc sử dụng một số thuật ngữ liên quan sẽ rất thuận tiện:  
 - Trong OWL2, các thành viên của các lớp thường được gọi là *các cá thể (individuals)* hơn là *các instance*, nhưng ta sẽ sử dụng cả hai thuật ngữ luân phiên.  
-- Khi chúng ta phát biểu rằng tài nguyên nào đó thuộc một kiểu nhất định, ta gọi đó là một *xác nhận (assertion)*.  
+- Khi chúng ta phát biểu rằng tài nguyên nào đó thuộc một kiểu nhất định, ta gọi đó là một *khẳng định (assertion)*.  
 &ensp; Ví dụ:  
 &ensp; *:roger_federer rdf:type :Person.*  
-&ensp; là một *xác nhận lớp* liên kết *cá thể* :roger federer với lớp của nó.  
+&ensp; là một *khẳng định lớp* liên kết *cá thể* :roger federer với lớp của nó.  
 - Khi ta kết hợp các lớp, các thuộc tính và instance, chúng sẽ tạo thành *các biểu thức (expressions)*. Ví dụ:  
 &ensp; *_:x rdf:type owl:Class;*  
 &ensp; *&emsp; owl:unionOf (:Man :Woman).*  
@@ -107,7 +110,97 @@ Phần này giới thiệu về các nguyên mẫu ngôn ngữ của OWL2. Do c�
 &ensp; *&emsp; owl:unionOf (:Man :Woman).*  
 &ensp; là một *tiên đề* lớp tương đương phát biểu rằng lớp :Person là tương đương kết hợp ta mô tả ở dưới. Các tiên đề lớp đôi khi được gọi là *các hạn chế*, vì chúng rằng buộc tập hợp của các cá thể thứ có thể là một thành viên của một lớp.  
 
+Cần lưu ý rằng OWL2 về cơ bản là một ngôn ngữ để mô tả các tập hợp sự vật. Những tập hợp này được gọi là 'các lớp'. Mỗi một phát biểu ta tạo ra về một lớp trong OWL2 đều nhằm phân biệt lớp đó với tập hợp tất cả sự vật.  
 
+## 4.4.1 Cú pháp
+OWL2 xây dựng dựa trên RDF và RDF Schema do đó có thể được diễn đạt bằng việc sử dụng tất cả các cú pháp RDF hợp lệ. Tuy nhiên, có rất nhiều cú pháp dành cho OWL2, mỗi cái có một lợi ích và một nhược điểm riêng:  
+- **Functionnal-Style Syntax**&emsp;Cú pháp này liên quan chặt chẽ đến cấu trúc chính thức của những bản thể học. Nó được sử dụng trong tài liệu đặc tả ngôn ngữ, trong những định nghĩa các ngữ nghĩa của các bản thể học OWL2, ánh xạ từ và tới các cú pháp RDF và các cấu hình khác nhau của OWL2. Chúng gọn nhẹ và dễ đọc hơn những cú pháp khác. Ví dụ, giới hạn lớp phía trên có thể được viết với cú pháp này như sau:  
+&emsp;*EquivalentClasses( :Person ObjectUnionOf( :Man :Woman))*  
+
+- **OWL/XML**&emsp;Đây là một cú pháp XML cho OWL2 nó không tuân theo quy tắc RDF, nhưng ánh xạ chặt chẽ với functional-style syntax. Lợi ích chính của cú pháp này là nó cho phép ta tương tác với những bản thể học sử dụng các công cụ soạn thảo XML tiêu chuẩn sẵn có. Ví dụ, cú pháp OWL/XML của tiên đề lớp tương đương là:  
+&emsp;```xml
+<EquivalentClasses>
+	<Class abbreviatedIRI=":Person"/>
+	<ObjectUnionOf>
+		<Class IRI="#Man"/>
+		<Class IRI="#Woman"/>
+	</ObjectUnionOf>
+</EquivalentClasses>
+```  
+
+- **Manchester Syntax**&emsp;Cú pháp này được thiết kế để con người có thể đọc được. Nó là cú pháp được sử dụng trong giao diện người dùng của phần lớn các phần mềm editor bản thể học như Protégé.  
+&emsp; Class:Person  
+&emsp; EquivalentTo: Man or Woman  
+
+Ngoài những cú pháp này, tất cả cú pháp RDF có thể được sử dụng cho OWL.  
+
+## 4.4.2 Những tài liệu bản thể học
+Khi sử dụng cú pháp Turtle, những tài liệu bản thể học OWL2 hoặc *bản thể học*, tương tự như một tài liệu RDF. Các bản thể học OWL2 đem lại tối thiểu các tên không gian sau đây:  
+*@prefix owl: <http://www.w3.org/2002/07/owl#>.*  
+*@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.*  
+*@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.*  
+*@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.*  
+
+Một bản thể học OWL2 bắt đầu với một tập hợp các khẳng định cho mục đích quản lý. Những khẳng định này giới thiệu một tên không gian cơ sở, bản thể học, tên của nó, có thể là bình luận, quản lý phiên bản và khai báo những bản thể học khác. Ví dụ như:  
+```Turtle
+@prefix : <http://www.semanticwebprimer.org/ontologies/apartments.ttl#>.
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/>.
+@prefix dbpedia: <http://dbpedia.org/resource/>.
+@base <http://www.semanticwebprimer.org/ontologies/apartments.ttl> .
+
+<http://www.semanticwebprimer.org/ontologies/apartments.ttl>
+	rdf:type owl:Ontology;
+	rdfs:label "Apartments Ontology"^^xsd:string;
+	rdfs:comment "An example OWL2 ontology"^^xsd:string;
+	owl:versionIRI <http://www.semanticwebprimer.org/ontoligies/apartments.ttl#1.0>;
+	owl:imports <http://dbpedia.org/ontology/>;
+	owl:imports <http://dbpedia.org/resource/>.
+```  
+
+- **Imports**&emsp;Chỉ một trong những khẳng định này có ảnh hưởng đến ý nghĩa logic của bản thể học: *owl:imports* trỏ vào những bản thể học khác có tiên đề là một phần của bản thể học hiện tại. Bản thể học apartments của ta khai báo tất cả các tiên đề được định nghĩa trong bản thể học DBPedia, hay tất cả mọi thứ trong DBPedia. Điều này ngay lập tức làm nổi bật một trong những vấn đề với *owl:imports* để có thể sử dụng một số thông tin trong DBPedia, ta phải nhập tất cả 672 triệu bộ ba được mô tả trong nó.  
+&emsp;Khi những tên không gian chỉ được sử dụng cho việc phân biệt, các bản thể học được khai báo cung cấp những định nghĩa có thể được sử dụng. Điển hình là một bản thể học chứa một phát biểu khai báo cho tất cả tên không gian mà nó sử dụng, nhưng nó có thể khai báo các bản thể học bổ sung - ví dụ, các bản thể học cung cấp các định nghĩa mà không đưa ra bất kỳ một cái tên mới này. Thuộc tính *owl:imports* có *tính bắc cầu*; nếu một bản thể học *O<sub>i</sub>* khai báo bản thể học O<sub>j</sub> và bản thể học O<sub>j</sub> khai báo bản thể học O<sub>k</sub> thì bản thể học O<sub>i</sub> cũng sẽ khai báo bản thể học O<sub>k</sub>.  
+
+## 4.4.3 Các kiểu thuộc tính
+Ta đã đề cập ở trước, OWL2 phân biệt hai kiểu thuộc tính: *object properties (Các thuộc tính đối tượng)* và *datatype properties (các thuộc tính kiểu dữ liệu)*. Trên thực tế, có một số đặc điểm của thuộc tính mà các loại bổ sung được cung cấp bởi OWL2. Ở phần này, ta sẽ nói ngắn gọn về từng loại:  
+- **Object Properties (Thuộc tính đối tượng)**&emsp;Những thuộc tính này liên kết những cá thể với những cá thể khác. Ví dụ là :rents và :livesln:  
+```Turtle
+:rents	rdf:type 	owl:ObjectProperty;
+	rdf:domain	:Person;
+	rdfs:range	:Apartment;
+	rdfs:subPropertyOf :livesln.
+```  
+
+- **Datatype Properties (Thuộc tính kiểu dữ liệu)**&emsp;Những thuộc tính liên kết các đối tượng với những giá trị trực nghĩa có kiểu dữ liệu nhất định. Ví dụ là :name và :age:  
+```Turtle
+:age	rdf:type 	owl:ObjectProperty;
+	rdfs:range	xsd:nonNegativeInteger.
+```  
+
+Tương tự như RDF, OWL2 cho phép sử dụng những kiểu dữ liệu XML Schema để chỉ ra những kiểu của một trực nghĩa hoặc xác định phạm vi của một thuộc tính kiểu dữ liệu. Những kiểu dữ liệu được người dùng định nghĩa có thể được xác định trong một XML schema và sau đó được sử dụng trong một bản thể luận OWL2.  
+Do những hạn chế trong ngữ nghĩa trực tiếp, trong số các loại thuộc tính sau, chỉ loại thuộc tính chức năng có thể được gán cho các thuộc tính kiểu dữ liệu trong OWL2DL.  
+
+- **Annotation Properties (Thuộc tính chú thích)**&emsp;Thuộc tính chú thích là các thuộc tính không mang bất kỳ một ý nghĩa nào theo nghĩa trực tiếp của OWL2 DL. Chúng được bỏ qua bở một trình suy luận DL. Tuy nhiên, chúng sẽ được tính đến bở các trình suy luận RDF Schema và OWL2 Full. Các thuộc tính chú thích thường được sử dụng để thêm nhãn, nhận xét hoặc giải thích có thể đọc được vào bản thể học, lớp, thuộc tính và cá thể OWL2.  
+```Turtle
+:label	rdf:type	owl:AnnotationProperty.
+	rdfs:range	rdf:PlainLiteral.
+	rdfs:subPropertyOf rdf:label
+:Apartment	:label	"Apartment"@en,
+			"Apparrtement"@nl.
+```  
+&ensp;Có một số điều xảy ra ở ví dụ trên. Chúng ta đầu tiên khai báo thuộc tính :label thuộc loại owl:AnnotationProperty với phạm vi rdf:PlainLiteral. Đó là một kiểu dữ liệu RDF đặc biệt cho văn bản ngôn ngữ tự nhiên - nghĩa là, các trực nghĩa có thể có một thẻ ngôn ngữ. Hơn nữa, ta định nghĩa thuộc tính :label trở thành một thuộc tính con của rdf:label và sau đó ta đưa ra ba label cho lớp :Apartment bằng Tiếng Anh và Tiếng Hà Lan.  
+&ensp;Trong trường hợp chung, các thuộc tính chú thích sẽ có các giá trị theo trực nghĩa, nhưng chúng cũng có thể được sử dụng để liên quan đến các tài nguyên không phải là chữ.  
+
+- **Top và Bottom Properties (Thuộc tính trên dưới)**&emsp;Tất cả thuộc tính đối tượng trong OWL2 là một thuộc tính con của owl:topObjectProperty. Thuộc tính được định nghĩa như là một thuộc tính liên kết tất cả các cá thể trong bản thể học. Ngược lại, owl:bottomObjectProperty là một thuộc tính liên kết các bất cá thể. Tương tự, owl:topDataProperty liên kết tất cả các cá thể tới mọi giá trị trực nghĩa có thể và owl:bottomDataProperty liên kết bất cả thế tới mọi giá trị trực nghĩa.  
+
+- **Transitive Properties (Thuộc tính bắc cầu)**&emsp;Từ những trao đổi về rdfs:subClassOf, ta biết rằng mối quan hệ này có *tính bắc cầu*; mỗi lớp là một lớp con của tất cả các lớp cha của lớp cha trực tiếp của nó. Rõ ràng có những quan hệ khác cũng có tính bắc cầu, chẳng hạn như :isPartOf hoặc :isCheperThan. Ta có thể định nghĩa một thuộc tính bắc cầu như sau:  
+```Turtle
+:isPartOf	rdf:type	owl:ObjectProperty;
+	rdf:type	owl:TransitiveProperty.
+```  
+
+|Khi nào là một thuộc tính hỗn hợp?|
+|---|
+|- Top và Bottom Properties đều là những thuộc tính hỗn hợp  - Bất kỳ thuộc tính nào tự có tính bắc cầu hoặc có thuộc tính nghịch đảo là thuộc tính bắc cầu  - Bất kỳ thuộc tính nào có một thuộc tính con nghịch đảo hoặc một thuộc tính con mà nghịch đảo của nó có tính bắc  - Bất kỳ thuộc tính nào là thuộc tính cha của một chuộc thuộc tính, hoặc là một thuộc tính đảo ngược của một thuộc tính của một thuộc tính cha của một chuỗi thuộc tính  - Bất kỳ thuộc tính là một thuộc tính tương đương với một trong những thuộc tính trên, hoặc là một thuộc tính cha của một thuộc tính tương đương với một trong những thuộc tính trên.  Thuộc tính tổng hợp đôi khi được gọi là vai trò phức hợp hoặc thuộc tính không đơn giản.|  
 
 
 
