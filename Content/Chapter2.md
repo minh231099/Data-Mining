@@ -109,7 +109,7 @@ Ta sẽ viết thành:
 
 ### 2.2.4 Đồ thị
 - Chúng ta cũng có thể viết cùng một phát biểu dưới dạng đồ thị.  
-![Đồ thị ví dụ 1](./pic/RDF_graph_1.png)
+![Đồ thị ví dụ 1](../pic/RDF_graph_1.png)
 
 - Những nốt được gán nhãn được kết nối bởi các đường được gán nhãn. Các đường có hướng từ chủ thể phát biểu đến đối tượng phát biểu, với nhãn trên đường là thuộc tính của phát biểu.  
 - Nhãn trên các nốt là định danh của chủ thể và đối tượng.  
@@ -125,7 +125,7 @@ Ta sẽ viết thành:
 ### 2.2.5 Trỏ tới những Phát biểu và Đồ thị
 - Đôi khi rất hữu ích khi có thể trỏ tới những phát biểu cụ thể và những phần của đồ thị, chẳng hạn như khi ấn định mức độ tin tưởng vào một phát biểu hoặc xác định nguồn gốc của phát biểu. Ví dụ như: ta muốn nói rằng phát biểu về vị trí của Baron Way Building được tạo ra bởi một người tên Frank. RDF cung cấp hai cơ chế để làm điều này.  
 - Cái thứ nhất được gọi là *reification(cải tổ)*. Ý tưởng chính đằng sau reification là đưa vào một đối tượng bổ trợ cẳng hạn như LocationStatement và liên hệ nó với từng phần trong ba phần của phát biểu ban đầu thông qua các thuộc tính chủ thể, vị từ và đối tượng.  
-![Đồ thị *reification*](./pic/reification_graph_1.png)  
+![Đồ thị *reification*](../pic/reification_graph_1.png)  
 - Trong ví dụ trước, chủ thể của *LocationStatement* sẽ là *BaronWayBuilding*, vị từ sẽ là *location* và đối tượng sẽ là Amsterdam. Sau đó, ta có thể dẫn tới phát biểu trong chủ thể của bộ ba khác điều đó xác định người tạo ra (creator).  
 - Việc tiếp cận này khá rườm rà này là cần thiết vì bộ ba chỉ nằm trong RDF; vậy nên ta không thể thêm một định danh trực tiếp vào một bộ ba. Do chi phí sửa đổi lớn, trong phiên bản mới hơn của RDF, khái niệm về các đồ thị được đặt tên đã được đưa ra. Ở đây, một định danh rõ ràng (một URL) được cấp cho một phát biểu hoặc một tập hợp những phát biểu. Mã định danh này sau đó có thể được tham chiếu trong bộ ba thông thường. Đây là một cơ chế đơn giản hơn để xác định các phát biểu cũng như đồ thị. Nói một cách đơn giản, một đồ thị được đặt tên cho phép ta khoanh tròn một tập hợp các phát biểu RDF và cung cấp cho các phát biểu này một mã định danh.  
 
@@ -371,7 +371,7 @@ The Baron Way Flat has <span property="swp:hasNumberOfBedrooms">3</span> bedroo
 - Những lớp này có liên quan đến nhau. Ví dụ như, mỗi một residential unit (Đơn vị cư trú) là một unit. Ta nói rằng "residential unit" là một *lớp con* (sub class) của "unit", hoặc "unit" là một *lớp cha* (superclass) của "residential unit". Quan hệ lớp con xác định một hệ thống phân cấp của các lớp.  
 - Một lớp A được coi là lớp con của B khi mọi instance của A cũng là instance của B. Không có yêu cầu nào trong RDF Schema rằng các lớp cùng nhau tạo thành một hệ thống phân cấp nghiêm ngặt. Nói cách khác, một đồ thị con không cần phải là một cây. Một lớp có thể có nhiều lớp cha. Nếu lớp A là con của cả B1 và B2, điều này có nghĩa là mọi instance của A đều là instance của B1 và B2.  
 
-![Hệ thống phân cấp của các lớp](./pic/A_hierachy_of_classes.png)  
+![Hệ thống phân cấp của các lớp](../pic/A_hierachy_of_classes.png)  
 
 - Một tổ chức phâp cấp các lớp có một ý nghĩa rất quan trọng. Xem xét ràng buộc phạm vi "People can only rent residential units". Giả sử Baron Way Apartment được định nghĩa là một căn hộ. Sau đó, theo ràng buộc trên, nó không đạt tiêu chuẩn là một Residential Unit bởi vì chưa có một phát biểu nào xác định rằng Baron Way Apartment cũng là một residential unit. Nó sẽ phản trực giác khi bạn khắc phục vấn đề này bằng cách thêm phát biểu đó vào mô tả của chúng ta. Thay vào đó, chúng ta muốn Baron Way Apartment *kế thừa* khả năng cho thuê từ lớp residential units. Điều này được thực hiện chính xác trong RDF Schema.  
 - Với cách làm như vậy, RDF Schema *sửa ngữ nghĩa* của "là một lớp con của". Giờ đây, nó không phụ thuộc vào một ứng dụng để giải thích "là một lớp con của" mà thay vào đó, ý nghĩa dự định của nó sẽ được sử dụng bởi tất cả các phần mềm xử lý RDF. Bằng cách đưa ra các định nghĩa ngữ nghĩa như vậy, RDFS là một ngôn ngữ (vẫn còn hạn chế) để xác định ngữ nghĩa của các miền cụ thể, RDFS là một ngôn ngữ bản thể học nguyên thủy.  
@@ -391,7 +391,7 @@ Nhưng điều ngược lại có thể không chính xác. Ví dụ như *p* l�
 - Cuối cùng, chúng ta sẽ minh họa các lớp (layer) khác nhau liên quan đế RDF và RDFS qua một ví dụ đơn giản. Có một phát biểu RDF:  
 *Jeff Meyer rents the Baron Way Apartment.*  
 - Lược đồ cho phát biểu này gồm các lớp như người, căn hộ, nhà, đơn vị và các thuộc tính như thuê, cư trú tại và địa chỉ.  
-![RDF và RDFS Layer](./pic/RDF_and_RDFS_layers.png)  
+![RDF và RDFS Layer](../pic/RDF_and_RDFS_layers.png)  
 - Ở hình trên, các hình chữ nhật là các thuộc tính, hình ê líp phía trên nét đứt là các lớp và phía dưới nét đứt sẽ là các instance.  
 - Bản thân lược đồ trên được viết bằng một ngôn ngữ chính thức RDF Schema, có thể diễn đạt các thành phần của nó: subClassOf, Class, Property, subPropertyOf, Resource, ... .  
 
@@ -495,7 +495,7 @@ swp:address rdfs:range rdf:Literal.
 
 ### 2.5.8 Ví dụ: Phương tiện xe máy
 
-![Hệ thống phân cấp lớp cho ví dụ phương tiện](./pic/Motor_vehicles.png)
+![Hệ thống phân cấp lớp cho ví dụ phương tiện](../pic/Motor_vehicles.png)
 
 ```Turtle
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .

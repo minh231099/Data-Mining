@@ -196,7 +196,7 @@ thấp thành metasteps và con người gọi nó là bước lập luận đơ
 	- Khả năng tương thích từ trên xuống. Agent nắm chắc một lớp cũng có thể giải thích và sử dụng thông tin được viết ở các lớp thấp hơn.  
 	- Hiểu rõ từng phần từ dưới lên. Phải thiết kế sao cho các agent nắm chắc về một lớp sẽ có thể tận dụng ít nhất một phần của thông tin ở cấp cao hơn.  
 - Dù những ý tưởng này hấp dẫn về mặt lý thuyết và được sử dụng làm nguyên tắc dẫn lối cho sự phát triển của **Mạng ngữ nghĩa** nhưng việc thực hiện chúng trên thực tế lại trở nên khó khăn và cần phải thực hiện một số thỏa hiệp.  
-![Layer Cake](./pic/layer_cake.png)  
+![Layer Cake](../pic/layer_cake.png)  
 - "Layer Cake" mô tả những lớp chính khi thiết kế và hình dung **Mạng ngữ nghĩa**.
 - Ở dưới cùng chung ta có XML, ngôn ngữ cho phép ta viết về cấu trúc của tài liệu web với những từ vựng người dùng tự định nghĩa. XML đặc biệt thích hợp để gửi tài liệu trên web. Ngoài ra, các URI được sử dụng trong XML có thể được nhóm theo namespace của chúng, được ký hiệu bởi NS trong sơ đồ.  
 - RDF là một mô hình cơ bản, nhưng là mô hình thực thể-quan hệ (Entity-relationship model), để viết những phát biểu đơn giản về các đối tượng web (tài nguyên). Mô hình dữ liệu RDF không dựa vào XML nhưng RDF lại có cú pháp dựa trên XML. Và đó là tại sao RDF được đặt phái trên lớp XML.  
