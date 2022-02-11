@@ -68,24 +68,24 @@ Chúng ta có thể cung cấp hỗ trợ ngữ nghĩa chính thức và hỗ tr
 Rõ ràng chúng ta cần một ngôn ngữ bản thể học phong phú hơn RDF Schema, một ngôn ngữ cung những tính năng này và hơn thế nữa. Khi thiết kế một ngôn ngữ như vậy, ta nên nhận thức được sự cân bằng giữa sức mạnh diễn đạt và hỗ trợ lập luận hiệu quả. Nói chung, hình thức logic càng phong phú, hỗ trợ lý luận càng trở nên kém hiệu quả, thường xuyên qua biên giới của khả năng phân hủy (decidability); nghĩa là, lý luận về logic như vậy không được đảm bảo chấm dứt. Do đó, chúng ta cần một sự thỏa hiệp, một ngôn ngữ có thể được hỗ trợ bởi những trình suy luận hiệu quả một cách hợp lý, đồng thời đủ biểu đạt để thể hiện một lượng lớn kiến thức.  
 
 # 4.3 Khả năng tương thích của OWL2 với RDF/RDFS
-OWL2 là một phần mở rộng của RDF Schema, theo nghĩa là OWL2 sử dụng ý nghĩa RDFS của các lớp và thuộc tính (rdfs:Class, rdfs:subClass, ...) và thêm các nguyễn mẫu ngôn ngữ (language primitives) để hỗ trợ mức độ biểu cảm phong phú hơn cần thiết. Cách tiếp cận này sẽ phù hợp với kiến trúc phân lớp của Mạng Ngữ Nghĩa.  
-Thật không may, chỉ cần mở rộng RDF Schema sẽ hoạt động chống lại việc đạt được sức mạnh biểu đạt và lập luận hiệu quả. RDF Schema có một số nguyễn thủy mô hình hóa rất mạnh mẽ. Các cấu trúc như là rdfs:Class (lớp của các lớp) và rdfs:Property (lớp của các thuộc tính) rất hàm ý (expressive) và sẽ dẫn đến các thuộc tính tính toán không thể kiểm soát nếu logic cơ bản OWL2 bao gồm các nguyễn mẫu này trong tính tổng quát của chúng.  
+OWL2 là một phần mở rộng của RDF Schema, theo nghĩa là OWL2 sử dụng ý nghĩa RDFS của các lớp và thuộc tính (rdfs:Class, rdfs:subClass, ...) và thêm các nguyên mẫu ngôn ngữ (language primitives) để hỗ trợ mức độ biểu cảm phong phú hơn cần thiết. Cách tiếp cận này sẽ phù hợp với kiến trúc phân lớp của Mạng Ngữ Nghĩa.  
+Thật không may, chỉ cần mở rộng RDF Schema sẽ hoạt động chống lại việc đạt được sức mạnh biểu đạt và lập luận hiệu quả. RDF Schema có một số nguyễn thủy mô hình hóa rất mạnh mẽ. Các cấu trúc như là rdfs:Class (lớp của các lớp) và rdfs:Property (lớp của các thuộc tính) rất hàm ý (expressive) và sẽ dẫn đến các thuộc tính tính toán không thể kiểm soát nếu logic cơ bản OWL2 bao gồm các nguyên mẫu này trong tính tổng quát của chúng.  
 
 ## 4.3.1 Hai ngữ nghĩa (Two Semantics)
 Tập hợp đầy đủ các yêu cầu cho ngôn ngữ bản thể học dường như không thể đạt được: hỗ trợ lập luận hiệu quả không tồn tại đối với một ngôn ngữ biểu đạt như sự kết hợp của RDF với một logic đầy đủ. Thật vậy, những yêu cầu này đã thúc đẩy W3C chia OWL2 thành hai ngôn ngữ con khác nhau, mỗi ngôn ngữ có một ngữ nghĩa cơ bản khác nhau nhằm đáp ứng các khía cạnh khác nhau của tập hợp đầy đủ các yêu cầu.  
 
 ### 4.3.1.1 OWL2 Full: Ngữ nghĩa dựa trên RDF (RDF-Based Semantics)
-Toàn bộ ngôn ngữ được gọi là OWL2 Full và sử dụng tất cả nguyễn mẫu ngôn ngữ OWL2. Nó cũng cho phép kết hợp những nguyễn mẫu một cách tùy ý với RDF và RDF Schema. Nó cũng bao gồm khả năng thay đổi ý nghĩa của các nguyên mẫu được xác định trước (RDF hoặc OWL2) bằng cách áp dụng các nguyễn mẫu ngôn ngữ cho nhau. Ví dụ trong OWL2 Full, ta có thể áp đặt một ràng buộc về số lượng đối với lớp của tất cả các lớp, về cơ bản giới hạn số lượng của các lớp có thể mô tả tại bất kỳ bản thể học.  
+Toàn bộ ngôn ngữ được gọi là OWL2 Full và sử dụng tất cả nguyên mẫu ngôn ngữ OWL2. Nó cũng cho phép kết hợp những nguyên mẫu một cách tùy ý với RDF và RDF Schema. Nó cũng bao gồm khả năng thay đổi ý nghĩa của các nguyên mẫu được xác định trước (RDF hoặc OWL2) bằng cách áp dụng các nguyên mẫu ngôn ngữ cho nhau. Ví dụ trong OWL2 Full, ta có thể áp đặt một ràng buộc về số lượng đối với lớp của tất cả các lớp, về cơ bản giới hạn số lượng của các lớp có thể mô tả tại bất kỳ bản thể học.  
 Ưu điểm của OWL2 Full là nó được ánh xạ tới *ngữ nghĩa dựa trên RDF*. Do đó, nó tương thích hoàn toàn về mặt cấu trúc và ngữ nghĩa trở lên với RDF: bấy kỳ tài liệu RDF hợp lệ nào cũng là tài liệu đầy đủ OWL2 hợp lệ và bất kỳ suy luận RDF Schema hợp lệ nào cũng là một kết luận OWL2 Full hợp lệ. Nhược điểm của OWL2 Full là ngôn ngữ đã trở nên mạnh mẽ đến mức không thể quyết định được, làm tiêu tan mọi hy vọng về hỗ trợ lý luận hoàn chỉnh (hoặc hiệu quả).  
 
 ### 4.3.1.2 OWL2 DL: Ngữ nghĩa trực tiếp
-Để đem lại được hiệu quả tính toán, ngôn ngữ con thứ hai OWL2 DL được ánh xa vào một logic mô tả (Description Logic - DL). Logic mô tả là một tập con của logic vị từ với tác dụng làm cho việc hỗ trợ lập luận hiệu quả trở nên khả thi. OWL2 DL hạn chế cách thức sử dụng các nguyễn mẫu của OWL2, RDF và RDFS. Một vài hạn chế là:  
-- OWL2 DL không cho phép áp dụng các nguyễn mẫu của OWL2 cho nhau.  
+Để đem lại được hiệu quả tính toán, ngôn ngữ con thứ hai OWL2 DL được ánh xa vào một logic mô tả (Description Logic - DL). Logic mô tả là một tập con của logic vị từ với tác dụng làm cho việc hỗ trợ lập luận hiệu quả trở nên khả thi. OWL2 DL hạn chế cách thức sử dụng các nguyên mẫu của OWL2, RDF và RDFS. Một vài hạn chế là:  
+- OWL2 DL không cho phép áp dụng các nguyên mẫu của OWL2 cho nhau.  
 - OWL2 DL chỉ có thể định nghĩa các lớp tài nguyên bất trực nghĩa (non-literal resources). Tất cả các lớp OWL2 DL là một instance của *owl:Class* hơn là *rdfs:Class*.  
 - OWL2 DL phân biệt chặt chẽ các thuộc tính mà phạm vi bao gồm các tài nguyên không theo trực nghĩa với các thuộc tính liên quan đến các giá trị trực nghĩa. Tất cả thuộc tính OWL2 là instance của *owl:ObjectProperty* hoặc owl:DatatypeProperty nhưng không đồng thời là cả hai.  
 - Trong OWL2 DL một tài nguyên không thể đồng thời là một lớp, một thuộc tính hoặc là một instance. Chúng có thể có cùng tên (điều này được gọi là *chơi chữ (punning)*) nhưng sẽ luôn luôn được coi như là những thứ khác biệt bởi logic cơ bản.  
 
-Các hạn chế trên đảm bảo rằng ngôn ngữ duy trì sự tương ứng trực tiếp của nó với một logic mô tả đã được hiểu rõ. Mô hình dưới đây chỉ ra những mối quan hệ của lớp con giữa một vài mô hình nguyễn mẫu của OWL2 và RDF/RDFS:  
+Các hạn chế trên đảm bảo rằng ngôn ngữ duy trì sự tương ứng trực tiếp của nó với một logic mô tả đã được hiểu rõ. Mô hình dưới đây chỉ ra những mối quan hệ của lớp con giữa một vài mô hình nguyên mẫu của OWL2 và RDF/RDFS:  
 ![Những mối quan hệ của lớp con](../pic/subclass_relations.png)  
 
 Điểm vượt trội của khả năng diễn đạt hạn chế này là nó cho phép hỗ trợ lập luận hiệu quả. OWL2 DL có thể sử dụng một loạt các trình suy luận hiện có như Pellet, FaCT, RACER và HermiT. Khuyết điểm là chúng ta mất đi sự tương thích đầy đủ với RDF. Một tài liệu RDF nói chung sẽ được mở rộng theo một số khía cạnh và bị hạn chế ở những khía cạnh khác trước khi nó là một tài liệu OWL2 DL hợp lệ. Tuy nhiên, mỗi tài liệu OWL2 DL hợp lệ sẽ là một tài liệu RDF hợp lệ.  
@@ -93,7 +93,6 @@ Các hạn chế trên đảm bảo rằng ngôn ngữ duy trì sự tương ứ
 Một trong những mục đích chính đằng sau kiến trúc phân lớp của Mạng Ngữ Nghĩa là khả năng tương thích thấp với việc tái sử dụng phần mềm tương ứng trên nhiều lớp khác nhau. Tuy nhiên, lợi thế của khả năng tương thích bị giảm xuống đối với OWL2 (bất kỳ bộ xử lý nhận biết OWL2 nào cũng sẽ cung cấp các diễn giải chính xác của bất kỳ tài liệu RDF Schema nào) chỉ đạt được với OWL2 Full, với chi phí khả năng khó tính toán.  
 
 # 4.4 Ngôn ngữ OWL
-
 Phần này giới thiệu về các nguyên mẫu ngôn ngữ của OWL2. Do có mối liên hệ chặt chẽ với logic hình thức, nên việc sử dụng một số thuật ngữ liên quan sẽ rất thuận tiện:  
 - Trong OWL2, các thành viên của các lớp thường được gọi là *các cá thể (individuals)* hơn là *các instance*, nhưng ta sẽ sử dụng cả hai thuật ngữ luân phiên.  
 - Khi chúng ta phát biểu rằng tài nguyên nào đó thuộc một kiểu nhất định, ta gọi đó là một *khẳng định (assertion)*.  
@@ -198,7 +197,7 @@ Do những hạn chế trong ngữ nghĩa trực tiếp, trong số các loại 
 	rdf:type	owl:TransitiveProperty.
 ```  
 
-|Khi nào là một thuộc tính hỗn hợp?|  
+|**Khi nào là một thuộc tính hỗn hợp?**|  
 |---|  
 |- Top và Bottom Properties đều là những thuộc tính hỗn hợp|  
 |- Bất kỳ thuộc tính nào tự có tính bắc cầu hoặc có thuộc tính nghịch đảo là thuộc tính bắc cầu|  
@@ -206,9 +205,28 @@ Do những hạn chế trong ngữ nghĩa trực tiếp, trong số các loại 
 |- Bất kỳ thuộc tính nào là thuộc tính cha của một chuộc thuộc tính, hoặc là một thuộc tính đảo ngược của một thuộc tính của một thuộc tính cha của một chuỗi thuộc tính|  
 |- Bất kỳ thuộc tính là một thuộc tính tương đương với một trong những thuộc tính trên, hoặc là một thuộc tính cha của một thuộc tính tương đương với một trong những thuộc tính trên.|  
 |Thuộc tính tổng hợp đôi khi được gọi là vai trò phức hợp hoặc thuộc tính không đơn giản.|  
+|---|  
+|**Các ràng buộc**|  
+|---|  
+|Thuộc tính tổng hợp có thể xảy ra với những tiên đề sau đây:|  
+|- Hạn chế về số lượng đủ điều kiện và không đủ tiêu chuẩn đối với các lớp;|  
+|- Giới hạn bản thân đối với các lớp,|  
+|- Tiền đề thuộc tính rời rạc.|  
+|Ngoài ra, chúng có thể không được chỉ định các loại thuộc tính sau:|  
+|- Chức năng và chức năng nghịch đảo;|  
+|- Không phả xa;|  
+|- Không đối xứng.|  
 
-
-
+Thuộc tính bắc cầu được gọi là thuộc tính hỗn hợp: chúng có thể được cho là bao gồm nhiều bước. Ví dụ, cho:  
+```Turtle
+:BaronWayApartment	:isPartOf	:BaronWayBuilding.
+:BaronWayKitchen	:isPartOf	:BaronWayApartment.
+```  
+một trình suy luận sẽ đưa ra:  
+```Turtle
+:BaronWayApartment	:isPartOf	:BaronWayBuilding.
+```  
+Quan hệ cuối cùng :isPartOf này bao gồm hai khẳng định thuộc tính trước đó. Do tính kết hợp này, các thuộc tính bắc cầu phải tuân theo một số hạn chế được liệt kê trong bảng trên.  
 
 
 
