@@ -205,9 +205,7 @@ Do những hạn chế trong ngữ nghĩa trực tiếp, trong số các loại 
 |- Bất kỳ thuộc tính nào là thuộc tính cha của một chuộc thuộc tính, hoặc là một thuộc tính đảo ngược của một thuộc tính của một thuộc tính cha của một chuỗi thuộc tính|  
 |- Bất kỳ thuộc tính là một thuộc tính tương đương với một trong những thuộc tính trên, hoặc là một thuộc tính cha của một thuộc tính tương đương với một trong những thuộc tính trên.|  
 |Thuộc tính tổng hợp đôi khi được gọi là vai trò phức hợp hoặc thuộc tính không đơn giản.|  
-|---|  
 |**Các ràng buộc**|  
-|---|  
 |Thuộc tính tổng hợp có thể xảy ra với những tiên đề sau đây:|  
 |- Hạn chế về số lượng đủ điều kiện và không đủ tiêu chuẩn đối với các lớp;|  
 |- Giới hạn bản thân đối với các lớp,|  
