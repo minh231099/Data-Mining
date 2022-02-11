@@ -198,9 +198,14 @@ Do những hạn chế trong ngữ nghĩa trực tiếp, trong số các loại 
 	rdf:type	owl:TransitiveProperty.
 ```  
 
-|Khi nào là một thuộc tính hỗn hợp?|
-|---|
-|- Top và Bottom Properties đều là những thuộc tính hỗn hợp  - Bất kỳ thuộc tính nào tự có tính bắc cầu hoặc có thuộc tính nghịch đảo là thuộc tính bắc cầu  - Bất kỳ thuộc tính nào có một thuộc tính con nghịch đảo hoặc một thuộc tính con mà nghịch đảo của nó có tính bắc  - Bất kỳ thuộc tính nào là thuộc tính cha của một chuộc thuộc tính, hoặc là một thuộc tính đảo ngược của một thuộc tính của một thuộc tính cha của một chuỗi thuộc tính  - Bất kỳ thuộc tính là một thuộc tính tương đương với một trong những thuộc tính trên, hoặc là một thuộc tính cha của một thuộc tính tương đương với một trong những thuộc tính trên.  Thuộc tính tổng hợp đôi khi được gọi là vai trò phức hợp hoặc thuộc tính không đơn giản.|  
+|Khi nào là một thuộc tính hỗn hợp?|  
+|---|  
+|- Top và Bottom Properties đều là những thuộc tính hỗn hợp|  
+|- Bất kỳ thuộc tính nào tự có tính bắc cầu hoặc có thuộc tính nghịch đảo là thuộc tính bắc cầu|  
+|- Bất kỳ thuộc tính nào có một thuộc tính con nghịch đảo hoặc một thuộc tính con mà nghịch đảo của nó có tính bắc|  
+|- Bất kỳ thuộc tính nào là thuộc tính cha của một chuộc thuộc tính, hoặc là một thuộc tính đảo ngược của một thuộc tính của một thuộc tính cha của một chuỗi thuộc tính|  
+|- Bất kỳ thuộc tính là một thuộc tính tương đương với một trong những thuộc tính trên, hoặc là một thuộc tính cha của một thuộc tính tương đương với một trong những thuộc tính trên.|  
+|Thuộc tính tổng hợp đôi khi được gọi là vai trò phức hợp hoặc thuộc tính không đơn giản.|  
 
 
 
