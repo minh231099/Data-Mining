@@ -94,18 +94,18 @@ Một trong những mục đích chính đằng sau kiến trúc phân lớp c�
 Phần này giới thiệu về các nguyên mẫu ngôn ngữ của OWL2. Do có mối liên hệ chặt chẽ với logic hình thức, nên việc sử dụng một số thuật ngữ liên quan sẽ rất thuận tiện:  
 - Trong OWL2, các thành viên của các lớp thường được gọi là *các cá thể (individuals)* hơn là *các instance*, nhưng ta sẽ sử dụng cả hai thuật ngữ luân phiên.  
 - Khi chúng ta phát biểu rằng tài nguyên nào đó thuộc một kiểu nhất định, ta gọi đó là một *xác nhận (assertion)*.  
-&emsp; Ví dụ:  
-&emsp; *:roger_federer rdf:type :Person.*  
-&emsp; là một *xác nhận lớp* liên kết *cá thể* :roger federer với lớp của nó.  
+&ensp; Ví dụ:  
+&ensp; *:roger_federer rdf:type :Person.*  
+&ensp; là một *xác nhận lớp* liên kết *cá thể* :roger federer với lớp của nó.  
 - Khi ta kết hợp các lớp, các thuộc tính và instance, chúng sẽ tạo thành *các biểu thức (expressions)*. Ví dụ:  
-&emsp; *_:x rdf:type owl:Class;*  
-&emsp; *&emsp; owl:unionOf (:Man :Woman).*  
-&emsp; là một *biểu thức lớp* chỉ định sự kết hợp giữa lớp :Man và lớp :Woman.  
+&ensp; *_:x rdf:type owl:Class;*  
+&ensp; *&emsp; owl:unionOf (:Man :Woman).*  
+&ensp; là một *biểu thức lớp* chỉ định sự kết hợp giữa lớp :Man và lớp :Woman.  
 - Sau đó chúng ta liên hệ những định nghĩa này tới một trong số các lớp của chúng ta, ta tạo ra một *tiên đề (axiom)*. Ví dụ:  
-&emsp; *:Person owl:equivalentClass _:x.*  
-&emsp; *_:x rdf:type owl:Class;*  
-&emsp; *&emsp; owl:unionOf (:Man :Woman).*  
-&emsp; là một *tiên đề* lớp tương đương phát biểu rằng lớp :Person là tương đương kết hợp ta mô tả ở dưới. Các tiên đề lớp đôi khi được gọi là *các hạn chế*, vì chúng rằng buộc tập hợp của các cá thể thứ có thể là một thành viên của một lớp.  
+&ensp; *:Person owl:equivalentClass _:x.*  
+&ensp; *_:x rdf:type owl:Class;*  
+&ensp; *&emsp; owl:unionOf (:Man :Woman).*  
+&ensp; là một *tiên đề* lớp tương đương phát biểu rằng lớp :Person là tương đương kết hợp ta mô tả ở dưới. Các tiên đề lớp đôi khi được gọi là *các hạn chế*, vì chúng rằng buộc tập hợp của các cá thể thứ có thể là một thành viên của một lớp.  
 
 
 
