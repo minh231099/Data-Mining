@@ -14,6 +14,9 @@
 	- **4.4.1 Cú pháp**  
 	- **4.4.2 Những tài liệu bản thể học**  
 	- **4.4.3 Các kiểu thuộc tính**  
+	- **4.4.4 Các tiên đề thuộc tính**  
+	- **4.4.5 Tiên đề lớp**  
+	- **4.4.6 Tiên đề lớp về thuộc tính**  
 	- 
 ---
 # 4.1 Giới thiệu
@@ -227,6 +230,218 @@ một trình suy luận sẽ đưa ra:
 :BaronWayApartment	:isPartOf	:BaronWayBuilding.
 ```  
 Quan hệ cuối cùng :isPartOf này bao gồm hai khẳng định thuộc tính trước đó. Do tính kết hợp này, các thuộc tính bắc cầu phải tuân theo một số hạn chế được liệt kê trong bảng trên.  
+
+**Symmetric and Asymmetric Properties (Thuộc tính đối xứng và không đối xứng)**&emsp;Vài thuộc tính như là :isAdjacentTo là một đối xứng; do đó nếu *a :isAdjacentTo b*, nghịch đảo cũng tương tự. Nói cách khác, thuộc tính đối xứng tương đương với nghịch đảo của nó. Với những thuộc tính khác, chúng ta biết rằng điều này sẽ không xảy ra. Ví dụ, quan hệ :isCheaperThan là một bất đối xứng.  
+```Turtle
+:isAdjacentTo	rdf:type	owl:ObjectProperty;
+	rdf:type	owl:SymmetricProperty.
+
+:isCheaperThan	rdf:type	owl:ObjectProperty;
+	rdf:type	owl:AsymmetricProperty;
+	rdf:type	owlTransitiveProperty.
+```  
+
+**Functional and Inverse-Functional Properties (Thuộc tính chức năng và chức năng nghịch đảo)**&emsp;Với một vài thuộc tính ta biết rằng mỗi cá thể luôn có thể có tối đa một cá thể khác được liên kết thông qua thuộc tính đó. Ví dụ :hasNumberOfRooms là một thuộc tính chức năng, và :hasRoom là thuộc tính chức năng nghịch đảo:  
+```Turtle
+:hasNumberOfRooms	rdf:type	owl:DatatypeProperty;
+	rdf:type	owl:FunctionalProperty.
+
+:hasRoom	rdf:type	owl:ObjectProperty;
+	rdf:type	owl:InversèunctionalProperty.
+```  
+
+**Reflexive and Irreflexive Properties (Thuộc tính phản chiếu và không phản chiếu)**&emsp;Phản chiếu là một thuộc tính mà mỗi cá thể được liên kết thông qua thuộc tính đó với chính nó. Ví dụ, mọi thứ đều :isPartOf của chính nó. Không phản chiếu thì có ý nghĩa ngược lại, mọi cá thể không liên kết với chính nó thông qua thuộc tính đó. Đa phần các thuộc tính không chung miền và phạm vi thực chất đều là phản chiếu. Ví dụ như thuộc tính :rents:  
+```Turtle
+:isPartOf	rdf:type	owl:ObjectProperty;
+	rdf:type	owl:ReflexiveProperty.
+
+:rents	rdf:type	owl:ObjectProperty;
+	rdf:type	owl:IrreflexiveProperty.
+```  
+
+## 4.4.4 Các tiên đề thuộc tính *
+
+Ngoài các kiểu thuộc tính được thảo luận trong phần trước, chúng ta có thể khai báo các đặc trưng bổ sung của thuộc tính về cách chúng liên kết các lớp và các thuộc tính khác.  
+
+**Miền và Phạm vi**&emsp;Việc OWL2 xử lý miền và phạm vi cho thuộc tính y hệt như RDF Schema. Nếu có nhiều hơn một rdfs:range hoặc rdfs:domain được khẳng định cho một thuộc tính, phạm vi và miền thật sự là giao điểm của các lớp được chỉ định trong tiên đề thuộc tính.  
+&emsp;Một hiểu lầm thông thường là miền và phạm vi hoạt động như một ràng buộc với các kiểu của cá thể có thể liên kết thông qua một thuộc tính. Thực tế, các miền và phạm vi chỉ có thể được sử dụng để xác định tư cách thành viên lớp cho các cá thể. Đưa ra định nghĩa của :rents như sau, bất kì hai cá thể *p* và *a* mà *p :rents a* sẽ được phân loại là thành viên của :Person và :Apartment.  
+
+**Inverse Properties (Thuộc tính nghịch đảo)**&emsp;OWL2 cho phép chúng ta định nghĩa nghịch đảo của các thuộc tính. Ví dụ như :rents và :isRentedBy:  
+```Turtle
+:isRentedBy	rdf:type	owl:ObjectProperty;
+	owl:inverseOf	:rents.
+```  
+&emsp;Điều này nghĩa là một trình suy luận sẽ xác định rằng hai cá thể *p* và *m* có mối quan hệ *m :isRentedBy p* ngoài *p :rents m*. Miền và phạm vi kế thừa từ thuộc tính nghịch đảo :isRentedBy có :Person là phạm vi và :Apartment là miền. Trong OWL2 DL, chỉ có thuộc tính đối tượng với có nghịch đảo.  
+
+**Equivalent Properties (Thuộc tính tương đương)**&emsp;Thuộc tính có thể được đĩnh nghĩa là tương đương. Do đó, mỗi hai cá thể liên kết qua một thuộc tính sẽ luôn luôn được liên kết qua tương đương của nó, và ngược lại. Tương đương là một cơ thế thuận tiện trong việc ánh xạ các thành phần của hai bản thể học với nhau. Ví dụ:  
+```Turtle
+:isPartOf	rdf:type	owl:ObjectProperty;
+	owl:equivalentProperty	dbpedia:partOf.
+```  
+
+**Disjoin Properties (Thuộc tính rời rạc)**&emsp; Vài thuộc tính mà ta biết rằng không có hai cá thể liên kết qua một thuộc tính có thể liên kết qua những thuộc tính còn lại: Tập hợp của các cặp cá thể cho các thuộc tính có thể chứa là *rời rạc*. Ví dụ là :rents và :owns:  
+```Turtle
+:rents	rdf:type	owl:ObjectProperty;
+	rdfs:domain	:Person;
+	rdfs:range	:Apartment;
+	owl:disjointProperty	:owns.
+```  
+&emsp;Dễ thấy, ta không thể thuê (rent) thứ là ta sở hữu (own). Lưu ý rằng theo ngữa nghĩa trực tiếp của OWL2 DL, owl:ObjectProperty và owl:DatatypeProperty là rời rạc.  
+
+**Property Chains (Chuỗi thuộc tính)**&emsp;Một tính năng phức tạp hơn của OWL2 là khả năng khai báo các chuỗi thuộc tính. Đôi khi chúng có ích trong việc xác định đường tắt trong đồ thị thuộc tính liên kết với nhiều loại cá thể. Ví dụ, nếu ta biết rằng :Paul :rents :BaronWayApartment, và :BaronWayApartment :isPartOf :BaronWayBuilding, là thứ dbpedia:location :dbpedia:Amsterdam, ta biết rằng :Paul phải có một quan hệ :livesIn với :Amsterdam. Trong OWL2 ta có thể xác định điều này bằng việc sử dụng tiên đồ chuỗi thuộc tính:  
+![Chuỗi thuộc tính](../pic/property_chain)  
+```Turtle
+:livesln	rdf:type	owl:ObjectProperty;
+	owl:propertyChainAxiom (:rents :isPartOf :location).  
+```  
+&emsp;Hình minh họa trên cho ta thấy sự tồn tại của :livesIn được suy ra từ ví dụ căn hộ. Lưu ý rằng, tiên đề chuỗi thuộc tính không làm cho thuộc tính được đặt tên (:livesln) tương đương với chuỗi thuộc tính; chính xác hơn nó là một thuộc tính con của chuỗi. Trong OWL2 DL, chuỗi thuộc tính chỉ có liên quan đến thuộc tính đối tượng, mặc dù hầu hết trình suy luận có thể xử lý chuỗi có một thuộc tính kiểu dữ liệu ở bước cuối cùng.  
+&emsp;Bởi vì tính biểu đạt của chúng, các chuỗi thuộc tính phải chịu một số các giới hạn. Đầu tiên, tương tự như thuộc tính bắc đầu, thuộc tính cha của chuỗi thuộc tính là *hỗn hợp*. Nghĩa là chúng không thể được sử dụng trong một số tiên đề. Thứ hai, chuỗi thuộc tính không thể đệ quy: thuộc tính cha của chuỗi, nghịch đảo của chuỗi hoặc một trong số các thuộc tính con của nó (hoặc nghịch đảo của nó) không thể xuất hiện trong tiên đề chuỗi thuộc tính. Ví dụ, OWL2 DL không cho phép ta mở rộng thuộc tính :livesIn theo hướng sau:  
+``Turtle
+:livesln	rdf:type	owl:ObjectProperty;
+	owl:propertyChainAxiom ( :rents :isPartOf dbpedia-owl:location);
+	owl:propertyChainAxiom ( :livesIn dbpedia-owl:country).
+```  
+&emsp; mặc dù nó sẽ cho phép ta suy luận rằng :Paul sống ở dbpedia:Amsterdam, thì anh ấy cũng phải sống tại dbpedia:Netherlands.  
+
+## 4.4.5 Tiên đề lớp
+Lớp được định nghĩa bởi việc khẳng định một tài nguyên có kiểu là owl:Class. Có hai lớp được xác định trước đóng vai trò quan trọng trong việc suy luận là: owl:Thing và owl:Nothing. Cái trước là lớp tổng quát nhất; tất cả những cá thể OWL2 là một thành viên của lớp đó, và mọi instance của owl:Class là một lớp con của owl:Thing. Lớp owl:Nothing là một lớp rỗng; nó không có thành viên, và mọi instance của owl:Class đều là lớp cha của lớp này. Các lớp không nhất quán không thể có bất kỳ thành viên nào và tương đương với owl:Nothing. Lưu ý rằng, rằng buộc của owl:Thing có một hậu quả khó lường: chúng chứa tất cả các lớp và cá thể trong bản thể học.  
+**Mối quan hệ lớp con (Subclass Relations)**&emsp;Quan hệ lớp con được định nghĩa giống trong RDF Schema. Ví dụ, ta có thể định nghĩa một lớp :LuxuryApartment như sau:  
+```Turtle
+:LuxuryApartment	rdf:type	owl:Class;
+	rdfs:subClassOf	:Apartment.
+```  
+
+**Lớp tương đương (Class Equivalent)**&emsp;Tương đương của các lớp nghĩa là mỗi một thành viên của một lớp cũng là thành viên của lớp tương đương, và ngược lại. Nói cách khác, cả hai lớp đều bao hàm cùng một tập cá thể. Lớp tương đương cần phải được định nghĩa bằng việc sử dụng thuộc tính owl:equivalentClass:  
+```Turtle
+:Apartment	owl:equivalentClass	dbpedia:Apartment.
+```  
+&emsp;PHát biểu này nghĩa là lớp :Apartment trong bản thể học căn hộ của chúng ta tương đương với dbpedia:Apartment được thêm vào từ DBPedia. Việc khẳng định một quan hệ tương đương giữa các lớp là khẳng định đồng nghĩa với việc khẳng định quan hệ lớp con theo cả hai hướng:  
+```Turtle
+:Apartment	rdfs:subClassOf	dbpedia:Apartment.
+dbpedia:Apartment	rdfs:subClassOf	:Apartment.
+```  
+
+**Intermezzo: Punning**&emsp;Ta phải lưu ý rằng định nghĩa căn hộ DBPedia xuất phát từ tên không gian *dbpedia* thay vì *dbpedia-owl*. Nó không hẳn là một lớp và là một cá thể.  
+&emsp;So sánh với bản thể học của ta, DBPedia mô tả các căn hộ trừu tượng ở mức độ cao. Các lớp trong bản thể học DBPedia không có ý phân lớp các thực thể riêng lẻ (như là căn hộ ở Amsterdam) mà là các *chủ đề* riêng lẻ (topics). Coi các cá thể như là các lớp được gọi là *meta-modeling*.  
+&emsp;Mặc dù ngữ nghĩa trực tiếp của OWL2 không cho phép meta-modeling, OWL2 DL vượt qua hạn chế này bằng một thủ thuật cú pháp gọi là *punning*, hay 'chơi chữ'. Nó có nghĩa là bất cứ khi nào URI dbpedia:Apartment xuất hiện trong tiên đề lớp, nó được coi như là một lớp, và khi nó xuất hiện trong một khẳng định cá thể, nó được coi như là một cá thể.  
+&emsp;Punning được cho phép trong các trường hợp sau: *tên lớp*, *tên cá thể* và *tên thuộc tính* có thể tự do thay thế cho nhau. Tuy nhiên, tên thuộc tính đối tượng và thuộc tính kiểu dữ liệu không thể xáo trộn.  
+
+**Liệt kê (Enumerations)**&emsp;Các đơn giản nhất (mặc dù không có khả năng diễn đạt và tốn kém trong tính toán) để định nghĩa một lớp là bằng cách liệt kê tất cả các cá thể mà nó bao gồm:  
+```Turtle
+:BaronWayRooms	rdf:type	owl:Class;
+	owl:oneOf	(:BaronWayKitchen
+			:BaronWayBedroom1
+			:BaronWayBedroom2
+			:BaronWayBedroom3
+			:BaronWayLivingroom
+			:BaronWayBathroom
+			...).
+```  
+&emsp;Phát biểu này định nghĩa lớp của toàn bộ căn hộ ở Amsterdam. Có thể cho rằng, kiểu định nghĩa lớp này có thể rất phức tạp nếu danh sách các thành viên đã biết rất dài, hoặc thâm chí là không thể nếu chúng ta không biết tất cả các cá thể. Ví dụ, chúng ta có thể quyết định thông hai phòng :BaronWayBedroom1 và :BaronWayBedroom2 để tạo thành một phòng mới.  
+
+**Các lớp rời rạc (Disjoint Classes)**&emsp;Sự rời rạc của các lớp nghĩa là không có bất kỳ thành viên nào của một lớp cũng là thành viên của lớp còn lại. Tập hợp các cá thể được mô tả bởi các lớp không lặp lại. Ta có thể nói lớp :LuxuryApartment là rời rạc với :ColdWaterFlat sử dụng thuộc tính owl:disjointWith:  
+```Turtle
+:LuxuryApartment	owl:disjointWith	:ColdWaterFlat.
+```  
+
+&emsp;Nó có nghĩa là không có :LuxuryApartment nào có thể là :ColdWaterFlat cùng một thời điểm.  
+
+**Phần Bù (Complement)**&emsp;Phần bù *C* của một lớp *A* là một lớp có tất cả thứ mà không thuộc về *A*. Nói cách khác, hợp của *A* và *C* chính là owl:Thing. Lưu ý rằng nó có nghĩa là phần bù luôn là tập cha của các lớp rời rạc với *A*. Nó rất quan trọng khi biết rằng phần bù là một cấu trúc mô hình mạnh mẽ cần được cân nhắc khi sử dụng. Ví dụ:  
+```Turtle
+:FurnishedApartment	rdfs:subClassOf	:Apartment.
+:UnfurnishedApartment	rdfs:subClassOf	:Apartment;
+	owl:complementOf	:FurnishedApartment.
+```  
+&emsp;Các phát biểu trên nói rằng lớp các căn hộ có nội thất là phần bù của lớp các căn hộ không có nội thất. Điều này có vấn đề nếu bản thể học của chúng ta chứa các lớp khác ngoài các căn hộ. Ví dụ, chúng ta bổ sung thêm phát biểu:  
+```Turtle
+:SemiDetached	owl:disjointWith	:Apartment.  
+```  
+&emsp;lớp :SemiDetached sẽ luôn là rỗng. Vì nếu lớp :Apartment bao gồm của :FurnishedApartment và phần bù của chính nó, :Apartment luôn luôn tương đương với owl:Thing: Sẽ là không thể khi một cá thể không thuộc về một lớp hay phần bù của một lớp. Nếu ta thêm một lớp rời rạc với :Apartment, lớp này thực sự rời rạc với owl:Thing. Lớp :SemiDetached không thể chứa bất kì một cá thể nào, và nó sẽ tương đương với owl:Nothing.  
+
+**Liên hợp và Liên hợp rời rạc (Union and Disjoint Union)**&emsp;Chúng ta thường xuyên biết rằng với một vài lớp tương đương với hai hoặc nhiều lớp khác: Mọi thành viên của lớp là thành viên của ít nhất một lớp trong liên hợp. Điều này có thể được chỉ định bằng cách sử dụng cấu trúc owl:unionOf. Ví dụ:  
+```Turtle
+:Apartment	rdf:type	owl:Class;
+	owl:unionOf	(:ColdWaterFlat
+			:LuxuryApartment
+			:PenthouseApartment
+			:StudioApartment
+			:BasementApartment
+			:FurnishedApartment
+			:UnFurnishedApartment
+			).
+```  
+&emsp;Trong nhiều trường hợp, các lớp thành viên của một liên hợp rời rạc với nhau. Tất nhiên, ta có thể khẳng định rõ ràng quan hệ owl:disjointWith giữa những lớp, nhưng nó sẽ thuận tiện hơn khi phát biểu trực tiếp:  
+```Turtle
+:Apartment	rdf:type	owl:Class,
+	owl:disjointUnionOf (
+			:FurnishedApartment
+			:UnFurnishedApartment).
+```  
+
+**Giao nhau (Intersection)**&emsp;Tương tự, ta có thể phát biểu rằng một lớp chính xác là giao điểm của hai hoặc nhiều lớp khác: tất cả thành viên của lớp là thành viên của từng lớp trong giao điểm. Ví dụ:  
+```Turtle
+:LuxuryApartment	rdf:type	owl:Class;
+	owl:intersectionOf (:GoodLocationApartment
+			:LargeApartment
+			:NiceViewApartment
+			:LuxuryBathroomApartment).
+```  
+&emsp;Phát biểu này nói rằng lớp :LuxuryApartment được chứa tại những căn hộ riêng lẻ có một vị trí đẹp, kích cỡ lớn, tầm nhìn đẹp và có một phòng tắm sang trọng.
+
+## 4.4.6 Tiên đề lớp về thuộc tính
+OWL2 cho phép kiểu soát chi tiết của các định nghĩa lớp hơn ta thấy ở những phần trước. Ta có thể chỉ định các tiên đề lớp bổ sung thứ *hạn chế* tập hợp các cá thể có thể được coi là một thành viên của một lớp bằng cách xem xét các thuộc tính của chúng. Ví dụ, điều này cho phép chúng ta tự động suy ra thành viên của lớp. Tiên đề ràng buộc lớp được gắn liền với một owl:Class bằng cách liên kết chúng với một kiểu đặc biệt của lớp ẩn danh (một owl:Restriction trong Turtle) thứ thu thập tất cả các cá thể mà thỏa mãn ràng buộc.  
+**Universal Restrictions (Những ràng buộc chung)**&emsp;Một ràng buộc chung trong một lớp *C* và thuộc tính *p* nghĩa là với mọi thành viên của *C* tất cả các giá trị của *p* đều thuộc một lớp nào đó. Nói cách khác, ràng buộc chung có thể được sử dụng để chỉ ra một phạm vi cho một thuộc tính là cục bộ (local) cho lớp bị ràng buộc. Kiểu ràng buộc này được xây dựng bằng cách sử dụng cấu trúc owl:allValuesFrom. Ví dụ:  
+```Turtle
+:LuxuryBathroomApartment	rdf:type	owl:Class;
+	rdfs:subClassOf [rdf:type	owl:Restriction;
+			owl:onProperty	has:Bathroom;
+			owl:allValuesFrom	:LuxuryBathroom
+			].
+```  
+&emsp;Nó định nghĩa lớp :LuxuryBathroomApartment là một lớp con của tập hợp các cá thể mà giá trị của thuộc tính :hasBathroom là các instance của :LuxuryBathroom. Lưu ý rằng một ràng buộc owl:allValuesFrom chỉ nói rằng nếu một thành viên của lớp bị ràng buộc có giá trị cho thuộc tính, và giá trị đó phải là một thành viên của lớp được chỉ định. Ràng buộc không yêu cầu thuộc tính có bất kỳ một giá trị nào: trong trường hợp đó, ràng buộc được thỏa mãn một cách đáng kể. Trong ví dụ căn hộ của ta, định nghĩa trên không yêu cầu một :LuxuryBathroomApartment phải có phòng tắm!  
+&emsp;Ràng buộc chung cũng có thể được sử dụng với thuộc tính kiểu dữ liệu - ví dụ, phát biểu rằng giá trị của một thuộc tính phải là một kiểu cụ thể hoặc nằm trong phạm vi của một dữ liệu nhất định.  
+
+**Existential Restrictions (Hạn chế hiện sinh)**&emsp;Một hạn chế hiện sinh của lớp *C* và thuộc tính *p* phát biểu rằng với mỗi thành viên của *C* luôn tồn tại ít nhất một giá trị nào đó đối với *p* thuộc về một lớp nhất định. Kiểu ràng buộc này được xác định bằng việc sử dụng từ khóa owl:someValuesFrom:  
+```Turtle
+:LuxuryBathroomApartment	rdf:type	owl:Class;
+	rdfs:subClassOf	[rdf:type	owl:Restriction;
+			owl:onProperty	:hasBathroom;
+			owl:someValuesFrom	:LuxuryBathroom
+			].
+```  
+
+**Necessary and Sufficient Conditions (Điều kiện cần và đủ)**&emsp;Thay vì sử dụng thuộc tính rdfs:subClassOf để liên kết lớp với ràng buộc, ta cũng có thể sử dụng thuộc tính owl:equivalentClass để phát biểu rằng lớp bị ràng buộc chính xác là lớp được mô tả bởi ràng buộc. Ràng buộc rdfs:subClassOf nêu các điều kiện *cần* để trở thành một thành viên của lớp, trong khi ràng buộc owl:equivalentClass nêu các điều kiện *cần* và *đủ*.  
+&emsp;Nhìn chung, một trình suy luận chỉ có thể trực tiếp suy ra tư cách thành viên lớp cho các cá thể dựa trên điều kiện cần và đủ. Ví dụ, hạn chế hiện sinh phía trên không khiến cho trình suy luận kết luận rằng mọi cá thể có một :hasBathroom liên kết với một cá thể có kiểu :LuxuryBathroom sẽ là một instance của :LuxuryBathroomApartment. Căn hộ chỉ là một *lớp con* của ràng buộc, và ta không có đủ thông tin để quyết định cá thể đó có phải là thành viên của chính lớp đó hay không. Nếu ta tạo lớp *tương đương* với lớp được chỉ định bởi giới hạn, rõ ràng là bất kỳ cá thể nào thỏa mãn ràng buộc cũng phải là thành viên của lớp.  
+&emsp;Tuy nhiên, trong cả hai trường hợp, nếu ta khẳng định rõ ràng một cá thể là một instance của lớp :LuxuryBathroomApartment, trình biên dịch sẽ suy ra rằng có ít nhất một (không xác định) cá thể kiểu :LuxuryBathroom là giá trị của thuộc tính :hasBathroom.  
+
+**Value Restrictions (Ràng buộc giá trị)**&emsp;Ràng buộc giá trị có ích khi ta muốn định nghĩa một lớp dựa trên các quan hệ với những cá thể được xác định hoặc giá trị cụ thể cho thuộc tính kiểu dữ liệu. Ví dụ, ta có thể xác định lớp của tất cả các căn hộ ở Amsterdam:  
+```Turtle
+:AmsterdamApartment	rdf:type	owl:Class;
+	owl:equivalentClass	[rdf:type	owl:Restriction;
+				owl:onProperty	dbpedia-owl:location;
+				owl:hasValue	dbpedia-owl:Amsterdam
+				].
+```  
+
+**Cardinality Restrictions (Ràng buộc số lượng)**&emsp;Một ràng buộc về số lượng hạn chế số lượng của giá trị mà một thuộc tính nhất định có thể có cho một lớp. Nếu ta chỉ định thêm lớp mà các giá trị này cần thuộc về, thì hạn chế được cho là *đủ điều kiện*. Ví dụ:  
+```Turtle
+:StudioApartment	rdf:type	owl:Class;
+	rdfs:subClassOf	[rdf:type	owl:Restriction;
+			owl:onProperty	:hasRoom;
+			owl:cardinality	"1"^^xsd:integer
+			].
+```  
+&emsp;Phát biểu trên chỉ ra rằng một :StudioApartment có chính xác một giá trị cho thuộc tính :hasRoom. Chúng ta có thể biến phát biểu trên thành một ràng buộc số lượng đủ điều kiện (qualified cardinality restriction) bằng cách nêu rõ số lượng giới hạn cho các thành viên của các lớp :LivingRoom, :Kitchen và :Bedroom:  
+```Turtle
+:StudioApartment	rdf:type	owl:Class;
+	rdfs:subClassOf	[rdf:type	owl:Restriction;
+			owl:onProperty	:isPlayedBy;
+			owl:qualifiedCardinality	"1"^^xsd:integer;
+			owl:onClass	[ owl:unionOf	(:LivingRoom :Kitchen :Bedroom)]
+			].
+```  
+&emsp;Lưu ý rằng ràng buộc đủ điều kiện vẫn cho phép các thành viên của lớp bị ràng buộc có các giá trị bổ sung cho thuộc tính, miễn là các giá trị này thuộc phần bổ sung của lớp định lượng (qualifier class). Một ràng buộc số lượng đủ điều kiện trong owl:Thing là với ràng buộc không đủ điều kiện. Bảng dưới tổng hợp các ràng buộc số lượng khác nhau trong OWL2.  
+![Ràng buộc số lượng](../pic/cardinality_restriction.png)  
 
 
 
