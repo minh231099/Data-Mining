@@ -259,7 +259,7 @@ Quan hệ cuối cùng :isPartOf này bao gồm hai khẳng định thuộc tín
 	rdf:type	owl:IrreflexiveProperty.
 ```  
 
-## 4.4.4 Các tiên đề thuộc tính *
+## 4.4.4 Các tiên đề thuộc tính
 
 Ngoài các kiểu thuộc tính được thảo luận trong phần trước, chúng ta có thể khai báo các đặc trưng bổ sung của thuộc tính về cách chúng liên kết các lớp và các thuộc tính khác.  
 
@@ -289,7 +289,7 @@ Ngoài các kiểu thuộc tính được thảo luận trong phần trước, c
 &emsp;Dễ thấy, ta không thể thuê (rent) thứ là ta sở hữu (own). Lưu ý rằng theo ngữa nghĩa trực tiếp của OWL2 DL, owl:ObjectProperty và owl:DatatypeProperty là rời rạc.  
 
 **Property Chains (Chuỗi thuộc tính)**&emsp;Một tính năng phức tạp hơn của OWL2 là khả năng khai báo các chuỗi thuộc tính. Đôi khi chúng có ích trong việc xác định đường tắt trong đồ thị thuộc tính liên kết với nhiều loại cá thể. Ví dụ, nếu ta biết rằng :Paul :rents :BaronWayApartment, và :BaronWayApartment :isPartOf :BaronWayBuilding, là thứ dbpedia:location :dbpedia:Amsterdam, ta biết rằng :Paul phải có một quan hệ :livesIn với :Amsterdam. Trong OWL2 ta có thể xác định điều này bằng việc sử dụng tiên đồ chuỗi thuộc tính:  
-![Chuỗi thuộc tính](../pic/property_chain)  
+![Chuỗi thuộc tính](../pic/property_chain.png)  
 ```Turtle
 :livesln	rdf:type	owl:ObjectProperty;
 	owl:propertyChainAxiom (:rents :isPartOf :location).  
