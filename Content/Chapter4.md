@@ -19,7 +19,8 @@
 	- **4.4.6 Tiên đề lớp về thuộc tính**  
 	- **4.4.7 Individual Facts**  
 - [**4.5 Các cấu hình OWL2**](#45-các-cấu-hình-owl2)  
-	-
+- [**4.6 Tổng kết**](#45-tổng-kết)  
+
 ---
 # 4.1 Giới thiệu
 Sự đa dạng của những điều mà ta có thể nói trong RDF và RDF Schema mà ta đã thảo luận trong những chương trước là rất hạn chế. RDF (gần như) giới hạn đối với các vị từ nhị phân cơ bản (binary ground predicates) và RDF Schema (gần như) giới hạn với một hệ thống phân cấp lớp con và thuộc tính, với miền và phạm vi xác định những thuộc tính này. Những ngôn ngữ được thiết kế với sự linh hoạt trong suy nghĩ.  
@@ -122,7 +123,7 @@ OWL2 xây dựng dựa trên RDF và RDF Schema do đó có thể được diễ
 &emsp;*EquivalentClasses( :Person ObjectUnionOf( :Man :Woman))*  
 
 - **OWL/XML**&emsp;Đây là một cú pháp XML cho OWL2 nó không tuân theo quy tắc RDF, nhưng ánh xạ chặt chẽ với functional-style syntax. Lợi ích chính của cú pháp này là nó cho phép ta tương tác với những bản thể học sử dụng các công cụ soạn thảo XML tiêu chuẩn sẵn có. Ví dụ, cú pháp OWL/XML của tiên đề lớp tương đương là:  
-&emsp;```xml
+```xml
 <EquivalentClasses>
 	<Class abbreviatedIRI=":Person"/>
 	<ObjectUnionOf>
@@ -534,7 +535,7 @@ _:x	rdf:type	owl:NegativePropertyAssertion;
 :BaronWayApartment	rdf:type	[owl:complementOf	:LuxuryApartment].
 ```  
 
-# 4.5 OWL2 Profile
+# 4.5 Các cấu hình OWL2
 Những đặc tả OWL2 bao gồm một số lượng *cấu hình*: Một vài cái được biết đến như là tập con của đặc tả OWL2 DL trong khi những cái khác có khả năng diễn đạt hơn nhưng không có ngữ nghĩa đầy đủ của OWL2 Full. Động lực để cung cấp những cấu hình này là nhiều bản thể học hiện có có xu hướng chỉ sử dụng một tập con cụ thể của các cấu trúc ngôn ngữ có sẵn trong DL. Có thể đạt được sự gia tăng đáng kể hiệu suất của người lập luận thông qua lập luận bằng cách sử dụng ngôn ngữ ít khả năng diễn đạt hơn. Một thư viện tiêu chuẩn của cấu hình logic với sự cân bằng đặc biệt dễ nhận biết giữa tính biểu cảm và độ phức tạp tính toán có thể trở nên rất hữu ích trong thực tế.  
 Các cấu hình cụ thể là:  
 - bị hạn chế bởi *cú pháp*. Ngữ nghĩa của một cú pháp cấu hình được cung cấp bởi đặc tả OWL2 DL.  
