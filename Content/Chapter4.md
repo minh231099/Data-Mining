@@ -17,7 +17,9 @@
 	- **4.4.4 Các tiên đề thuộc tính**  
 	- **4.4.5 Tiên đề lớp**  
 	- **4.4.6 Tiên đề lớp về thuộc tính**  
-	- 
+	- **4.4.7 Individual Facts**  
+- [**4.5 Các cấu hình OWL2**](#45-các-cấu-hình-owl2)  
+	-
 ---
 # 4.1 Giới thiệu
 Sự đa dạng của những điều mà ta có thể nói trong RDF và RDF Schema mà ta đã thảo luận trong những chương trước là rất hạn chế. RDF (gần như) giới hạn đối với các vị từ nhị phân cơ bản (binary ground predicates) và RDF Schema (gần như) giới hạn với một hệ thống phân cấp lớp con và thuộc tính, với miền và phạm vi xác định những thuộc tính này. Những ngôn ngữ được thiết kế với sự linh hoạt trong suy nghĩ.  
@@ -442,6 +444,120 @@ OWL2 cho phép kiểu soát chi tiết của các định nghĩa lớp hơn ta t
 ```  
 &emsp;Lưu ý rằng ràng buộc đủ điều kiện vẫn cho phép các thành viên của lớp bị ràng buộc có các giá trị bổ sung cho thuộc tính, miễn là các giá trị này thuộc phần bổ sung của lớp định lượng (qualifier class). Một ràng buộc số lượng đủ điều kiện trong owl:Thing là với ràng buộc không đủ điều kiện. Bảng dưới tổng hợp các ràng buộc số lượng khác nhau trong OWL2.  
 ![Ràng buộc số lượng](../pic/cardinality_restriction.png)  
+
+**Ràng buộc phạm vi dữ liệu và kiểu dữ liệu (Data Range Restrictions and Datatypes)**&emsp;Các hạn chế chung và hiện sinh đối với các thuộc tính kiểu dữ liệu cho phép các thành viên của một lớp có bất kỳ một giá trị nào từ kiểu dữ liệu được định nghĩa làm giá trị cho thuộc tính. Đôi khi ta cần những định nghĩa chắc chắn hơn để xác định, ví dụ, lớp người lớn có thể thuê các căn hộ hoặc kích thước nhỏ nhất của căn hộ. Trong OWL2, ta có thể xác định những ràng buộc trong phạm vi của giá trị được cho phép cho thuộc tính:  
+```Turtle
+:Adult	rdfs:subClassOf	dbpedia:Person;
+	rdfs:subClassOf	[rdf:type	owl:Restriction;
+			owl:onProperty	:hasAge;
+			owl:someValuesFrom
+				[ rdf:type	rdfs:Datatype;
+				owl:onDatatype	xsd:integer;
+				owl:withRestrictions (
+					[xsd:minInclusive "18"^^xsd:integer]
+					)
+				]
+			].
+```  
+&emsp;Câu lệnh trên định nghĩa :Adult là một lớp con của những người có :hasAge bằng hoặc lớn hơn 18. Ta có thể thấy phạm vi dữ liệu được định nghĩa là một lớp ẩn danh có kiểu rdfs:Datatype. Ta cũng có thể đưa vào một kiểu dữ liệu *được đặt tên* mới để có tái sử dụng xuyên suốt bản thể học:  
+```Turtle
+:AdultAge	rdf:type	rdfs:Datatype;
+	owl:onDatatype	xsd:integer;
+	owl:withRestrictions (
+		[xsd:minInclusive "18"^^xsd:integer]
+		).
+
+:Adult	rdf:type	owl:Class;
+	rdfs:subClassOf	dbpedia:Person;
+	rdfs:subClassOf	[ rdf:type	owl:Restriction;
+			owl:onProperty	:hasAge;
+			owl:someValuesFrom	:AdultAge
+			].
+```  
+&emspOWL2 cho phép sử dụng XML Schema để định nghĩa các kiểu dữ liệu. Tuy nhiên, chỉ kiểu dữ liệu được định nghĩa sử dụng các XML Schema *facet* mới có thể được sử dụng trong các ràng buộc.  
+
+**Tự ràng buộc (Self Restrictions)**&emsp;Chúng ta đều biết rằng những căn hộ tốt sẽ tự bán được; nếu nó nằm ở vị trí đẹp, với một tầm nhìn tốt và có kích thước phù hợp thì không cần tốn quá nhiều thời gian để tân trang lại. Trong OWL2 ta có thể thể hiện điều này sử dụng một *tự ràng buộc*. Ví dụ:  
+```Turtle
+ex:GoodApartment	rdf:type	owl:Class;
+	rdfs:subClassOf	[ rdf:type	owl:Restriction;
+			owl:onProperty ex:sells;
+			owl:hasSelf	"true"^^xsd:boolean;
+			].
+```  
+&emsp;Phát biểu này có nghĩa là mọi instance của ex:GoodApartment được liên kết với chính nó bằng thuộc tính ex:sells. Rõ ràng, OWL2 DL không cho phép tự ràng buộc trên các thuộc tính kiểu dữ liệu.  
+
+**Khóa (Key)**&emsp;Cơ sở dữ liệu thông thường sử dụng khóa để định danh các bản ghi trong bảng. Những khóa này không nhất thiết là URIs và nó có thể khó để đưa ra với một lược đồ chuyển đổi tao nhã. OWL2 cho phép ta chỉ ra rằng đối với một số lớp nhất định (bảng), giá trị của một thuộc tính kiểu dữ liệu cụ thể (hoặc tổ hợp các thuộc tính) phải được coi là một định danh duy nhất. Ví dụ, tổ hợp các mã bưu điện và số nhà sẽ cung cấp một định danh duy nhất cho bất kỳ một nhà nào nằm ở Hà Lan:  
+```Turtle
+:postcode	rdf:type	owl:DatatypeProperty.
+:addressNumber	rdf:type	owl:DatatypeProperty.
+
+:Dwelling	rdf:type	owl:Class;
+	owl:hasKey ( :postcode :addressNumber).
+```  
+&emsp;Lưu ý rằng cơ chế khóa cho phép chúng ta định nghĩa các *thuộc tính kiểu dữ liệu chức năng nghịch đảo (inverse functional datatype properties)* được nằm trong một lớp. Bất kỳ hai cá thể có kiểu ex:Dwelling có cùng giá trị :postcode và :addressNumber thì được coi là giống nhau. Thật không may, OWL2 DL không cho phép ta xác định thuộc tính kiểu dữ liệu chức năng nghịch đảo toàn cục (global inverse functional datatype
+properties) vì các hệ quả tính toán.  
+
+## 4.4.7 Individual Facts
+Giờ ta đã có tư tưởng chung về cách để định nghĩa các thuộc tính và các lớp trong OWL2, chúng ta sẽ tập trung vào các cá thể được điều hành bằng mô hình của ta. Trong nhiều trường hợp, chúng ta đã có rất nhiều kiến thức về những thực thể và chỉ cần tiên đề lớp để suy ra thông tin *bổ sung*. Các phát biểu về các cá thể được gọi là *khẳng định*.  
+
+**Khẳng định lớp và thuộc tính (Class and Property Assertions)**&emsp;Các khẳng định về tư cách thành viên lớp và thuộc tính trong OWL2 được phát biểu tương tự với RDF Schema:  
+```Turtle
+:Apartment	rdf:type	owl:Class.
+
+:BaronWayApartment	rdf:type	:Apartment;
+	:hasNumberOfRooms	"4"^^xsd:integer;
+	:isRentedBy	:Paul.
+```  
+&emsp;Phát biểu này đưa ra :BaronWayApartment là một instance của :Apartment. Gồm 4 phòng và được thuê bởi :Paul. Nhớ rằng dưới ngữ nghĩa trực tiếp của OWL2 DL, quan hệ rdf:type chỉ có thể giữ giữa hại cấp độ được phân biệt nghiêm ngặt: cả các lớp và của các cá thể.  
+
+**Khẳng định danh tính (Identity Assertions)** Vì OWL2 có giả thuyết thế giới mở, ta không bao giờ có thể cho rằng hai cá thể với các URI khác nhau phải là các thực thể khác nhau, chúng ta có thể đang xử lý một cá thể có nhiều tên. Mặc dù ta đã thấy rằng trong một số trường hợp, ta có thể tự động suy ra các quan hệ định danh nhưng thường thuận tiện hơn khi chúng ta phát biểu chúng một cách rõ ràng:  
+```Turtle
+:BaronWayApartment	owl:sameAs	:PaulssApartment;
+	owl:differentFrom	:FranksApartment.  
+```  
+&emsp;Danh sách các cá thể khác nhau có thể dễ dàng phát triển rất lớn. Ví dụ, một thành phố nhỏ sẽ gồm hàng trăm căn hộ mà ta cần khẳng định các cặp quan hệ owl:differentFrom. May thay, ta có thể phát biểu điều này một cách tao nhã hơn sử dụng cấu trúc owl:AllDifferent:  
+```Turtle
+_:x	rdf:type	owl:AllDifferent;
+	owl:members	(:FrankApartment :PaulApartment).
+```  
+
+**Khăng định phủ định (Negative Assertions)**&emsp;Đôi khi ta biết rằng có vài thứ *không nên*. Làm cho một tri thức như vậy trở nên rõ ràng rất có giá trị trong một thế giới mở: loại trừ các khả năng thông thường sẽ cho phép ta suy ra những tri thức mới. Ví dụ, trị thức :BaronWayApartment không được thuê bởi :Frank có thể cho phép chúng ta suy luận ra đó không phải là :FrankApartment:  
+```Turtle
+_:x	rdf:type	owl:NegativePropertyAssertion;
+	owl:sourceIndividual	:BaronWayApartment;
+	owl:assertionProperty	:isRentedBy;
+	owl:targetIndividual	:Frank.
+```  
+&emsp;Nếu owl:assertionProperty trỏ tới thuộc tính kiểu dữ liệu, ta sử dụng owl:targetValue thay gì owl:targetIndividual.  
+&emsp;Lưu ý rằng, nếu ta biết rằng một cá thể không phải là một thành viên của một lớp cụ thể, ta có thể phát biểu điều này rõ ràng bằng việc khẳng định nó trở thành một thành viên của phần bù của lớp đó:  
+```Turtle
+:BaronWayApartment	rdf:type	[owl:complementOf	:LuxuryApartment].
+```  
+
+# 4.5 OWL2 Profile
+Những đặc tả OWL2 bao gồm một số lượng *cấu hình*: Một vài cái được biết đến như là tập con của đặc tả OWL2 DL trong khi những cái khác có khả năng diễn đạt hơn nhưng không có ngữ nghĩa đầy đủ của OWL2 Full. Động lực để cung cấp những cấu hình này là nhiều bản thể học hiện có có xu hướng chỉ sử dụng một tập con cụ thể của các cấu trúc ngôn ngữ có sẵn trong DL. Có thể đạt được sự gia tăng đáng kể hiệu suất của người lập luận thông qua lập luận bằng cách sử dụng ngôn ngữ ít khả năng diễn đạt hơn. Một thư viện tiêu chuẩn của cấu hình logic với sự cân bằng đặc biệt dễ nhận biết giữa tính biểu cảm và độ phức tạp tính toán có thể trở nên rất hữu ích trong thực tế.  
+Các cấu hình cụ thể là:  
+- bị hạn chế bởi *cú pháp*. Ngữ nghĩa của một cú pháp cấu hình được cung cấp bởi đặc tả OWL2 DL.  
+- được định nghĩa bởi logic có thể xử lý ít nhất một dịch vụ suy luận hấp dẫn trong thời gian đa thức tuân thủ một trong hai:  
+&emsp;- số lượng dữ kiện hoặc bản thể luận, hoặc  
+&emsp;- quy mô của bản thể luận nói chung.  
+Phần này cung cấp tổng quát ngắn gọn về các cấu hình được xác định trong OWL2 và ứng dụng điển hình của chúng.  
+
+**OWL2 EL**&emsp;Cấu hình EL là một phần mở rộng của logic mô tả &#8455;&#8466;. Sức mạnh cơ bản của nó nằm ở khả năng suy luận theo thời gian đa thức trên các bản thể học với một số lượng lớn các tiên đề lớp và nó được thiết kế để bao hàm sức mạnh biểu đạt của các bản thể luận quy mô lớn hiện có trong lĩnh vực chăm sóc sức khỏe và khoa học đời sống.  
+&emsp;Sức mạnh cơ bản của OWL2 EL nằm trong việc giải quyết các liên từ và các ràng buộc hiện sinh. Nó nhẹ và hỗ trợ âm thanh và suy luận hoàn chỉnh trong thời gian đa thức. Sự khác biệt đáng kể nhất với OWL2 DL là nó giảm các ràng buộc @powl:allValuesFrom, mặc dù nó có hỗ trợ ràng buộc @prdfs:range với thuộc tính với một tác dụng tương tự.  
+
+**OWL2 QL**&emsp;Các trình suy luận được phát triển cho OWL2 DL và OWL2 EL được tối ưu hóa để lập luận về các tiên đề lớp và tương đối kém hiệu quả khi xử lý các bản thể luận có các định nghĩa lớp phức tạp nhưng chứa một số lượng lớn các khẳng định riêng lẻ. Cấu hình QL của OWL2 được phát triển để xử lý hiệu quả *kết quả truy vấn (answering query)* trên các bản thể học như vậy và áp dụng các công nghệ từ quản lý cơ sở dữ liệu quan hệ. Nó được mở rộng dựa trên logic mô tả DL-Lite với các tính năng điểu đạt hơn như tiên đề bao hàm thuộc tính (@powl:subPropertyOf) và các thuộc tính đối tượng chức năng và chức năng nghịch đảo.  
+**OWL2 RL**&emsp;Cấu hình OWL2 RL được dự trên Chương Trình Logic Mô Tả (Description Logic Programs) và cho phép tương tác giữa các logic mô tả và các quy tắc: nó là đoạn cú pháp lớn nhất của OWL2 DL có thể triển khai được bằng việc sử dụng các quy tắc. Nó là một tính năng rất quan trọng, vì các quy tắc có thể được chạy song song một cách hiệu quả, cho phép việc triển khai lập luận có thể mở rộng.  
+&emsp;OWL2 RL khác biệt so với cấu hình QL và EL trong việc nó cung cấp một cầu nối giữa góc nhìn của DL và của OWL Full: trình suy luận quy tắc có thể dễ dàng bỏ qua các ràng buộc của OWL DL (chẳng hạn như sự cách biệt giữa các lớp và các cá thể). Có nghĩa là việc triển khai quy tắc của OWL2 RL có thể triển khai các tập con của OWL Full. Những trình suy luận có khả năng mở rộng nhất cho các ngôn ngữ Mạng ngữ nghĩa triển khai với OWL2 RL hoặc một ngôn ngữ tương tự được gọi là pD* hoặc OWL-Horst. Tập hợp các quy tắc phải được triển khai được đưa vào đặc tả của OWL2 RL.  
+
+# 4.6 Tổng Kết
+- OWL2 mở rộng RDF và RDF Schema với một số lượng các tính năng ngôn ngữ giàu sức biểu đạt, ví dụ như các ràng buộc về số lượng, lớp tương đương, giao điểm và sự rời rạc.  
+- Hỗ trợ ngữ nghĩa và suy luận được cung cấp thông qua sự tương ứng của OWL với logic.  
+- OWL2 gồm hai thứ. OWL2 DL là một ngôn ngữ đặt ra vài ràng buộc với tổ hợp của các thành phần ngôn ngữ trong OWL2 và RDFS để duy trì khả năng diễn giải. OWL2 Full là một phần mở rộng hoàn toàn tương thích của RDF Schema với tất cả các tính năng của ngôn ngữ OWL2, nhưng nó không có khả năng quyết định.  
+- Ba cấu hình, OWL2 EL, OWL2 QL và OWL2 RL là các tập con cú pháp có các thuộc tính tính toán mong muốn. Trên thực tế, OWL2 RL có thể triển khai được bằng cách sử dụng công nghệ dựa trên quy tắc và đã trở thành tiêu chuẩn thực tế để lập luận diễn đạt trên Mạng Ngữ Nghĩa.  
+- OWL2 có bốn cú pháp tiêu chuẩn, RDF/XML, Manchester Syntax, OWL/XML và cú pháp Kiểu Chức Năng.  
+
+
 
 
 
