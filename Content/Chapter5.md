@@ -111,9 +111,9 @@ Quy tắc này áp dụng cho tất cả các khách hàng: nếu một khách h
 Tóm lại, một quy tắc *r*:
 *B<sub>1</sub>, ..., B<sub>n</sub> &rarr; A*  
 được hiểu theo biểu thức sau, ký hiện là *pl(r)*:  
-*&forall;X<sub>1</sub>...&forallX<sub>k</sub>((B<sub>1</sub> &and; ... &and; B<sub>n</sub>) &rarr; A)*  
+&emsp;*&forall;X<sub>1</sub>...&forallX<sub>k</sub>((B<sub>1</sub> &and; ... &and; B<sub>n</sub>) &rarr; A)*  
 hoặc tương đương với:  
-*&forall;X<sub>1</sub>...&forallX<sub>k</sub>((&not;B<sub>1</sub> &or; ... &or; &not;B<sub>n</sub>) &or; A)*  
+&emsp;*&forall;X<sub>1</sub>...&forallX<sub>k</sub>((&not;B<sub>1</sub> &or; ... &or; &not;B<sub>n</sub>) &or; A)*  
 với *X<sub>1</sub>, ..., X<sub>k</sub>* là tất cả các biến xuất hiện trong *A, B<sub>1</sub>, ..., B<sub>n</sub>*.  
 
 ## 5.3.2 Chân lý
