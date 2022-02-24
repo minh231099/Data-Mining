@@ -422,7 +422,7 @@ CONSTRUCT{
 - Nó thể hiện các quy tắc bằng SPARQL CONADING, DELETE và INSERT và các ràng buộc bằng cách sử dụng cấu trúc SPARQL ASK.  
 - Nó cung cấp cơ chế trừu tượng hóa cho các quy tắc sử dụng Template, về bản chất, nó đóng gói các truy vấn có chức năng như một cơ chế để xây dựng các quy tắc cấp cao hơn (các truy vấn SPARQL phức tạp) bên trên các quy tắc đơn giản.  
 Như một bằng chứng về khái niệm, các quy tắc OWL2 RL đã được thể hiện trong SPIN. Ví dụ, quy tắc  
-&emsp;*C<sub>2</sub>(X) &larr; C<sub>1</sub>, equivalentClass(C<sub>1</sub>, C<sub>2</sub>)*  
+&emsp;*C<sub>2</sub>(X) &larr; C<sub>1</sub>(X), equivalentClass(C<sub>1</sub>, C<sub>2</sub>)*  
 có thể được biểu diễn trong SPARQL như sau:  
 ```SPARQL
 CONSTRUCT {
