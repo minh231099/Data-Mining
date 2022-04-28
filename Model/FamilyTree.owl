@@ -1,0 +1,728 @@
+Prefix(:=<http://www.semanticweb.org/tbm23/ontologies/2022/3/untitled-ontology-58#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/tbm23/ontologies/2022/3/untitled-ontology-58>
+
+Declaration(Class(:AnhChiEm))
+Declaration(Class(:AnhChiEmChong))
+Declaration(Class(:AnhChiEmHo))
+Declaration(Class(:AnhChiEmRuot))
+Declaration(Class(:AnhChiEmVo))
+Declaration(Class(:AnhChong))
+Declaration(Class(:AnhHo))
+Declaration(Class(:AnhRuot))
+Declaration(Class(:AnhVo))
+Declaration(Class(:Ba))
+Declaration(Class(:BaNgoai))
+Declaration(Class(:BaNoi))
+Declaration(Class(:Bac))
+Declaration(Class(:BacGai))
+Declaration(Class(:BacTrai))
+Declaration(Class(:Bo))
+Declaration(Class(:BoChong))
+Declaration(Class(:BoRuot))
+Declaration(Class(:BoVo))
+Declaration(Class(:Cau))
+Declaration(Class(:Chau))
+Declaration(Class(:ChauNgoai))
+Declaration(Class(:ChauNoi))
+Declaration(Class(:ChiChong))
+Declaration(Class(:ChiHo))
+Declaration(Class(:ChiRuot))
+Declaration(Class(:ChiVo))
+Declaration(Class(:Chong))
+Declaration(Class(:Chu))
+Declaration(Class(:Co))
+Declaration(Class(:Con))
+Declaration(Class(:ConDau))
+Declaration(Class(:ConGai))
+Declaration(Class(:ConRe))
+Declaration(Class(:ConRuot))
+Declaration(Class(:ConTrai))
+Declaration(Class(:Di))
+Declaration(Class(:EmChong))
+Declaration(Class(:EmGaiRuot))
+Declaration(Class(:EmHo))
+Declaration(Class(:EmTraiRuot))
+Declaration(Class(:EmVo))
+Declaration(Class(:Me))
+Declaration(Class(:MeChong))
+Declaration(Class(:MeRuot))
+Declaration(Class(:MeVo))
+Declaration(Class(:Mo))
+Declaration(Class(:Nam))
+Declaration(Class(:Nguoi))
+Declaration(Class(:Nu))
+Declaration(Class(:Ong))
+Declaration(Class(:OngNgoai))
+Declaration(Class(:OngNoi))
+Declaration(Class(:Vo))
+Declaration(ObjectProperty(:laAnhChiEm))
+Declaration(ObjectProperty(:laAnhChiEmChong))
+Declaration(ObjectProperty(:laAnhChiEmHo))
+Declaration(ObjectProperty(:laAnhChiEmRuot))
+Declaration(ObjectProperty(:laAnhChiEmVo))
+Declaration(ObjectProperty(:laAnhChong))
+Declaration(ObjectProperty(:laAnhHo))
+Declaration(ObjectProperty(:laAnhRuot))
+Declaration(ObjectProperty(:laAnhVo))
+Declaration(ObjectProperty(:laBa))
+Declaration(ObjectProperty(:laBaNgoai))
+Declaration(ObjectProperty(:laBaNoi))
+Declaration(ObjectProperty(:laBac))
+Declaration(ObjectProperty(:laBo))
+Declaration(ObjectProperty(:laBoChong))
+Declaration(ObjectProperty(:laBoRuot))
+Declaration(ObjectProperty(:laBoVo))
+Declaration(ObjectProperty(:laCau))
+Declaration(ObjectProperty(:laChau))
+Declaration(ObjectProperty(:laChauNgoai))
+Declaration(ObjectProperty(:laChauNoi))
+Declaration(ObjectProperty(:laChiChong))
+Declaration(ObjectProperty(:laChiHo))
+Declaration(ObjectProperty(:laChiRuot))
+Declaration(ObjectProperty(:laChiVo))
+Declaration(ObjectProperty(:laChong))
+Declaration(ObjectProperty(:laChu))
+Declaration(ObjectProperty(:laCo))
+Declaration(ObjectProperty(:laCon))
+Declaration(ObjectProperty(:laConDau))
+Declaration(ObjectProperty(:laConGai))
+Declaration(ObjectProperty(:laConRe))
+Declaration(ObjectProperty(:laConRuot))
+Declaration(ObjectProperty(:laConTrai))
+Declaration(ObjectProperty(:laDi))
+Declaration(ObjectProperty(:laEmChong))
+Declaration(ObjectProperty(:laEmGaiRuot))
+Declaration(ObjectProperty(:laEmHo))
+Declaration(ObjectProperty(:laEmTraiRuot))
+Declaration(ObjectProperty(:laEmVo))
+Declaration(ObjectProperty(:laMe))
+Declaration(ObjectProperty(:laMeChong))
+Declaration(ObjectProperty(:laMeRuot))
+Declaration(ObjectProperty(:laMeVo))
+Declaration(ObjectProperty(:laMo))
+Declaration(ObjectProperty(:laOng))
+Declaration(ObjectProperty(:laOngNgoai))
+Declaration(ObjectProperty(:laOngNoi))
+Declaration(ObjectProperty(:laVo))
+Declaration(DataProperty(:laNam))
+Declaration(DataProperty(:laNu))
+Declaration(DataProperty(:tuoi))
+############################
+#   Object Properties
+############################
+
+# Object Property: :laAnhChiEm (:laAnhChiEm)
+
+SymmetricObjectProperty(:laAnhChiEm)
+TransitiveObjectProperty(:laAnhChiEm)
+ObjectPropertyDomain(:laAnhChiEm :AnhChiEm)
+ObjectPropertyRange(:laAnhChiEm :AnhChiEm)
+
+# Object Property: :laAnhChiEmChong (:laAnhChiEmChong)
+
+SubObjectPropertyOf(:laAnhChiEmChong :laAnhChiEm)
+SymmetricObjectProperty(:laAnhChiEmChong)
+TransitiveObjectProperty(:laAnhChiEmChong)
+ObjectPropertyDomain(:laAnhChiEmChong :AnhChiEmChong)
+
+# Object Property: :laAnhChiEmHo (:laAnhChiEmHo)
+
+SubObjectPropertyOf(:laAnhChiEmHo :laAnhChiEm)
+SymmetricObjectProperty(:laAnhChiEmHo)
+TransitiveObjectProperty(:laAnhChiEmHo)
+ObjectPropertyDomain(:laAnhChiEmHo :AnhChiEmHo)
+
+# Object Property: :laAnhChiEmRuot (:laAnhChiEmRuot)
+
+SubObjectPropertyOf(:laAnhChiEmRuot :laAnhChiEm)
+SymmetricObjectProperty(:laAnhChiEmRuot)
+TransitiveObjectProperty(:laAnhChiEmRuot)
+ObjectPropertyDomain(:laAnhChiEmRuot :AnhChiEmRuot)
+
+# Object Property: :laAnhChiEmVo (:laAnhChiEmVo)
+
+SubObjectPropertyOf(:laAnhChiEmVo :laAnhChiEm)
+AsymmetricObjectProperty(:laAnhChiEmVo)
+IrreflexiveObjectProperty(:laAnhChiEmVo)
+ObjectPropertyDomain(:laAnhChiEmVo :AnhChiEmVo)
+
+# Object Property: :laAnhChong (:laAnhChong)
+
+SubObjectPropertyOf(:laAnhChong :laAnhChiEmChong)
+AsymmetricObjectProperty(:laAnhChong)
+IrreflexiveObjectProperty(:laAnhChong)
+ObjectPropertyDomain(:laAnhChong :AnhChong)
+
+# Object Property: :laAnhHo (:laAnhHo)
+
+SubObjectPropertyOf(:laAnhHo :laAnhChiEmHo)
+AsymmetricObjectProperty(:laAnhHo)
+IrreflexiveObjectProperty(:laAnhHo)
+ObjectPropertyDomain(:laAnhHo :AnhHo)
+
+# Object Property: :laAnhRuot (:laAnhRuot)
+
+SubObjectPropertyOf(:laAnhRuot :laAnhChiEmRuot)
+AsymmetricObjectProperty(:laAnhRuot)
+IrreflexiveObjectProperty(:laAnhRuot)
+ObjectPropertyDomain(:laAnhRuot :AnhRuot)
+
+# Object Property: :laAnhVo (:laAnhVo)
+
+SubObjectPropertyOf(:laAnhVo :laAnhChiEmVo)
+AsymmetricObjectProperty(:laAnhVo)
+IrreflexiveObjectProperty(:laAnhVo)
+ObjectPropertyDomain(:laAnhVo :AnhVo)
+
+# Object Property: :laBa (:laBa)
+
+AsymmetricObjectProperty(:laBa)
+IrreflexiveObjectProperty(:laBa)
+ObjectPropertyDomain(:laBa :Ba)
+ObjectPropertyRange(:laBa :Chau)
+
+# Object Property: :laBaNgoai (:laBaNgoai)
+
+SubObjectPropertyOf(:laBaNgoai :laBa)
+AsymmetricObjectProperty(:laBaNgoai)
+IrreflexiveObjectProperty(:laBaNgoai)
+ObjectPropertyDomain(:laBaNgoai :BaNgoai)
+ObjectPropertyRange(:laBaNgoai :ChauNgoai)
+
+# Object Property: :laBaNoi (:laBaNoi)
+
+SubObjectPropertyOf(:laBaNoi :laBa)
+AsymmetricObjectProperty(:laBaNoi)
+IrreflexiveObjectProperty(:laBaNoi)
+ObjectPropertyDomain(:laBaNoi :BaNoi)
+ObjectPropertyRange(:laBaNoi :ChauNoi)
+
+# Object Property: :laBac (:laBac)
+
+SubObjectPropertyOf(:laBac owl:topObjectProperty)
+AsymmetricObjectProperty(:laBac)
+IrreflexiveObjectProperty(:laBac)
+ObjectPropertyDomain(:laBac :Bac)
+ObjectPropertyRange(:laBac :Chau)
+
+# Object Property: :laBo (:laBo)
+
+SubObjectPropertyOf(:laBo owl:topObjectProperty)
+AsymmetricObjectProperty(:laBo)
+IrreflexiveObjectProperty(:laBo)
+ObjectPropertyDomain(:laBo :Bo)
+ObjectPropertyRange(:laBo :Con)
+
+# Object Property: :laBoChong (:laBoChong)
+
+SubObjectPropertyOf(:laBoChong :laBo)
+AsymmetricObjectProperty(:laBoChong)
+IrreflexiveObjectProperty(:laBoChong)
+ObjectPropertyDomain(:laBoChong :BoChong)
+ObjectPropertyRange(:laBoChong :ConDau)
+
+# Object Property: :laBoRuot (:laBoRuot)
+
+SubObjectPropertyOf(:laBoRuot :laBo)
+AsymmetricObjectProperty(:laBoRuot)
+IrreflexiveObjectProperty(:laBoRuot)
+ObjectPropertyDomain(:laBoRuot :BoRuot)
+ObjectPropertyRange(:laBoRuot :ConRuot)
+
+# Object Property: :laBoVo (:laBoVo)
+
+SubObjectPropertyOf(:laBoVo :laBo)
+AsymmetricObjectProperty(:laBoVo)
+IrreflexiveObjectProperty(:laBoVo)
+ObjectPropertyDomain(:laBoVo :BoVo)
+ObjectPropertyRange(:laBoVo :ConRe)
+
+# Object Property: :laCau (:laCau)
+
+AsymmetricObjectProperty(:laCau)
+IrreflexiveObjectProperty(:laCau)
+ObjectPropertyDomain(:laCau :Cau)
+ObjectPropertyRange(:laCau :Chau)
+
+# Object Property: :laChau (:laChau)
+
+AsymmetricObjectProperty(:laChau)
+IrreflexiveObjectProperty(:laChau)
+ObjectPropertyRange(:laChau :Chau)
+
+# Object Property: :laChauNgoai (:laChauNgoai)
+
+SubObjectPropertyOf(:laChauNgoai :laChau)
+AsymmetricObjectProperty(:laChauNgoai)
+IrreflexiveObjectProperty(:laChauNgoai)
+ObjectPropertyDomain(:laChauNgoai :ChauNgoai)
+
+# Object Property: :laChauNoi (:laChauNoi)
+
+SubObjectPropertyOf(:laChauNoi :laChau)
+AsymmetricObjectProperty(:laChauNoi)
+IrreflexiveObjectProperty(:laChauNoi)
+ObjectPropertyDomain(:laChauNoi :ChauNoi)
+
+# Object Property: :laChiChong (:laChiChong)
+
+SubObjectPropertyOf(:laChiChong :laAnhChiEmChong)
+AsymmetricObjectProperty(:laChiChong)
+IrreflexiveObjectProperty(:laChiChong)
+ObjectPropertyDomain(:laChiChong :ChiChong)
+
+# Object Property: :laChiHo (:laChiHo)
+
+SubObjectPropertyOf(:laChiHo :laAnhChiEmHo)
+AsymmetricObjectProperty(:laChiHo)
+IrreflexiveObjectProperty(:laChiHo)
+ObjectPropertyDomain(:laChiHo :ChiHo)
+
+# Object Property: :laChiRuot (:laChiRuot)
+
+SubObjectPropertyOf(:laChiRuot :laAnhChiEmRuot)
+AsymmetricObjectProperty(:laChiRuot)
+IrreflexiveObjectProperty(:laChiRuot)
+ObjectPropertyDomain(:laChiRuot :ChiRuot)
+
+# Object Property: :laChiVo (:laChiVo)
+
+SubObjectPropertyOf(:laChiVo :laAnhChiEmVo)
+AsymmetricObjectProperty(:laChiVo)
+IrreflexiveObjectProperty(:laChiVo)
+ObjectPropertyDomain(:laChiVo :ChiVo)
+
+# Object Property: :laChong (:laChong)
+
+AsymmetricObjectProperty(:laChong)
+IrreflexiveObjectProperty(:laChong)
+ObjectPropertyDomain(:laChong :Chong)
+ObjectPropertyRange(:laChong :Vo)
+
+# Object Property: :laChu (:laChu)
+
+SubObjectPropertyOf(:laChu owl:topObjectProperty)
+AsymmetricObjectProperty(:laChu)
+IrreflexiveObjectProperty(:laChu)
+ObjectPropertyDomain(:laChu :Chu)
+ObjectPropertyRange(:laChu :Chau)
+
+# Object Property: :laCo (:laCo)
+
+AsymmetricObjectProperty(:laCo)
+IrreflexiveObjectProperty(:laCo)
+ObjectPropertyDomain(:laCo :Co)
+ObjectPropertyRange(:laCo :Chau)
+
+# Object Property: :laCon (:laCon)
+
+AsymmetricObjectProperty(:laCon)
+IrreflexiveObjectProperty(:laCon)
+ObjectPropertyDomain(:laCon :Con)
+ObjectPropertyRange(:laCon :Bo)
+ObjectPropertyRange(:laCon :Me)
+
+# Object Property: :laConDau (:laConDau)
+
+SubObjectPropertyOf(:laConDau :laCon)
+AsymmetricObjectProperty(:laConDau)
+IrreflexiveObjectProperty(:laConDau)
+ObjectPropertyDomain(:laConDau :ConDau)
+ObjectPropertyRange(:laConDau :BoChong)
+ObjectPropertyRange(:laConDau :MeChong)
+
+# Object Property: :laConGai (:laConGai)
+
+SubObjectPropertyOf(:laConGai :laConRuot)
+AsymmetricObjectProperty(:laConGai)
+IrreflexiveObjectProperty(:laConGai)
+ObjectPropertyDomain(:laConGai :ConGai)
+
+# Object Property: :laConRe (:laConRe)
+
+SubObjectPropertyOf(:laConRe :laCon)
+AsymmetricObjectProperty(:laConRe)
+IrreflexiveObjectProperty(:laConRe)
+ObjectPropertyDomain(:laConRe :ConRe)
+ObjectPropertyRange(:laConRe :BoVo)
+ObjectPropertyRange(:laConRe :MeVo)
+
+# Object Property: :laConRuot (:laConRuot)
+
+SubObjectPropertyOf(:laConRuot :laCon)
+AsymmetricObjectProperty(:laConRuot)
+IrreflexiveObjectProperty(:laConRuot)
+ObjectPropertyDomain(:laConRuot :ConRuot)
+ObjectPropertyRange(:laConRuot :BoRuot)
+ObjectPropertyRange(:laConRuot :MeRuot)
+
+# Object Property: :laConTrai (:laConTrai)
+
+SubObjectPropertyOf(:laConTrai :laConRuot)
+AsymmetricObjectProperty(:laConTrai)
+IrreflexiveObjectProperty(:laConTrai)
+ObjectPropertyDomain(:laConTrai :ConTrai)
+
+# Object Property: :laDi (:laDi)
+
+AsymmetricObjectProperty(:laDi)
+IrreflexiveObjectProperty(:laDi)
+ObjectPropertyDomain(:laDi :Di)
+ObjectPropertyRange(:laDi :Chau)
+
+# Object Property: :laEmChong (:laEmChong)
+
+SubObjectPropertyOf(:laEmChong :laAnhChiEmChong)
+AsymmetricObjectProperty(:laEmChong)
+IrreflexiveObjectProperty(:laEmChong)
+ObjectPropertyDomain(:laEmChong :EmChong)
+
+# Object Property: :laEmGaiRuot (:laEmGaiRuot)
+
+SubObjectPropertyOf(:laEmGaiRuot :laAnhChiEmRuot)
+AsymmetricObjectProperty(:laEmGaiRuot)
+IrreflexiveObjectProperty(:laEmGaiRuot)
+ObjectPropertyDomain(:laEmGaiRuot :EmGaiRuot)
+
+# Object Property: :laEmHo (:laEmHo)
+
+SubObjectPropertyOf(:laEmHo :laAnhChiEmHo)
+AsymmetricObjectProperty(:laEmHo)
+IrreflexiveObjectProperty(:laEmHo)
+ObjectPropertyDomain(:laEmHo :EmHo)
+
+# Object Property: :laEmTraiRuot (:laEmTraiRuot)
+
+SubObjectPropertyOf(:laEmTraiRuot :laAnhChiEmRuot)
+AsymmetricObjectProperty(:laEmTraiRuot)
+IrreflexiveObjectProperty(:laEmTraiRuot)
+ObjectPropertyDomain(:laEmTraiRuot :EmTraiRuot)
+
+# Object Property: :laEmVo (:laEmVo)
+
+SubObjectPropertyOf(:laEmVo :laAnhChiEmVo)
+AsymmetricObjectProperty(:laEmVo)
+IrreflexiveObjectProperty(:laEmVo)
+ObjectPropertyDomain(:laEmVo :EmVo)
+
+# Object Property: :laMe (:laMe)
+
+SubObjectPropertyOf(:laMe owl:topObjectProperty)
+AsymmetricObjectProperty(:laMe)
+IrreflexiveObjectProperty(:laMe)
+ObjectPropertyDomain(:laMe :Me)
+ObjectPropertyRange(:laMe :Con)
+
+# Object Property: :laMeChong (:laMeChong)
+
+SubObjectPropertyOf(:laMeChong :laMe)
+AsymmetricObjectProperty(:laMeChong)
+IrreflexiveObjectProperty(:laMeChong)
+ObjectPropertyDomain(:laMeChong :MeChong)
+ObjectPropertyRange(:laMeChong :ConDau)
+
+# Object Property: :laMeRuot (:laMeRuot)
+
+SubObjectPropertyOf(:laMeRuot :laMe)
+AsymmetricObjectProperty(:laMeRuot)
+IrreflexiveObjectProperty(:laMeRuot)
+ObjectPropertyDomain(:laMeRuot :MeRuot)
+ObjectPropertyRange(:laMeRuot :ConRuot)
+
+# Object Property: :laMeVo (:laMeVo)
+
+SubObjectPropertyOf(:laMeVo :laMe)
+AsymmetricObjectProperty(:laMeVo)
+IrreflexiveObjectProperty(:laMeVo)
+ObjectPropertyDomain(:laMeVo :MeVo)
+ObjectPropertyRange(:laMeVo :ConRe)
+
+# Object Property: :laMo (:laMo)
+
+AsymmetricObjectProperty(:laMo)
+IrreflexiveObjectProperty(:laMo)
+ObjectPropertyDomain(:laMo :Mo)
+ObjectPropertyRange(:laMo :Chau)
+
+# Object Property: :laOng (:laOng)
+
+SubObjectPropertyOf(:laOng owl:topObjectProperty)
+AsymmetricObjectProperty(:laOng)
+IrreflexiveObjectProperty(:laOng)
+ObjectPropertyDomain(:laOng :Ong)
+ObjectPropertyRange(:laOng :Chau)
+
+# Object Property: :laOngNgoai (:laOngNgoai)
+
+SubObjectPropertyOf(:laOngNgoai :laOng)
+AsymmetricObjectProperty(:laOngNgoai)
+IrreflexiveObjectProperty(:laOngNgoai)
+ObjectPropertyDomain(:laOngNgoai :OngNgoai)
+ObjectPropertyRange(:laOngNgoai :ChauNgoai)
+
+# Object Property: :laOngNoi (:laOngNoi)
+
+SubObjectPropertyOf(:laOngNoi :laOng)
+AsymmetricObjectProperty(:laOngNoi)
+IrreflexiveObjectProperty(:laOngNoi)
+ObjectPropertyDomain(:laOngNoi :OngNoi)
+ObjectPropertyRange(:laOngNoi :ChauNoi)
+
+# Object Property: :laVo (:laVo)
+
+AsymmetricObjectProperty(:laVo)
+IrreflexiveObjectProperty(:laVo)
+ObjectPropertyDomain(:laVo :Vo)
+ObjectPropertyRange(:laVo :Chong)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :laNam (:laNam)
+
+FunctionalDataProperty(:laNam)
+DataPropertyDomain(:laNam :Nguoi)
+DataPropertyRange(:laNam xsd:boolean)
+
+# Data Property: :laNu (:laNu)
+
+FunctionalDataProperty(:laNu)
+DataPropertyDomain(:laNu :Nguoi)
+DataPropertyRange(:laNu xsd:boolean)
+
+# Data Property: :tuoi (:tuoi)
+
+FunctionalDataProperty(:tuoi)
+DataPropertyDomain(:tuoi :Nguoi)
+DataPropertyRange(:tuoi xsd:integer)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :AnhChiEm (:AnhChiEm)
+
+SubClassOf(:AnhChiEm :Nguoi)
+
+# Class: :AnhChiEmChong (:AnhChiEmChong)
+
+SubClassOf(:AnhChiEmChong :AnhChiEm)
+
+# Class: :AnhChiEmHo (:AnhChiEmHo)
+
+SubClassOf(:AnhChiEmHo :AnhChiEm)
+
+# Class: :AnhChiEmRuot (:AnhChiEmRuot)
+
+SubClassOf(:AnhChiEmRuot :AnhChiEm)
+
+# Class: :AnhChiEmVo (:AnhChiEmVo)
+
+SubClassOf(:AnhChiEmVo :AnhChiEm)
+
+# Class: :AnhChong (:AnhChong)
+
+SubClassOf(:AnhChong :AnhChiEmChong)
+
+# Class: :AnhHo (:AnhHo)
+
+SubClassOf(:AnhHo :AnhChiEmHo)
+
+# Class: :AnhRuot (:AnhRuot)
+
+SubClassOf(:AnhRuot :AnhChiEmRuot)
+
+# Class: :AnhVo (:AnhVo)
+
+SubClassOf(:AnhVo :AnhChiEmVo)
+
+# Class: :Ba (:Ba)
+
+SubClassOf(:Ba :Nu)
+
+# Class: :BaNgoai (:BaNgoai)
+
+SubClassOf(:BaNgoai :Ba)
+
+# Class: :BaNoi (:BaNoi)
+
+SubClassOf(:BaNoi :Ba)
+
+# Class: :Bac (:Bac)
+
+SubClassOf(:Bac :Nguoi)
+
+# Class: :BacGai (:BacGai)
+
+SubClassOf(:BacGai :Bac)
+
+# Class: :BacTrai (:BacTrai)
+
+SubClassOf(:BacTrai :Bac)
+
+# Class: :Bo (:Bo)
+
+SubClassOf(:Bo :Nam)
+
+# Class: :BoChong (:BoChong)
+
+SubClassOf(:BoChong :Bo)
+
+# Class: :BoRuot (:BoRuot)
+
+SubClassOf(:BoRuot :Bo)
+
+# Class: :BoVo (:BoVo)
+
+SubClassOf(:BoVo :Bo)
+
+# Class: :Cau (:Cau)
+
+SubClassOf(:Cau :Nam)
+
+# Class: :Chau (:Chau)
+
+SubClassOf(:Chau :Nguoi)
+
+# Class: :ChauNgoai (:ChauNgoai)
+
+SubClassOf(:ChauNgoai :Chau)
+
+# Class: :ChauNoi (:ChauNoi)
+
+SubClassOf(:ChauNoi :Chau)
+
+# Class: :ChiChong (:ChiChong)
+
+SubClassOf(:ChiChong :AnhChiEmChong)
+
+# Class: :ChiHo (:ChiHo)
+
+SubClassOf(:ChiHo :AnhChiEmHo)
+
+# Class: :ChiRuot (:ChiRuot)
+
+SubClassOf(:ChiRuot :AnhChiEmRuot)
+
+# Class: :ChiVo (:ChiVo)
+
+SubClassOf(:ChiVo :AnhChiEmVo)
+
+# Class: :Chong (:Chong)
+
+SubClassOf(:Chong :Nam)
+
+# Class: :Chu (:Chu)
+
+SubClassOf(:Chu :Nam)
+
+# Class: :Co (:Co)
+
+SubClassOf(:Co :Nu)
+
+# Class: :Con (:Con)
+
+SubClassOf(:Con :Nguoi)
+
+# Class: :ConDau (:ConDau)
+
+SubClassOf(:ConDau :Con)
+
+# Class: :ConGai (:ConGai)
+
+SubClassOf(:ConGai :ConRuot)
+
+# Class: :ConRe (:ConRe)
+
+SubClassOf(:ConRe :Con)
+
+# Class: :ConRuot (:ConRuot)
+
+SubClassOf(:ConRuot :Con)
+
+# Class: :ConTrai (:ConTrai)
+
+SubClassOf(:ConTrai :ConRuot)
+
+# Class: :Di (:Di)
+
+SubClassOf(:Di :Nu)
+
+# Class: :EmChong (:EmChong)
+
+SubClassOf(:EmChong :AnhChiEmChong)
+
+# Class: :EmGaiRuot (:EmGaiRuot)
+
+SubClassOf(:EmGaiRuot :AnhChiEmRuot)
+
+# Class: :EmHo (:EmHo)
+
+SubClassOf(:EmHo :AnhChiEmHo)
+
+# Class: :EmTraiRuot (:EmTraiRuot)
+
+SubClassOf(:EmTraiRuot :AnhChiEmRuot)
+
+# Class: :EmVo (:EmVo)
+
+SubClassOf(:EmVo :AnhChiEmVo)
+
+# Class: :Me (:Me)
+
+SubClassOf(:Me :Nu)
+
+# Class: :MeChong (:MeChong)
+
+SubClassOf(:MeChong :Me)
+
+# Class: :MeRuot (:MeRuot)
+
+SubClassOf(:MeRuot :Me)
+
+# Class: :MeVo (:MeVo)
+
+SubClassOf(:MeVo :Me)
+
+# Class: :Mo (:Mo)
+
+SubClassOf(:Mo :Nu)
+
+# Class: :Nam (:Nam)
+
+SubClassOf(:Nam :Nguoi)
+DisjointClasses(:Nam :Nu)
+
+# Class: :Nu (:Nu)
+
+SubClassOf(:Nu :Nguoi)
+
+# Class: :Ong (:Ong)
+
+SubClassOf(:Ong :Nam)
+
+# Class: :OngNgoai (:OngNgoai)
+
+SubClassOf(:OngNgoai :Ong)
+
+# Class: :OngNoi (:OngNoi)
+
+SubClassOf(:OngNoi :Ong)
+
+# Class: :Vo (:Vo)
+
+SubClassOf(:Vo :Nu)
+
+
+)

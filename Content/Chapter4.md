@@ -293,13 +293,16 @@ Ngoài các kiểu thuộc tính được thảo luận trong phần trước, c
 
 **Property Chains (Chuỗi thuộc tính)**&emsp;Một tính năng phức tạp hơn của OWL2 là khả năng khai báo các chuỗi thuộc tính. Đôi khi chúng có ích trong việc xác định đường tắt trong đồ thị thuộc tính liên kết với nhiều loại cá thể. Ví dụ, nếu ta biết rằng :Paul :rents :BaronWayApartment, và :BaronWayApartment :isPartOf :BaronWayBuilding, là thứ dbpedia:location :dbpedia:Amsterdam, ta biết rằng :Paul phải có một quan hệ :livesIn với :Amsterdam. Trong OWL2 ta có thể xác định điều này bằng việc sử dụng tiên đồ chuỗi thuộc tính:  
 ![Chuỗi thuộc tính](../pic/property_chain.png)  
+
 ```Turtle
 :livesln	rdf:type	owl:ObjectProperty;
 	owl:propertyChainAxiom (:rents :isPartOf :location).  
 ```  
+
 &emsp;Hình minh họa trên cho ta thấy sự tồn tại của :livesIn được suy ra từ ví dụ căn hộ. Lưu ý rằng, tiên đề chuỗi thuộc tính không làm cho thuộc tính được đặt tên (:livesln) tương đương với chuỗi thuộc tính; chính xác hơn nó là một thuộc tính con của chuỗi. Trong OWL2 DL, chuỗi thuộc tính chỉ có liên quan đến thuộc tính đối tượng, mặc dù hầu hết trình suy luận có thể xử lý chuỗi có một thuộc tính kiểu dữ liệu ở bước cuối cùng.  
 &emsp;Bởi vì tính biểu đạt của chúng, các chuỗi thuộc tính phải chịu một số các giới hạn. Đầu tiên, tương tự như thuộc tính bắc đầu, thuộc tính cha của chuỗi thuộc tính là *hỗn hợp*. Nghĩa là chúng không thể được sử dụng trong một số tiên đề. Thứ hai, chuỗi thuộc tính không thể đệ quy: thuộc tính cha của chuỗi, nghịch đảo của chuỗi hoặc một trong số các thuộc tính con của nó (hoặc nghịch đảo của nó) không thể xuất hiện trong tiên đề chuỗi thuộc tính. Ví dụ, OWL2 DL không cho phép ta mở rộng thuộc tính :livesIn theo hướng sau:  
-``Turtle
+
+```Turtle
 :livesln	rdf:type	owl:ObjectProperty;
 	owl:propertyChainAxiom ( :rents :isPartOf dbpedia-owl:location);
 	owl:propertyChainAxiom ( :livesIn dbpedia-owl:country).
