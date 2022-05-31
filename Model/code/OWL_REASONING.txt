@@ -1,0 +1,156 @@
+List Class: 
+[AnhChiEm, AnhChiEmChong, AnhChiEmHo, AnhChiEmRuot, AnhChiEmVo, AnhChong, AnhHo, AnhRe, AnhRuot, AnhVo, Ba, BaNgoai, BaNoi, Bac, BacGai, BacTrai, Bo, BoChong, BoMe, BoMeChong, BoMeRuot, BoMeVo, BoRuot, BoVo, Cau, Chau, ChauDau, ChauNgoai, ChauNoi, ChauRe, ChiChong, ChiDau, ChiHo, ChiRuot, ChiVo, Chong, Chu, Co, Con, ConDau, ConGai, ConRe, ConRuot, ConTrai, Di, EmChong, EmDau, EmGaiRuot, EmHo, EmRe, EmTraiRuot, EmVo, Me, MeChong, MeRuot, MeVo, Mo, Nam, Nguoi, Nu, Ong, OngNgoai, OngNoi, Vo]
+
+Properties:
+laAnhChiEm, laAnhChiEmChong, laAnhChiEmHo, laAnhChiEmRuot, laAnhChiEmVo, laAnhChong, laAnhHo, laEmHo, laAnhRe, laAnhRuot, laEmRuot, laAnhVo, laBa, laOngBa, laBaNgoai, laBaNoi, laBac, laBo, laBoChong, laBoMe, laBoMeRuot, laConRuot, laBoRuot, laBoVo, laCau, laChau, laChauDau, laChauNgoai, laChauNoi, laChauRe, laChiChong, laChiDau, laChiHo, laChiRuot, laChiVo, laChong, laVo, laChu, laCo, laCon, laConDau, laConGai, laConRe, laConTrai, laDi, laEmChong, laEmDau, laEmGaiRuot, laEmRe, laEmTraiRuot, laEmVo, laMe, laMeChong, laMeRuot, laMeVo, laMo, laOng, laOngNgoai, laOngNoi, 
+
+Individuals Before Reasoning:
+BoRuotA:
+	laBoRuot A
+	laChong MeRuotA
+
+A:
+	laChong B
+
+BoRuotB:
+	laChong MeRuotB
+
+MeRuotA:
+	laVo BoRuotA
+
+B:
+	laVo A
+
+MeRuotB:
+	laVo BoRuotB
+	laMeRuot B
+
+ConTraiB:
+	laConTrai B
+
+
+
+Individuals After Reasoning:
+A:
+	laAnhChiEm B
+	laAnhChiEmChong B
+	laBo ConTraiB
+	laBoMe ConTraiB
+	laBoMeRuot ConTraiB
+	laBoMeRuot ConTraiB
+	laConRuot MeRuotA
+	laConRuot BoRuotA
+	laConRuot MeRuotA
+	laConRuot BoRuotA
+	laBoRuot ConTraiB
+	laChong B
+	laCon MeRuotA
+	laCon BoRuotB
+	laCon BoRuotA
+	laCon MeRuotB
+	laConRe BoRuotB
+	laConRe MeRuotB
+	laConTrai MeRuotA
+	laConTrai BoRuotA
+
+B:
+	laAnhChiEm A
+	laAnhChiEmChong A
+	laAnhChiEmVo A
+	laBoMe ConTraiB
+	laBoMeRuot ConTraiB
+	laBoMeRuot ConTraiB
+	laConRuot BoRuotB
+	laConRuot MeRuotB
+	laConRuot BoRuotB
+	laConRuot MeRuotB
+	laVo A
+	laCon MeRuotA
+	laCon BoRuotB
+	laCon BoRuotA
+	laCon MeRuotB
+	laConDau MeRuotA
+	laConDau BoRuotA
+	laConGai BoRuotB
+	laConGai MeRuotB
+	laMe ConTraiB
+	laMeRuot ConTraiB
+
+ConTraiB:
+	laConRuot A
+	laConRuot B
+	laConRuot A
+	laConRuot B
+	laChau MeRuotA
+	laChau BoRuotB
+	laChau BoRuotA
+	laChau MeRuotB
+	laChau MeRuotA
+	laChau BoRuotB
+	laChau BoRuotA
+	laChau MeRuotB
+	laChauNgoai BoRuotB
+	laChauNgoai MeRuotB
+	laChauNoi MeRuotA
+	laChauNoi BoRuotA
+	laCon A
+	laCon B
+	laConTrai B
+	laConTrai A
+
+MeRuotA:
+	laBa ConTraiB
+	laOngBa ConTraiB
+	laOngBa ConTraiB
+	laBaNoi ConTraiB
+	laBoMe A
+	laBoMeRuot A
+	laBoMeRuot A
+	laVo BoRuotA
+	laMe A
+	laMe B
+	laMeChong B
+	laMeRuot A
+
+MeRuotB:
+	laBa ConTraiB
+	laOngBa ConTraiB
+	laOngBa ConTraiB
+	laBaNgoai ConTraiB
+	laBoMe B
+	laBoMeRuot B
+	laBoMeRuot B
+	laVo BoRuotB
+	laMe A
+	laMe B
+	laMeRuot B
+	laMeVo A
+
+BoRuotB:
+	laOngBa ConTraiB
+	laOngBa ConTraiB
+	laBo A
+	laBo B
+	laBoMe B
+	laBoMeRuot B
+	laBoMeRuot B
+	laBoRuot B
+	laBoVo A
+	laChong MeRuotB
+	laOng ConTraiB
+	laOngNgoai ConTraiB
+
+BoRuotA:
+	laOngBa ConTraiB
+	laOngBa ConTraiB
+	laBo A
+	laBo B
+	laBoChong B
+	laBoMe A
+	laBoMeRuot A
+	laBoMeRuot A
+	laBoRuot A
+	laChong MeRuotA
+	laOng ConTraiB
+	laOngNoi ConTraiB
+

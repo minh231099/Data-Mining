@@ -1,0 +1,1003 @@
+Prefix(:=<http://www.semanticweb.org/tbm23/ontologies/2022/3/untitled-ontology-58#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/tbm23/ontologies/2022/3/untitled-ontology-58>
+
+Declaration(Class(:AnhChiEm))
+Declaration(Class(:AnhChiEmChong))
+Declaration(Class(:AnhChiEmHo))
+Declaration(Class(:AnhChiEmRuot))
+Declaration(Class(:AnhChiEmVo))
+Declaration(Class(:AnhChong))
+Declaration(Class(:AnhHo))
+Declaration(Class(:AnhRe))
+Declaration(Class(:AnhRuot))
+Declaration(Class(:AnhVo))
+Declaration(Class(:Ba))
+Declaration(Class(:BaNgoai))
+Declaration(Class(:BaNoi))
+Declaration(Class(:Bac))
+Declaration(Class(:BacGai))
+Declaration(Class(:BacTrai))
+Declaration(Class(:Bo))
+Declaration(Class(:BoChong))
+Declaration(Class(:BoMe))
+Declaration(Class(:BoMeChong))
+Declaration(Class(:BoMeRuot))
+Declaration(Class(:BoMeVo))
+Declaration(Class(:BoRuot))
+Declaration(Class(:BoVo))
+Declaration(Class(:Cau))
+Declaration(Class(:Chau))
+Declaration(Class(:ChauDau))
+Declaration(Class(:ChauNgoai))
+Declaration(Class(:ChauNoi))
+Declaration(Class(:ChauRe))
+Declaration(Class(:ChiChong))
+Declaration(Class(:ChiDau))
+Declaration(Class(:ChiHo))
+Declaration(Class(:ChiRuot))
+Declaration(Class(:ChiVo))
+Declaration(Class(:Chong))
+Declaration(Class(:Chu))
+Declaration(Class(:Co))
+Declaration(Class(:Con))
+Declaration(Class(:ConDau))
+Declaration(Class(:ConGai))
+Declaration(Class(:ConRe))
+Declaration(Class(:ConRuot))
+Declaration(Class(:ConTrai))
+Declaration(Class(:Di))
+Declaration(Class(:EmChong))
+Declaration(Class(:EmDau))
+Declaration(Class(:EmGaiRuot))
+Declaration(Class(:EmHo))
+Declaration(Class(:EmRe))
+Declaration(Class(:EmTraiRuot))
+Declaration(Class(:EmVo))
+Declaration(Class(:Me))
+Declaration(Class(:MeChong))
+Declaration(Class(:MeRuot))
+Declaration(Class(:MeVo))
+Declaration(Class(:Mo))
+Declaration(Class(:Nam))
+Declaration(Class(:Nguoi))
+Declaration(Class(:Nu))
+Declaration(Class(:Ong))
+Declaration(Class(:OngNgoai))
+Declaration(Class(:OngNoi))
+Declaration(Class(:Vo))
+Declaration(ObjectProperty(:laAnhChiEm))
+Declaration(ObjectProperty(:laAnhChiEmChong))
+Declaration(ObjectProperty(:laAnhChiEmHo))
+Declaration(ObjectProperty(:laAnhChiEmRuot))
+Declaration(ObjectProperty(:laAnhChiEmVo))
+Declaration(ObjectProperty(:laAnhChong))
+Declaration(ObjectProperty(:laAnhHo))
+Declaration(ObjectProperty(:laAnhRe))
+Declaration(ObjectProperty(:laAnhRuot))
+Declaration(ObjectProperty(:laAnhVo))
+Declaration(ObjectProperty(:laBa))
+Declaration(ObjectProperty(:laBaNgoai))
+Declaration(ObjectProperty(:laBaNoi))
+Declaration(ObjectProperty(:laBac))
+Declaration(ObjectProperty(:laBo))
+Declaration(ObjectProperty(:laBoChong))
+Declaration(ObjectProperty(:laBoMe))
+Declaration(ObjectProperty(:laBoMeRuot))
+Declaration(ObjectProperty(:laBoRuot))
+Declaration(ObjectProperty(:laBoVo))
+Declaration(ObjectProperty(:laCau))
+Declaration(ObjectProperty(:laChau))
+Declaration(ObjectProperty(:laChauDau))
+Declaration(ObjectProperty(:laChauNgoai))
+Declaration(ObjectProperty(:laChauNoi))
+Declaration(ObjectProperty(:laChauRe))
+Declaration(ObjectProperty(:laChiChong))
+Declaration(ObjectProperty(:laChiDau))
+Declaration(ObjectProperty(:laChiHo))
+Declaration(ObjectProperty(:laChiRuot))
+Declaration(ObjectProperty(:laChiVo))
+Declaration(ObjectProperty(:laChong))
+Declaration(ObjectProperty(:laChu))
+Declaration(ObjectProperty(:laCo))
+Declaration(ObjectProperty(:laCon))
+Declaration(ObjectProperty(:laConDau))
+Declaration(ObjectProperty(:laConGai))
+Declaration(ObjectProperty(:laConRe))
+Declaration(ObjectProperty(:laConRuot))
+Declaration(ObjectProperty(:laConTrai))
+Declaration(ObjectProperty(:laDi))
+Declaration(ObjectProperty(:laEmChong))
+Declaration(ObjectProperty(:laEmDau))
+Declaration(ObjectProperty(:laEmGaiRuot))
+Declaration(ObjectProperty(:laEmHo))
+Declaration(ObjectProperty(:laEmRe))
+Declaration(ObjectProperty(:laEmRuot))
+Declaration(ObjectProperty(:laEmTraiRuot))
+Declaration(ObjectProperty(:laEmVo))
+Declaration(ObjectProperty(:laMe))
+Declaration(ObjectProperty(:laMeChong))
+Declaration(ObjectProperty(:laMeRuot))
+Declaration(ObjectProperty(:laMeVo))
+Declaration(ObjectProperty(:laMo))
+Declaration(ObjectProperty(:laOng))
+Declaration(ObjectProperty(:laOngBa))
+Declaration(ObjectProperty(:laOngNgoai))
+Declaration(ObjectProperty(:laOngNoi))
+Declaration(ObjectProperty(:laVo))
+Declaration(DataProperty(:laNam))
+Declaration(DataProperty(:laNu))
+Declaration(DataProperty(:tuoi))
+Declaration(NamedIndividual(:A))
+Declaration(NamedIndividual(:B))
+Declaration(NamedIndividual(:BoRuotA))
+Declaration(NamedIndividual(:BoRuotB))
+Declaration(NamedIndividual(:ConTraiB))
+Declaration(NamedIndividual(:MeRuotA))
+Declaration(NamedIndividual(:MeRuotB))
+Declaration(AnnotationProperty(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :laAnhChiEm (:laAnhChiEm)
+
+SymmetricObjectProperty(:laAnhChiEm)
+TransitiveObjectProperty(:laAnhChiEm)
+ObjectPropertyDomain(:laAnhChiEm :AnhChiEm)
+ObjectPropertyRange(:laAnhChiEm :AnhChiEm)
+
+# Object Property: :laAnhChiEmChong (:laAnhChiEmChong)
+
+SubObjectPropertyOf(:laAnhChiEmChong :laAnhChiEm)
+SymmetricObjectProperty(:laAnhChiEmChong)
+TransitiveObjectProperty(:laAnhChiEmChong)
+ObjectPropertyDomain(:laAnhChiEmChong :AnhChiEmChong)
+ObjectPropertyRange(:laAnhChiEmChong :AnhChiEmChong)
+
+# Object Property: :laAnhChiEmHo (:laAnhChiEmHo)
+
+SubObjectPropertyOf(:laAnhChiEmHo :laAnhChiEm)
+SymmetricObjectProperty(:laAnhChiEmHo)
+TransitiveObjectProperty(:laAnhChiEmHo)
+ObjectPropertyDomain(:laAnhChiEmHo :AnhChiEmHo)
+ObjectPropertyRange(:laAnhChiEmHo :AnhChiEmHo)
+
+# Object Property: :laAnhChiEmRuot (:laAnhChiEmRuot)
+
+SubObjectPropertyOf(:laAnhChiEmRuot :laAnhChiEm)
+SymmetricObjectProperty(:laAnhChiEmRuot)
+TransitiveObjectProperty(:laAnhChiEmRuot)
+ObjectPropertyDomain(:laAnhChiEmRuot :AnhChiEmRuot)
+ObjectPropertyRange(:laAnhChiEmRuot :AnhChiEmRuot)
+
+# Object Property: :laAnhChiEmVo (:laAnhChiEmVo)
+
+SubObjectPropertyOf(:laAnhChiEmVo :laAnhChiEm)
+AsymmetricObjectProperty(:laAnhChiEmVo)
+IrreflexiveObjectProperty(:laAnhChiEmVo)
+ObjectPropertyDomain(:laAnhChiEmVo :AnhChiEmVo)
+ObjectPropertyRange(:laAnhChiEmVo :AnhChiEmVo)
+
+# Object Property: :laAnhChong (:laAnhChong)
+
+SubObjectPropertyOf(:laAnhChong :laAnhChiEmChong)
+AsymmetricObjectProperty(:laAnhChong)
+IrreflexiveObjectProperty(:laAnhChong)
+ObjectPropertyDomain(:laAnhChong :AnhChong)
+
+# Object Property: :laAnhHo (:laAnhHo)
+
+SubObjectPropertyOf(:laAnhHo :laAnhChiEmHo)
+InverseObjectProperties(:laAnhHo :laEmHo)
+AsymmetricObjectProperty(:laAnhHo)
+IrreflexiveObjectProperty(:laAnhHo)
+ObjectPropertyDomain(:laAnhHo :AnhHo)
+
+# Object Property: :laAnhRe (:laAnhRe)
+
+SubObjectPropertyOf(:laAnhRe :laAnhChiEm)
+AsymmetricObjectProperty(:laAnhRe)
+IrreflexiveObjectProperty(:laAnhRe)
+ObjectPropertyDomain(:laAnhRe :AnhRe)
+ObjectPropertyRange(:laAnhRe :AnhChiEm)
+
+# Object Property: :laAnhRuot (:laAnhRuot)
+
+SubObjectPropertyOf(:laAnhRuot :laAnhChiEmRuot)
+InverseObjectProperties(:laAnhRuot :laEmRuot)
+AsymmetricObjectProperty(:laAnhRuot)
+IrreflexiveObjectProperty(:laAnhRuot)
+ObjectPropertyDomain(:laAnhRuot :AnhRuot)
+
+# Object Property: :laAnhVo (:laAnhVo)
+
+SubObjectPropertyOf(:laAnhVo :laAnhChiEmVo)
+AsymmetricObjectProperty(:laAnhVo)
+IrreflexiveObjectProperty(:laAnhVo)
+ObjectPropertyDomain(:laAnhVo :AnhVo)
+
+# Object Property: :laBa (:laBa)
+
+SubObjectPropertyOf(:laBa :laOngBa)
+AsymmetricObjectProperty(:laBa)
+IrreflexiveObjectProperty(:laBa)
+ObjectPropertyDomain(:laBa :Ba)
+ObjectPropertyRange(:laBa :Chau)
+
+# Object Property: :laBaNgoai (:laBaNgoai)
+
+SubObjectPropertyOf(:laBaNgoai :laBa)
+AsymmetricObjectProperty(:laBaNgoai)
+IrreflexiveObjectProperty(:laBaNgoai)
+ObjectPropertyDomain(:laBaNgoai :BaNgoai)
+ObjectPropertyRange(:laBaNgoai :ChauNgoai)
+
+# Object Property: :laBaNoi (:laBaNoi)
+
+SubObjectPropertyOf(:laBaNoi :laBa)
+AsymmetricObjectProperty(:laBaNoi)
+IrreflexiveObjectProperty(:laBaNoi)
+ObjectPropertyDomain(:laBaNoi :BaNoi)
+ObjectPropertyRange(:laBaNoi :ChauNoi)
+
+# Object Property: :laBac (:laBac)
+
+SubObjectPropertyOf(:laBac owl:topObjectProperty)
+AsymmetricObjectProperty(:laBac)
+IrreflexiveObjectProperty(:laBac)
+ObjectPropertyDomain(:laBac :Bac)
+ObjectPropertyRange(:laBac :Chau)
+
+# Object Property: :laBo (:laBo)
+
+SubObjectPropertyOf(:laBo owl:topObjectProperty)
+AsymmetricObjectProperty(:laBo)
+IrreflexiveObjectProperty(:laBo)
+ObjectPropertyDomain(:laBo :Bo)
+ObjectPropertyRange(:laBo :Con)
+
+# Object Property: :laBoChong (:laBoChong)
+
+SubObjectPropertyOf(:laBoChong :laBo)
+AsymmetricObjectProperty(:laBoChong)
+IrreflexiveObjectProperty(:laBoChong)
+ObjectPropertyDomain(:laBoChong :BoChong)
+ObjectPropertyRange(:laBoChong :ConDau)
+
+# Object Property: :laBoMe (:laBoMe)
+
+AsymmetricObjectProperty(:laBoMe)
+IrreflexiveObjectProperty(:laBoMe)
+
+# Object Property: :laBoMeRuot (:laBoMeRuot)
+
+SubObjectPropertyOf(:laBoMeRuot :laBoMe)
+InverseObjectProperties(:laBoMeRuot :laConRuot)
+AsymmetricObjectProperty(:laBoMeRuot)
+IrreflexiveObjectProperty(:laBoMeRuot)
+ObjectPropertyDomain(:laBoMeRuot :BoMeRuot)
+ObjectPropertyRange(:laBoMeRuot :ConRuot)
+
+# Object Property: :laBoRuot (:laBoRuot)
+
+SubObjectPropertyOf(:laBoRuot :laBo)
+SubObjectPropertyOf(:laBoRuot :laBoMeRuot)
+AsymmetricObjectProperty(:laBoRuot)
+IrreflexiveObjectProperty(:laBoRuot)
+ObjectPropertyRange(:laBoRuot :ConRuot)
+
+# Object Property: :laBoVo (:laBoVo)
+
+SubObjectPropertyOf(:laBoVo :laBo)
+AsymmetricObjectProperty(:laBoVo)
+IrreflexiveObjectProperty(:laBoVo)
+ObjectPropertyDomain(:laBoVo :BoVo)
+ObjectPropertyRange(:laBoVo :ConRe)
+
+# Object Property: :laCau (:laCau)
+
+AsymmetricObjectProperty(:laCau)
+IrreflexiveObjectProperty(:laCau)
+ObjectPropertyDomain(:laCau :Cau)
+ObjectPropertyRange(:laCau :Chau)
+
+# Object Property: :laChau (:laChau)
+
+InverseObjectProperties(:laChau :laOngBa)
+AsymmetricObjectProperty(:laChau)
+IrreflexiveObjectProperty(:laChau)
+ObjectPropertyRange(:laChau :Chau)
+
+# Object Property: :laChauDau (:laChauDau)
+
+SubObjectPropertyOf(:laChauDau :laChau)
+AsymmetricObjectProperty(:laChauDau)
+IrreflexiveObjectProperty(:laChauDau)
+ObjectPropertyDomain(:laChauDau :ChauDau)
+
+# Object Property: :laChauNgoai (:laChauNgoai)
+
+SubObjectPropertyOf(:laChauNgoai :laChau)
+AsymmetricObjectProperty(:laChauNgoai)
+IrreflexiveObjectProperty(:laChauNgoai)
+ObjectPropertyDomain(:laChauNgoai :ChauNgoai)
+
+# Object Property: :laChauNoi (:laChauNoi)
+
+SubObjectPropertyOf(:laChauNoi :laChau)
+AsymmetricObjectProperty(:laChauNoi)
+IrreflexiveObjectProperty(:laChauNoi)
+ObjectPropertyDomain(:laChauNoi :ChauNoi)
+
+# Object Property: :laChauRe (:laChauRe)
+
+SubObjectPropertyOf(:laChauRe :laChau)
+AsymmetricObjectProperty(:laChauRe)
+IrreflexiveObjectProperty(:laChauRe)
+ObjectPropertyDomain(:laChauRe :ChauRe)
+
+# Object Property: :laChiChong (:laChiChong)
+
+SubObjectPropertyOf(:laChiChong :laAnhChiEmChong)
+AsymmetricObjectProperty(:laChiChong)
+IrreflexiveObjectProperty(:laChiChong)
+ObjectPropertyDomain(:laChiChong :ChiChong)
+
+# Object Property: :laChiDau (:laChiDau)
+
+SubObjectPropertyOf(:laChiDau :laAnhChiEm)
+AsymmetricObjectProperty(:laChiDau)
+IrreflexiveObjectProperty(:laChiDau)
+ObjectPropertyDomain(:laChiDau :ChiDau)
+ObjectPropertyRange(:laChiDau :AnhChiEm)
+
+# Object Property: :laChiHo (:laChiHo)
+
+SubObjectPropertyOf(:laChiHo :laAnhChiEmHo)
+InverseObjectProperties(:laChiHo :laEmHo)
+AsymmetricObjectProperty(:laChiHo)
+IrreflexiveObjectProperty(:laChiHo)
+ObjectPropertyDomain(:laChiHo :ChiHo)
+
+# Object Property: :laChiRuot (:laChiRuot)
+
+SubObjectPropertyOf(:laChiRuot :laAnhChiEmRuot)
+InverseObjectProperties(:laChiRuot :laEmRuot)
+AsymmetricObjectProperty(:laChiRuot)
+IrreflexiveObjectProperty(:laChiRuot)
+ObjectPropertyDomain(:laChiRuot :ChiRuot)
+
+# Object Property: :laChiVo (:laChiVo)
+
+SubObjectPropertyOf(:laChiVo :laAnhChiEmVo)
+AsymmetricObjectProperty(:laChiVo)
+IrreflexiveObjectProperty(:laChiVo)
+ObjectPropertyDomain(:laChiVo :ChiVo)
+
+# Object Property: :laChong (:laChong)
+
+InverseObjectProperties(:laChong :laVo)
+ObjectPropertyDomain(:laChong :Chong)
+ObjectPropertyRange(:laChong :Vo)
+
+# Object Property: :laChu (:laChu)
+
+SubObjectPropertyOf(:laChu owl:topObjectProperty)
+AsymmetricObjectProperty(:laChu)
+IrreflexiveObjectProperty(:laChu)
+ObjectPropertyDomain(:laChu :Chu)
+ObjectPropertyRange(:laChu :Chau)
+
+# Object Property: :laCo (:laCo)
+
+AsymmetricObjectProperty(:laCo)
+IrreflexiveObjectProperty(:laCo)
+ObjectPropertyDomain(:laCo :Co)
+ObjectPropertyRange(:laCo :Chau)
+
+# Object Property: :laCon (:laCon)
+
+AsymmetricObjectProperty(:laCon)
+IrreflexiveObjectProperty(:laCon)
+ObjectPropertyDomain(:laCon :Con)
+
+# Object Property: :laConDau (:laConDau)
+
+SubObjectPropertyOf(:laConDau :laCon)
+AsymmetricObjectProperty(:laConDau)
+IrreflexiveObjectProperty(:laConDau)
+ObjectPropertyDomain(:laConDau :ConDau)
+
+# Object Property: :laConGai (:laConGai)
+
+SubObjectPropertyOf(:laConGai :laConRuot)
+AsymmetricObjectProperty(:laConGai)
+IrreflexiveObjectProperty(:laConGai)
+ObjectPropertyDomain(:laConGai :ConGai)
+
+# Object Property: :laConRe (:laConRe)
+
+SubObjectPropertyOf(:laConRe :laCon)
+AsymmetricObjectProperty(:laConRe)
+IrreflexiveObjectProperty(:laConRe)
+ObjectPropertyDomain(:laConRe :ConRe)
+
+# Object Property: :laConRuot (:laConRuot)
+
+SubObjectPropertyOf(:laConRuot :laCon)
+AsymmetricObjectProperty(:laConRuot)
+IrreflexiveObjectProperty(:laConRuot)
+ObjectPropertyDomain(:laConRuot :ConRuot)
+ObjectPropertyRange(:laConRuot :BoMe)
+
+# Object Property: :laConTrai (:laConTrai)
+
+SubObjectPropertyOf(:laConTrai :laConRuot)
+AsymmetricObjectProperty(:laConTrai)
+IrreflexiveObjectProperty(:laConTrai)
+ObjectPropertyDomain(:laConTrai :ConTrai)
+
+# Object Property: :laDi (:laDi)
+
+AsymmetricObjectProperty(:laDi)
+IrreflexiveObjectProperty(:laDi)
+ObjectPropertyDomain(:laDi :Di)
+ObjectPropertyRange(:laDi :Chau)
+
+# Object Property: :laEmChong (:laEmChong)
+
+SubObjectPropertyOf(:laEmChong :laAnhChiEmChong)
+AsymmetricObjectProperty(:laEmChong)
+IrreflexiveObjectProperty(:laEmChong)
+ObjectPropertyDomain(:laEmChong :EmChong)
+
+# Object Property: :laEmDau (:laEmDau)
+
+SubObjectPropertyOf(:laEmDau :laAnhChiEm)
+AsymmetricObjectProperty(:laEmDau)
+IrreflexiveObjectProperty(:laEmDau)
+ObjectPropertyDomain(:laEmDau :EmDau)
+ObjectPropertyRange(:laEmDau :AnhChiEm)
+
+# Object Property: :laEmGaiRuot (:laEmGaiRuot)
+
+SubObjectPropertyOf(:laEmGaiRuot :laEmRuot)
+AsymmetricObjectProperty(:laEmGaiRuot)
+IrreflexiveObjectProperty(:laEmGaiRuot)
+ObjectPropertyDomain(:laEmGaiRuot :EmGaiRuot)
+
+# Object Property: :laEmHo (:laEmHo)
+
+SubObjectPropertyOf(:laEmHo :laAnhChiEmHo)
+AsymmetricObjectProperty(:laEmHo)
+IrreflexiveObjectProperty(:laEmHo)
+ObjectPropertyDomain(:laEmHo :EmHo)
+
+# Object Property: :laEmRe (:laEmRe)
+
+SubObjectPropertyOf(:laEmRe :laAnhChiEm)
+AsymmetricObjectProperty(:laEmRe)
+IrreflexiveObjectProperty(:laEmRe)
+ObjectPropertyDomain(:laEmRe :EmRe)
+ObjectPropertyRange(:laEmRe :AnhChiEm)
+
+# Object Property: :laEmRuot (:laEmRuot)
+
+SubObjectPropertyOf(:laEmRuot :laAnhChiEmRuot)
+AsymmetricObjectProperty(:laEmRuot)
+IrreflexiveObjectProperty(:laEmRuot)
+ObjectPropertyDomain(:laEmRuot :AnhChiEmRuot)
+ObjectPropertyRange(:laEmRuot :AnhChiEmRuot)
+
+# Object Property: :laEmTraiRuot (:laEmTraiRuot)
+
+SubObjectPropertyOf(:laEmTraiRuot :laEmRuot)
+AsymmetricObjectProperty(:laEmTraiRuot)
+IrreflexiveObjectProperty(:laEmTraiRuot)
+ObjectPropertyDomain(:laEmTraiRuot :EmTraiRuot)
+
+# Object Property: :laEmVo (:laEmVo)
+
+SubObjectPropertyOf(:laEmVo :laAnhChiEmVo)
+AsymmetricObjectProperty(:laEmVo)
+IrreflexiveObjectProperty(:laEmVo)
+ObjectPropertyDomain(:laEmVo :EmVo)
+
+# Object Property: :laMe (:laMe)
+
+SubObjectPropertyOf(:laMe owl:topObjectProperty)
+AsymmetricObjectProperty(:laMe)
+IrreflexiveObjectProperty(:laMe)
+ObjectPropertyDomain(:laMe :Me)
+ObjectPropertyRange(:laMe :Con)
+
+# Object Property: :laMeChong (:laMeChong)
+
+SubObjectPropertyOf(:laMeChong :laMe)
+AsymmetricObjectProperty(:laMeChong)
+IrreflexiveObjectProperty(:laMeChong)
+ObjectPropertyDomain(:laMeChong :MeChong)
+ObjectPropertyRange(:laMeChong :ConDau)
+
+# Object Property: :laMeRuot (:laMeRuot)
+
+SubObjectPropertyOf(:laMeRuot :laBoMeRuot)
+SubObjectPropertyOf(:laMeRuot :laMe)
+AsymmetricObjectProperty(:laMeRuot)
+IrreflexiveObjectProperty(:laMeRuot)
+ObjectPropertyRange(:laMeRuot :ConRuot)
+
+# Object Property: :laMeVo (:laMeVo)
+
+SubObjectPropertyOf(:laMeVo :laMe)
+AsymmetricObjectProperty(:laMeVo)
+IrreflexiveObjectProperty(:laMeVo)
+ObjectPropertyDomain(:laMeVo :MeVo)
+ObjectPropertyRange(:laMeVo :ConRe)
+
+# Object Property: :laMo (:laMo)
+
+AsymmetricObjectProperty(:laMo)
+IrreflexiveObjectProperty(:laMo)
+ObjectPropertyDomain(:laMo :Mo)
+ObjectPropertyRange(:laMo :Chau)
+
+# Object Property: :laOng (:laOng)
+
+SubObjectPropertyOf(:laOng :laOngBa)
+AsymmetricObjectProperty(:laOng)
+IrreflexiveObjectProperty(:laOng)
+ObjectPropertyDomain(:laOng :Ong)
+ObjectPropertyRange(:laOng :Chau)
+
+# Object Property: :laOngBa (:laOngBa)
+
+AsymmetricObjectProperty(:laOngBa)
+IrreflexiveObjectProperty(:laOngBa)
+ObjectPropertyDomain(:laOngBa :Nguoi)
+ObjectPropertyRange(:laOngBa :Chau)
+
+# Object Property: :laOngNgoai (:laOngNgoai)
+
+SubObjectPropertyOf(:laOngNgoai :laOng)
+AsymmetricObjectProperty(:laOngNgoai)
+IrreflexiveObjectProperty(:laOngNgoai)
+ObjectPropertyDomain(:laOngNgoai :OngNgoai)
+ObjectPropertyRange(:laOngNgoai :ChauNgoai)
+
+# Object Property: :laOngNoi (:laOngNoi)
+
+SubObjectPropertyOf(:laOngNoi :laOng)
+AsymmetricObjectProperty(:laOngNoi)
+IrreflexiveObjectProperty(:laOngNoi)
+ObjectPropertyDomain(:laOngNoi :OngNoi)
+ObjectPropertyRange(:laOngNoi :ChauNoi)
+
+# Object Property: :laVo (:laVo)
+
+AsymmetricObjectProperty(:laVo)
+IrreflexiveObjectProperty(:laVo)
+ObjectPropertyDomain(:laVo :Vo)
+ObjectPropertyRange(:laVo :Chong)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :laNam (:laNam)
+
+FunctionalDataProperty(:laNam)
+DataPropertyDomain(:laNam :Nguoi)
+DataPropertyRange(:laNam xsd:boolean)
+
+# Data Property: :laNu (:laNu)
+
+FunctionalDataProperty(:laNu)
+DataPropertyDomain(:laNu :Nguoi)
+DataPropertyRange(:laNu xsd:boolean)
+
+# Data Property: :tuoi (:tuoi)
+
+FunctionalDataProperty(:tuoi)
+DataPropertyDomain(:tuoi :Nguoi)
+DataPropertyRange(:tuoi xsd:integer)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :AnhChiEm (:AnhChiEm)
+
+SubClassOf(:AnhChiEm :Nguoi)
+
+# Class: :AnhChiEmChong (:AnhChiEmChong)
+
+SubClassOf(:AnhChiEmChong :AnhChiEm)
+
+# Class: :AnhChiEmHo (:AnhChiEmHo)
+
+SubClassOf(:AnhChiEmHo :AnhChiEm)
+
+# Class: :AnhChiEmRuot (:AnhChiEmRuot)
+
+SubClassOf(:AnhChiEmRuot :AnhChiEm)
+
+# Class: :AnhChiEmVo (:AnhChiEmVo)
+
+SubClassOf(:AnhChiEmVo :AnhChiEm)
+
+# Class: :AnhChong (:AnhChong)
+
+SubClassOf(:AnhChong :AnhChiEmChong)
+
+# Class: :AnhHo (:AnhHo)
+
+SubClassOf(:AnhHo :AnhChiEmHo)
+
+# Class: :AnhRe (:AnhRe)
+
+SubClassOf(:AnhRe :AnhChiEm)
+
+# Class: :AnhRuot (:AnhRuot)
+
+SubClassOf(:AnhRuot :AnhChiEmRuot)
+
+# Class: :AnhVo (:AnhVo)
+
+SubClassOf(:AnhVo :AnhChiEmVo)
+
+# Class: :Ba (:Ba)
+
+SubClassOf(:Ba :Nu)
+
+# Class: :BaNgoai (:BaNgoai)
+
+EquivalentClasses(:BaNgoai ObjectSomeValuesFrom(:laBaNgoai :ChauNgoai))
+SubClassOf(:BaNgoai :Ba)
+
+# Class: :BaNoi (:BaNoi)
+
+EquivalentClasses(:BaNoi ObjectSomeValuesFrom(:laBaNoi :ChauNoi))
+SubClassOf(:BaNoi :Ba)
+
+# Class: :Bac (:Bac)
+
+SubClassOf(:Bac :Nguoi)
+
+# Class: :BacGai (:BacGai)
+
+SubClassOf(:BacGai :Bac)
+
+# Class: :BacTrai (:BacTrai)
+
+SubClassOf(:BacTrai :Bac)
+
+# Class: :Bo (:Bo)
+
+SubClassOf(:Bo :Nam)
+
+# Class: :BoChong (:BoChong)
+
+EquivalentClasses(:BoChong ObjectSomeValuesFrom(:laBoChong :ConDau))
+SubClassOf(:BoChong :Bo)
+SubClassOf(:BoChong :BoMeChong)
+
+# Class: :BoMe (:BoMe)
+
+SubClassOf(:BoMe :Nguoi)
+
+# Class: :BoMeChong (:BoMeChong)
+
+SubClassOf(:BoMeChong :BoMe)
+
+# Class: :BoMeRuot (:BoMeRuot)
+
+SubClassOf(:BoMeRuot :BoMe)
+
+# Class: :BoMeVo (:BoMeVo)
+
+SubClassOf(:BoMeVo :BoMe)
+
+# Class: :BoRuot (:BoRuot)
+
+EquivalentClasses(:BoRuot ObjectSomeValuesFrom(:laBoRuot :ConRuot))
+SubClassOf(:BoRuot :Bo)
+SubClassOf(:BoRuot :BoMeRuot)
+
+# Class: :BoVo (:BoVo)
+
+EquivalentClasses(:BoVo ObjectSomeValuesFrom(:laBoVo :ConDau))
+SubClassOf(:BoVo :Bo)
+SubClassOf(:BoVo :BoMeVo)
+
+# Class: :Cau (:Cau)
+
+SubClassOf(:Cau :Nam)
+
+# Class: :Chau (:Chau)
+
+SubClassOf(:Chau :Nguoi)
+
+# Class: :ChauDau (:ChauDau)
+
+SubClassOf(:ChauDau :Chau)
+
+# Class: :ChauNgoai (:ChauNgoai)
+
+SubClassOf(:ChauNgoai :Chau)
+
+# Class: :ChauNoi (:ChauNoi)
+
+SubClassOf(:ChauNoi :Chau)
+
+# Class: :ChauRe (:ChauRe)
+
+SubClassOf(:ChauRe :Chau)
+
+# Class: :ChiChong (:ChiChong)
+
+SubClassOf(:ChiChong :AnhChiEmChong)
+
+# Class: :ChiDau (:ChiDau)
+
+SubClassOf(:ChiDau :AnhChiEm)
+
+# Class: :ChiHo (:ChiHo)
+
+SubClassOf(:ChiHo :AnhChiEmHo)
+
+# Class: :ChiRuot (:ChiRuot)
+
+SubClassOf(:ChiRuot :AnhChiEmRuot)
+
+# Class: :ChiVo (:ChiVo)
+
+SubClassOf(:ChiVo :AnhChiEmVo)
+
+# Class: :Chong (:Chong)
+
+EquivalentClasses(:Chong ObjectSomeValuesFrom(:laChong :Vo))
+SubClassOf(:Chong :Nam)
+
+# Class: :Chu (:Chu)
+
+SubClassOf(:Chu :Nam)
+
+# Class: :Co (:Co)
+
+SubClassOf(:Co :Nu)
+
+# Class: :Con (:Con)
+
+SubClassOf(:Con :Nguoi)
+
+# Class: :ConDau (:ConDau)
+
+SubClassOf(:ConDau :Con)
+
+# Class: :ConGai (:ConGai)
+
+SubClassOf(:ConGai :ConRuot)
+
+# Class: :ConRe (:ConRe)
+
+SubClassOf(:ConRe :Con)
+
+# Class: :ConRuot (:ConRuot)
+
+SubClassOf(:ConRuot :Con)
+
+# Class: :ConTrai (:ConTrai)
+
+EquivalentClasses(:ConTrai ObjectIntersectionOf(:Nam ObjectSomeValuesFrom(:laConRuot :BoRuot)))
+SubClassOf(:ConTrai :ConRuot)
+
+# Class: :Di (:Di)
+
+SubClassOf(:Di :Nu)
+
+# Class: :EmChong (:EmChong)
+
+SubClassOf(:EmChong :AnhChiEmChong)
+
+# Class: :EmDau (:EmDau)
+
+SubClassOf(:EmDau :AnhChiEm)
+
+# Class: :EmGaiRuot (:EmGaiRuot)
+
+SubClassOf(:EmGaiRuot :AnhChiEmRuot)
+
+# Class: :EmHo (:EmHo)
+
+SubClassOf(:EmHo :AnhChiEmHo)
+
+# Class: :EmRe (:EmRe)
+
+SubClassOf(:EmRe :AnhChiEm)
+
+# Class: :EmTraiRuot (:EmTraiRuot)
+
+SubClassOf(:EmTraiRuot :AnhChiEmRuot)
+
+# Class: :EmVo (:EmVo)
+
+SubClassOf(:EmVo :AnhChiEmVo)
+
+# Class: :Me (:Me)
+
+EquivalentClasses(:Me ObjectSomeValuesFrom(:laMeVo :ConRe))
+SubClassOf(:Me :Nu)
+
+# Class: :MeChong (:MeChong)
+
+EquivalentClasses(:MeChong ObjectSomeValuesFrom(:laMeChong :ConDau))
+SubClassOf(:MeChong :BoMeChong)
+SubClassOf(:MeChong :Me)
+
+# Class: :MeRuot (:MeRuot)
+
+EquivalentClasses(:MeRuot ObjectSomeValuesFrom(:laMeRuot :ConRuot))
+SubClassOf(:MeRuot :BoMeRuot)
+SubClassOf(:MeRuot :Me)
+
+# Class: :MeVo (:MeVo)
+
+EquivalentClasses(:MeVo ObjectSomeValuesFrom(:laMeVo :ConRe))
+SubClassOf(:MeVo :BoMeVo)
+SubClassOf(:MeVo :Me)
+
+# Class: :Mo (:Mo)
+
+SubClassOf(:Mo :Nu)
+
+# Class: :Nam (:Nam)
+
+EquivalentClasses(:Nam DataHasValue(:laNam "true"^^xsd:boolean))
+SubClassOf(:Nam :Nguoi)
+DisjointClasses(:Nam :Nu)
+
+# Class: :Nu (:Nu)
+
+EquivalentClasses(:Nu DataHasValue(:laNu "true"^^xsd:boolean))
+SubClassOf(:Nu :Nguoi)
+
+# Class: :Ong (:Ong)
+
+SubClassOf(:Ong :Nam)
+
+# Class: :OngNgoai (:OngNgoai)
+
+EquivalentClasses(:OngNgoai ObjectSomeValuesFrom(:laOngNgoai :ChauNgoai))
+SubClassOf(:OngNgoai :Ong)
+
+# Class: :OngNoi (:OngNoi)
+
+EquivalentClasses(:OngNoi ObjectSomeValuesFrom(:laOngNoi :ChauNoi))
+SubClassOf(:OngNoi :Ong)
+
+# Class: :Vo (:Vo)
+
+EquivalentClasses(:Vo ObjectSomeValuesFrom(:laVo :Chong))
+SubClassOf(:Vo :Nu)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :A (:A)
+
+ObjectPropertyAssertion(:laChong :A :B)
+
+# Individual: :BoRuotA (:BoRuotA)
+
+ObjectPropertyAssertion(:laBoRuot :BoRuotA :A)
+
+# Individual: :BoRuotB (:BoRuotB)
+
+ObjectPropertyAssertion(:laChong :BoRuotB :MeRuotB)
+
+# Individual: :ConTraiB (:ConTraiB)
+
+ObjectPropertyAssertion(:laConTrai :ConTraiB :B)
+
+# Individual: :MeRuotA (:MeRuotA)
+
+ObjectPropertyAssertion(:laVo :MeRuotA :BoRuotA)
+
+# Individual: :MeRuotB (:MeRuotB)
+
+ObjectPropertyAssertion(:laMeRuot :MeRuotB :B)
+
+
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-AnhChiEmHoLaNamVaHonTuoi"^^xsd:string) Body(BuiltInAtom(<http://www.w3.org/2003/11/swrlb#greaterThan> Variable(:t1) Variable(:t2)) DataPropertyAtom(:tuoi Variable(:x) Variable(:t1)) DataPropertyAtom(:tuoi Variable(:y) Variable(:t2)) ObjectPropertyAtom(:laAnhChiEmHo Variable(:x) Variable(:y)) ClassAtom(:Nam Variable(:x)))Head(ObjectPropertyAtom(:laAnhHo Variable(:x) Variable(:y))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-AnhChiEmRuotLaNamHonTuoi"^^xsd:string) Body(BuiltInAtom(<http://www.w3.org/2003/11/swrlb#greaterThan> Variable(:t1) Variable(:t2)) DataPropertyAtom(:tuoi Variable(:x) Variable(:t1)) DataPropertyAtom(:tuoi Variable(:y) Variable(:t2)) ObjectPropertyAtom(:laAnhChiEmRuot Variable(:x) Variable(:y)) ClassAtom(:Nam Variable(:x)))Head(ObjectPropertyAtom(:laAnhRuot Variable(:x) Variable(:y))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-AnhChiEmRuotLaNamVaKemTuoi"^^xsd:string) Body(DataPropertyAtom(:tuoi Variable(:x) Variable(:t1)) DataPropertyAtom(:tuoi Variable(:y) Variable(:t2)) ObjectPropertyAtom(:laAnhChiEmRuot Variable(:x) Variable(:y)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#lessThan> Variable(:t1) Variable(:t2)) ClassAtom(:Nam Variable(:x)))Head(ObjectPropertyAtom(:laEmTraiRuot Variable(:x) Variable(:y))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-laBoRuot"^^xsd:string) Body(ClassAtom(:Nam Variable(:x)) ObjectPropertyAtom(:laBoMeRuot Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laBoRuot Variable(:x) Variable(:y))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ConRuotChongLaNam"^^xsd:string) Body(ObjectPropertyAtom(:laConRuot Variable(:x) Variable(:y)) ClassAtom(:Nam Variable(:x)) ObjectPropertyAtom(:laChong Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laConTrai Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ConRuotCuaVoLaNam"^^xsd:string) Body(ObjectPropertyAtom(:laVo Variable(:y) Variable(:z)) ObjectPropertyAtom(:laConRuot Variable(:x) Variable(:y)) ClassAtom(:Nam Variable(:x)))Head(ObjectPropertyAtom(:laConTrai Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-AnhChiEmHoLaNuVaHonTuoi"^^xsd:string) Body(BuiltInAtom(<http://www.w3.org/2003/11/swrlb#greaterThan> Variable(:t1) Variable(:t2)) DataPropertyAtom(:tuoi Variable(:x) Variable(:t1)) DataPropertyAtom(:tuoi Variable(:y) Variable(:t2)) ObjectPropertyAtom(:laAnhChiEmHo Variable(:x) Variable(:y)) ClassAtom(:Nu Variable(:x)))Head(ObjectPropertyAtom(:laChiHo Variable(:x) Variable(:y))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-AnhChiEmRuotLaNuVaHonTuoi"^^xsd:string) Body(BuiltInAtom(<http://www.w3.org/2003/11/swrlb#greaterThan> Variable(:t1) Variable(:t2)) DataPropertyAtom(:tuoi Variable(:x) Variable(:t1)) DataPropertyAtom(:tuoi Variable(:y) Variable(:t2)) ObjectPropertyAtom(:laAnhChiEmRuot Variable(:x) Variable(:y)) ClassAtom(:Nu Variable(:x)))Head(ObjectPropertyAtom(:laChiRuot Variable(:x) Variable(:y))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-AnhChiEmRuotLaNuVaKemTuoi"^^xsd:string) Body(DataPropertyAtom(:tuoi Variable(:x) Variable(:t1)) DataPropertyAtom(:tuoi Variable(:y) Variable(:t2)) ObjectPropertyAtom(:laAnhChiEmRuot Variable(:x) Variable(:y)) ClassAtom(:Nu Variable(:x)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#lessThan> Variable(:t1) Variable(:t2)))Head(ObjectPropertyAtom(:laEmGaiRuot Variable(:x) Variable(:y))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-laMeRuot"^^xsd:string) Body(ClassAtom(:Nu Variable(:x)) ObjectPropertyAtom(:laBoMeRuot Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laMeRuot Variable(:x) Variable(:y))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ConRuotChongLaNu"^^xsd:string) Body(ObjectPropertyAtom(:laConRuot Variable(:x) Variable(:y)) ClassAtom(:Nu Variable(:x)) ObjectPropertyAtom(:laChong Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laConGai Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ConRuotVoLaNu"^^xsd:string) Body(ObjectPropertyAtom(:laVo Variable(:y) Variable(:z)) ObjectPropertyAtom(:laConRuot Variable(:x) Variable(:y)) ClassAtom(:Nu Variable(:x)))Head(ObjectPropertyAtom(:laConGai Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-AnhChiEmHoCuaAnhChiEmRuot"^^xsd:string) Body(ObjectPropertyAtom(:laAnhChiEmRuot Variable(:y) Variable(:z)) ObjectPropertyAtom(:laAnhChiEmHo Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laAnhChiEmHo Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-AnhChiEmHoKemTuoi"^^xsd:string) Body(DataPropertyAtom(:tuoi Variable(:x) Variable(:t1)) DataPropertyAtom(:tuoi Variable(:y) Variable(:t2)) ObjectPropertyAtom(:laAnhChiEmHo Variable(:x) Variable(:y)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#lessThan> Variable(:t1) Variable(:t2)))Head(ObjectPropertyAtom(:laEmHo Variable(:x) Variable(:y))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-AnhChiEmRuotCuaBoHonTuoiBo"^^xsd:string) Body(ObjectPropertyAtom(:laBo Variable(:y) Variable(:z)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#greaterThan> Variable(:t1) Variable(:t2)) DataPropertyAtom(:tuoi Variable(:x) Variable(:t1)) DataPropertyAtom(:tuoi Variable(:y) Variable(:t2)) ObjectPropertyAtom(:laAnhChiEmRuot Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laBac Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-AnhChiEmRuotCuaChong"^^xsd:string) Body(ObjectPropertyAtom(:laChong Variable(:y) Variable(:z)) ObjectPropertyAtom(:laAnhChiEmRuot Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laAnhChiEmChong Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-AnhChiEmCuaMeHonTuoiMe"^^xsd:string) Body(ObjectPropertyAtom(:laMe Variable(:y) Variable(:z)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#greaterThan> Variable(:t1) Variable(:t2)) DataPropertyAtom(:tuoi Variable(:x) Variable(:t1)) DataPropertyAtom(:tuoi Variable(:y) Variable(:t2)) ObjectPropertyAtom(:laAnhChiEmRuot Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laBac Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-AnhChiEmCuaVo"^^xsd:string) Body(ObjectPropertyAtom(:laAnhChiEmRuot Variable(:x) Variable(:y)) ObjectPropertyAtom(:laVo Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laAnhChiEmVo Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-BaNgoaiAnhChiEmRuot"^^xsd:string) Body(ObjectPropertyAtom(:laBaNgoai Variable(:x) Variable(:y)) ObjectPropertyAtom(:laAnhChiEmRuot Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laBaNgoai Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-BaNoiAnhChiEmRuot"^^xsd:string) Body(ObjectPropertyAtom(:laAnhChiEmRuot Variable(:y) Variable(:z)) ObjectPropertyAtom(:laBaNoi Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laBaNoi Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-BoRuotAnhChiEmRuot"^^xsd:string) Body(ObjectPropertyAtom(:laBoRuot Variable(:x) Variable(:y)) ObjectPropertyAtom(:laAnhChiEmRuot Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laBoRuot Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ConCuaAnhChiEmRuotCuaBo"^^xsd:string) Body(ObjectPropertyAtom(:laAnhChiEmRuot Variable(:y) Variable(:z)) ObjectPropertyAtom(:laBoRuot Variable(:z) Variable(:r)) ObjectPropertyAtom(:laConRuot Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laAnhChiEmHo Variable(:x) Variable(:r))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ConCuaAnhChiEmRuotCuaMe"^^xsd:string) Body(ObjectPropertyAtom(:laMeRuot Variable(:z) Variable(:r)) ObjectPropertyAtom(:laAnhChiEmRuot Variable(:y) Variable(:z)) ObjectPropertyAtom(:laConRuot Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laAnhChiEmHo Variable(:x) Variable(:r))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-MeRuotAnhChiEmRuot"^^xsd:string) Body(ObjectPropertyAtom(:laAnhChiEmRuot Variable(:y) Variable(:z)) ObjectPropertyAtom(:laMeRuot Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laMeRuot Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-OngNgoaiCuaAnhChiEmRuot"^^xsd:string) Body(ObjectPropertyAtom(:laAnhChiEmRuot Variable(:y) Variable(:z)) ObjectPropertyAtom(:laOngNgoai Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laOngNgoai Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-OngNoiCuaAnhChiEmRuot"^^xsd:string) Body(ObjectPropertyAtom(:laAnhChiEmRuot Variable(:y) Variable(:z)) ObjectPropertyAtom(:laOngNoi Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laOngNoi Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-VoCuaAnhHo"^^xsd:string) Body(ObjectPropertyAtom(:laVo Variable(:x) Variable(:y)) ObjectPropertyAtom(:laAnhHo Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laChiDau Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-AnhTraiCuaChong"^^xsd:string) Body(ObjectPropertyAtom(:laChong Variable(:y) Variable(:z)) ObjectPropertyAtom(:laAnhRuot Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laAnhChong Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-AnhTraiVo"^^xsd:string) Body(ObjectPropertyAtom(:laVo Variable(:y) Variable(:z)) ObjectPropertyAtom(:laAnhRuot Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laAnhVo Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-VoCuaAnhRuot"^^xsd:string) Body(ObjectPropertyAtom(:laVo Variable(:x) Variable(:y)) ObjectPropertyAtom(:laAnhRuot Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laChiDau Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ChongCuaBaNgoai"^^xsd:string) Body(ObjectPropertyAtom(:laChong Variable(:x) Variable(:y)) ObjectPropertyAtom(:laBaNgoai Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laOngNgoai Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ChongCuaBaNoi"^^xsd:string) Body(ObjectPropertyAtom(:laChong Variable(:x) Variable(:y)) ObjectPropertyAtom(:laBaNoi Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laOngNoi Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-EmGaiCuaBo"^^xsd:string) Body(ObjectPropertyAtom(:laEmGaiRuot Variable(:x) Variable(:y)) ObjectPropertyAtom(:laBo Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laCo Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-EmTraiBo"^^xsd:string) Body(ObjectPropertyAtom(:laEmTraiRuot Variable(:x) Variable(:y)) ObjectPropertyAtom(:laBo Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laChu Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-VoCuaBoChong"^^xsd:string) Body(ObjectPropertyAtom(:laBoChong Variable(:y) Variable(:z)) ObjectPropertyAtom(:laVo Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laMeChong Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-BoRuotCuaBoRuot"^^xsd:string) Body(ObjectPropertyAtom(:laBoRuot Variable(:x) Variable(:y)) ObjectPropertyAtom(:laBoRuot Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laOngNoi Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-BoRuotCuaChong"^^xsd:string) Body(ObjectPropertyAtom(:laChong Variable(:y) Variable(:z)) ObjectPropertyAtom(:laBoRuot Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laBoChong Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-BoRuotCuaMe"^^xsd:string) Body(ObjectPropertyAtom(:laBoRuot Variable(:x) Variable(:y)) ObjectPropertyAtom(:laMeRuot Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laOngNgoai Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-BoRuotCuaVo"^^xsd:string) Body(ObjectPropertyAtom(:laBoRuot Variable(:x) Variable(:y)) ObjectPropertyAtom(:laVo Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laBoVo Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ConRuotCuaBo"^^xsd:string) Body(ObjectPropertyAtom(:laConRuot Variable(:x) Variable(:y)) ObjectPropertyAtom(:laBoRuot Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laAnhChiEmRuot Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-MeRuotCuaBoRuot"^^xsd:string) Body(ObjectPropertyAtom(:laBoRuot Variable(:y) Variable(:z)) ObjectPropertyAtom(:laMeRuot Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laBaNoi Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-VoCuaBoRuot"^^xsd:string) Body(ObjectPropertyAtom(:laBoRuot Variable(:y) Variable(:z)) ObjectPropertyAtom(:laVo Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laMeRuot Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-MeRuotCuaConRuot"^^xsd:string) Body(ObjectPropertyAtom(:laBoRuot Variable(:z) Variable(:y)) ObjectPropertyAtom(:laMeRuot Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laVo Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-VoCuaBoVo"^^xsd:string) Body(ObjectPropertyAtom(:laBoVo Variable(:y) Variable(:z)) ObjectPropertyAtom(:laVo Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laMeVo Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-VoCuaCau"^^xsd:string) Body(ObjectPropertyAtom(:laCau Variable(:y) Variable(:z)) ObjectPropertyAtom(:laVo Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laMo Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ChauNgoaiCuaChong"^^xsd:string) Body(ObjectPropertyAtom(:laChong Variable(:y) Variable(:z)) ObjectPropertyAtom(:laChauNgoai Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laChauNgoai Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ChauNgoaiCuaVo"^^xsd:string) Body(ObjectPropertyAtom(:laVo Variable(:y) Variable(:z)) ObjectPropertyAtom(:laChauNgoai Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laChauNgoai Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ChauNoiCuaChong"^^xsd:string) Body(ObjectPropertyAtom(:laChong Variable(:y) Variable(:z)) ObjectPropertyAtom(:laChauNoi Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laChauNoi Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ChauNoiCuaVo"^^xsd:string) Body(ObjectPropertyAtom(:laVo Variable(:y) Variable(:z)) ObjectPropertyAtom(:laChauNoi Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laChauNoi Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ChongCuaChiHo"^^xsd:string) Body(ObjectPropertyAtom(:laChong Variable(:x) Variable(:y)) ObjectPropertyAtom(:laChiHo Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laAnhRe Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ChiCuaChong"^^xsd:string) Body(ObjectPropertyAtom(:laChong Variable(:x) Variable(:z)) ObjectPropertyAtom(:laChiRuot Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laChiChong Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ChiGaiVo"^^xsd:string) Body(ObjectPropertyAtom(:laVo Variable(:y) Variable(:z)) ObjectPropertyAtom(:laChiRuot Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laChiVo Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ChongCuaChiRuot"^^xsd:string) Body(ObjectPropertyAtom(:laChong Variable(:x) Variable(:y)) ObjectPropertyAtom(:laChiRuot Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laAnhRe Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ChongCuaCo"^^xsd:string) Body(ObjectPropertyAtom(:laChong Variable(:x) Variable(:y)) ObjectPropertyAtom(:laCo Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laChu Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ChongCuaConGai"^^xsd:string) Body(ObjectPropertyAtom(:laChong Variable(:x) Variable(:y)) ObjectPropertyAtom(:laConGai Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laConRe Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ChongCuaEmGaiRuot"^^xsd:string) Body(ObjectPropertyAtom(:laChong Variable(:x) Variable(:y)) ObjectPropertyAtom(:laEmGaiRuot Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laEmRe Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ChongCuaEmHo"^^xsd:string) Body(ObjectPropertyAtom(:laChong Variable(:x) Variable(:y)) ObjectPropertyAtom(:laEmHo Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laEmRe Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ChongCuaEmRuot"^^xsd:string) Body(ObjectPropertyAtom(:laChong Variable(:x) Variable(:y)) ObjectPropertyAtom(:laEmRuot Variable(:x) Variable(:z)))Head(ObjectPropertyAtom(:laEmRe Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ChongCuaMeChong"^^xsd:string) Body(ObjectPropertyAtom(:laChong Variable(:x) Variable(:y)) ObjectPropertyAtom(:laMeChong Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laBoChong Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ChongCuaMeVo"^^xsd:string) Body(ObjectPropertyAtom(:laChong Variable(:x) Variable(:y)) ObjectPropertyAtom(:laMeVo Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laBoVo Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-EmRuotCuaChong"^^xsd:string) Body(ObjectPropertyAtom(:laEmRuot Variable(:x) Variable(:y)) ObjectPropertyAtom(:laChong Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laEmChong Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-MeRuotCuaChong"^^xsd:string) Body(ObjectPropertyAtom(:laChong Variable(:y) Variable(:z)) ObjectPropertyAtom(:laMeRuot Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laMeChong Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-VoCuaChu"^^xsd:string) Body(ObjectPropertyAtom(:laVo Variable(:x) Variable(:y)) ObjectPropertyAtom(:laChu Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laCo Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ConRuotCuaConDau"^^xsd:string) Body(ObjectPropertyAtom(:laConRuot Variable(:x) Variable(:y)) ObjectPropertyAtom(:laConDau Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laChauNoi Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ConRuotCuaConGai"^^xsd:string) Body(ObjectPropertyAtom(:laConRuot Variable(:x) Variable(:y)) ObjectPropertyAtom(:laConGai Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laChauNgoai Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ConRuotCuaConRe"^^xsd:string) Body(ObjectPropertyAtom(:laConRuot Variable(:x) Variable(:y)) ObjectPropertyAtom(:laConRe Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laChauNgoai Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ConRuotCuaConTraiRuot"^^xsd:string) Body(ObjectPropertyAtom(:laConTrai Variable(:y) Variable(:z)) ObjectPropertyAtom(:laConRuot Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laChauNoi Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-ConRuotCuaMe"^^xsd:string) Body(ObjectPropertyAtom(:laConRuot Variable(:x) Variable(:y)) ObjectPropertyAtom(:laMeRuot Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laAnhChiEmRuot Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-VoCuaConTrai"^^xsd:string) Body(ObjectPropertyAtom(:laConTrai Variable(:y) Variable(:z)) ObjectPropertyAtom(:laVo Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laConDau Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-EmGaiCuaMe"^^xsd:string) Body(ObjectPropertyAtom(:laEmGaiRuot Variable(:x) Variable(:y)) ObjectPropertyAtom(:laMe Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laDi Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-VoCuaEmHo"^^xsd:string) Body(ObjectPropertyAtom(:laVo Variable(:x) Variable(:y)) ObjectPropertyAtom(:laEmHo Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laEmDau Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-EmCuaVo"^^xsd:string) Body(ObjectPropertyAtom(:laEmRuot Variable(:x) Variable(:y)) ObjectPropertyAtom(:laVo Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laEmVo Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-VoCuaEmRuot"^^xsd:string) Body(ObjectPropertyAtom(:laEmRuot Variable(:x) Variable(:z)) ObjectPropertyAtom(:laVo Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laEmDau Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-EmTraiCuaMe"^^xsd:string) Body(ObjectPropertyAtom(:laEmTraiRuot Variable(:x) Variable(:y)) ObjectPropertyAtom(:laMe Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laCau Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-MeRuotCuaMeRuot"^^xsd:string) Body(ObjectPropertyAtom(:laMeRuot Variable(:x) Variable(:y)) ObjectPropertyAtom(:laMeRuot Variable(:y) Variable(:z)))Head(ObjectPropertyAtom(:laBaNgoai Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-MeRuotCuaVo"^^xsd:string) Body(ObjectPropertyAtom(:laVo Variable(:y) Variable(:z)) ObjectPropertyAtom(:laMeRuot Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laMeVo Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-VoCuaOngNgoai"^^xsd:string) Body(ObjectPropertyAtom(:laOngNgoai Variable(:y) Variable(:z)) ObjectPropertyAtom(:laVo Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laBaNgoai Variable(:x) Variable(:z))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "def-VoCuaOngNoi"^^xsd:string) Body(ObjectPropertyAtom(:laOngNoi Variable(:y) Variable(:z)) ObjectPropertyAtom(:laVo Variable(:x) Variable(:y)))Head(ObjectPropertyAtom(:laBaNoi Variable(:x) Variable(:z))))
+)

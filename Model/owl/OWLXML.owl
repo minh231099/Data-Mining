@@ -1,0 +1,4541 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/tbm23/ontologies/2022/3/untitled-ontology-58"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/tbm23/ontologies/2022/3/untitled-ontology-58">
+    <Prefix name="" IRI="http://www.semanticweb.org/tbm23/ontologies/2022/3/untitled-ontology-58#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
+    <Prefix name="swrla" IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"/>
+    <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb#"/>
+    <Declaration>
+        <Class IRI="#AnhChiEm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnhChiEmChong"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnhChiEmHo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnhChiEmRuot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnhChiEmVo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnhChong"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnhHo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnhRe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnhRuot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnhVo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ba"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BaNgoai"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BaNoi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bac"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BacGai"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BacTrai"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BoChong"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BoMe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BoMeChong"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BoMeRuot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BoMeVo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BoRuot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BoVo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cau"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chau"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChauDau"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChauNgoai"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChauNoi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChauRe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChiChong"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChiDau"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChiHo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChiRuot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChiVo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chong"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Co"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Con"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConDau"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConGai"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConRe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConRuot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConTrai"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Di"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EmChong"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EmDau"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EmGaiRuot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EmHo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EmRe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EmTraiRuot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EmVo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Me"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeChong"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeRuot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeVo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nguoi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ong"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OngNgoai"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OngNoi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laAnhChiEm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laAnhChiEmChong"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laAnhChiEmHo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laAnhChiEmRuot"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laAnhChiEmVo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laAnhChong"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laAnhHo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laAnhRe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laAnhRuot"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laAnhVo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laBa"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laBaNgoai"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laBaNoi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laBac"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laBo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laBoChong"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laBoMe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laBoMeRuot"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laBoRuot"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laBoVo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laCau"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laChau"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laChauDau"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laChauNgoai"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laChauNoi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laChauRe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laChiChong"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laChiDau"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laChiHo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laChiRuot"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laChiVo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laChong"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laChu"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laCo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laCon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laConDau"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laConGai"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laConRe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laConRuot"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laConTrai"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laDi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laEmChong"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laEmDau"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laEmGaiRuot"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laEmHo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laEmRe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laEmRuot"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laEmTraiRuot"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laEmVo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laMe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laMeChong"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laMeRuot"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laMeVo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laMo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laOng"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laOngBa"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laOngNgoai"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laOngNoi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#laVo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#laNam"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#laNu"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tuoi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#A"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#B"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BoRuotA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BoRuotB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConTraiB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MeRuotA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MeRuotB"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#BaNgoai"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#laBaNgoai"/>
+            <Class IRI="#ChauNgoai"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BaNoi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#laBaNoi"/>
+            <Class IRI="#ChauNoi"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BoChong"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#laBoChong"/>
+            <Class IRI="#ConDau"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BoRuot"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#laBoRuot"/>
+            <Class IRI="#ConRuot"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BoVo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#laBoVo"/>
+            <Class IRI="#ConDau"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Chong"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#laChong"/>
+            <Class IRI="#Vo"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ConTrai"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Nam"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#laConRuot"/>
+                <Class IRI="#BoRuot"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Me"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#laMeVo"/>
+            <Class IRI="#ConRe"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MeChong"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#laMeChong"/>
+            <Class IRI="#ConDau"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MeRuot"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#laMeRuot"/>
+            <Class IRI="#ConRuot"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MeVo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#laMeVo"/>
+            <Class IRI="#ConRe"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Nam"/>
+        <DataHasValue>
+            <DataProperty IRI="#laNam"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Nu"/>
+        <DataHasValue>
+            <DataProperty IRI="#laNu"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#OngNgoai"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#laOngNgoai"/>
+            <Class IRI="#ChauNgoai"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#OngNoi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#laOngNoi"/>
+            <Class IRI="#ChauNoi"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Vo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#laVo"/>
+            <Class IRI="#Chong"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AnhChiEm"/>
+        <Class IRI="#Nguoi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AnhChiEmChong"/>
+        <Class IRI="#AnhChiEm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AnhChiEmHo"/>
+        <Class IRI="#AnhChiEm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AnhChiEmRuot"/>
+        <Class IRI="#AnhChiEm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AnhChiEmVo"/>
+        <Class IRI="#AnhChiEm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AnhChong"/>
+        <Class IRI="#AnhChiEmChong"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AnhHo"/>
+        <Class IRI="#AnhChiEmHo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AnhRe"/>
+        <Class IRI="#AnhChiEm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AnhRuot"/>
+        <Class IRI="#AnhChiEmRuot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AnhVo"/>
+        <Class IRI="#AnhChiEmVo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ba"/>
+        <Class IRI="#Nu"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BaNgoai"/>
+        <Class IRI="#Ba"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BaNoi"/>
+        <Class IRI="#Ba"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bac"/>
+        <Class IRI="#Nguoi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BacGai"/>
+        <Class IRI="#Bac"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BacTrai"/>
+        <Class IRI="#Bac"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bo"/>
+        <Class IRI="#Nam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoChong"/>
+        <Class IRI="#Bo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoChong"/>
+        <Class IRI="#BoMeChong"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoMe"/>
+        <Class IRI="#Nguoi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoMeChong"/>
+        <Class IRI="#BoMe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoMeRuot"/>
+        <Class IRI="#BoMe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoMeVo"/>
+        <Class IRI="#BoMe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoRuot"/>
+        <Class IRI="#Bo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoRuot"/>
+        <Class IRI="#BoMeRuot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoVo"/>
+        <Class IRI="#Bo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoVo"/>
+        <Class IRI="#BoMeVo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cau"/>
+        <Class IRI="#Nam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chau"/>
+        <Class IRI="#Nguoi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChauDau"/>
+        <Class IRI="#Chau"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChauNgoai"/>
+        <Class IRI="#Chau"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChauNoi"/>
+        <Class IRI="#Chau"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChauRe"/>
+        <Class IRI="#Chau"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChiChong"/>
+        <Class IRI="#AnhChiEmChong"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChiDau"/>
+        <Class IRI="#AnhChiEm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChiHo"/>
+        <Class IRI="#AnhChiEmHo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChiRuot"/>
+        <Class IRI="#AnhChiEmRuot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChiVo"/>
+        <Class IRI="#AnhChiEmVo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chong"/>
+        <Class IRI="#Nam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chu"/>
+        <Class IRI="#Nam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Co"/>
+        <Class IRI="#Nu"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Con"/>
+        <Class IRI="#Nguoi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConDau"/>
+        <Class IRI="#Con"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConGai"/>
+        <Class IRI="#ConRuot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConRe"/>
+        <Class IRI="#Con"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConRuot"/>
+        <Class IRI="#Con"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConTrai"/>
+        <Class IRI="#ConRuot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Di"/>
+        <Class IRI="#Nu"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EmChong"/>
+        <Class IRI="#AnhChiEmChong"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EmDau"/>
+        <Class IRI="#AnhChiEm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EmGaiRuot"/>
+        <Class IRI="#AnhChiEmRuot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EmHo"/>
+        <Class IRI="#AnhChiEmHo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EmRe"/>
+        <Class IRI="#AnhChiEm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EmTraiRuot"/>
+        <Class IRI="#AnhChiEmRuot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EmVo"/>
+        <Class IRI="#AnhChiEmVo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Me"/>
+        <Class IRI="#Nu"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeChong"/>
+        <Class IRI="#BoMeChong"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeChong"/>
+        <Class IRI="#Me"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeRuot"/>
+        <Class IRI="#BoMeRuot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeRuot"/>
+        <Class IRI="#Me"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeVo"/>
+        <Class IRI="#BoMeVo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeVo"/>
+        <Class IRI="#Me"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mo"/>
+        <Class IRI="#Nu"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nam"/>
+        <Class IRI="#Nguoi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nu"/>
+        <Class IRI="#Nguoi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ong"/>
+        <Class IRI="#Nam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OngNgoai"/>
+        <Class IRI="#Ong"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OngNoi"/>
+        <Class IRI="#Ong"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vo"/>
+        <Class IRI="#Nu"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Nam"/>
+        <Class IRI="#Nu"/>
+    </DisjointClasses>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#laChong"/>
+        <NamedIndividual IRI="#A"/>
+        <NamedIndividual IRI="#B"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#laBoRuot"/>
+        <NamedIndividual IRI="#BoRuotA"/>
+        <NamedIndividual IRI="#A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#laChong"/>
+        <NamedIndividual IRI="#BoRuotB"/>
+        <NamedIndividual IRI="#MeRuotB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#laConTrai"/>
+        <NamedIndividual IRI="#ConTraiB"/>
+        <NamedIndividual IRI="#B"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#laVo"/>
+        <NamedIndividual IRI="#MeRuotA"/>
+        <NamedIndividual IRI="#BoRuotA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#laMeRuot"/>
+        <NamedIndividual IRI="#MeRuotB"/>
+        <NamedIndividual IRI="#B"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#laNam"/>
+        <NamedIndividual IRI="#BoRuotA"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laAnhChiEmChong"/>
+        <ObjectProperty IRI="#laAnhChiEm"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laAnhChiEmHo"/>
+        <ObjectProperty IRI="#laAnhChiEm"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laAnhChiEmRuot"/>
+        <ObjectProperty IRI="#laAnhChiEm"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laAnhChiEmVo"/>
+        <ObjectProperty IRI="#laAnhChiEm"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laAnhChong"/>
+        <ObjectProperty IRI="#laAnhChiEmChong"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laAnhHo"/>
+        <ObjectProperty IRI="#laAnhChiEmHo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laAnhRe"/>
+        <ObjectProperty IRI="#laAnhChiEm"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laAnhRuot"/>
+        <ObjectProperty IRI="#laAnhChiEmRuot"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laAnhVo"/>
+        <ObjectProperty IRI="#laAnhChiEmVo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laBa"/>
+        <ObjectProperty IRI="#laOngBa"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laBaNgoai"/>
+        <ObjectProperty IRI="#laBa"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laBaNoi"/>
+        <ObjectProperty IRI="#laBa"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laBac"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laBo"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laBoChong"/>
+        <ObjectProperty IRI="#laBo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laBoMeRuot"/>
+        <ObjectProperty IRI="#laBoMe"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laBoRuot"/>
+        <ObjectProperty IRI="#laBo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laBoRuot"/>
+        <ObjectProperty IRI="#laBoMeRuot"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laBoVo"/>
+        <ObjectProperty IRI="#laBo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laChauDau"/>
+        <ObjectProperty IRI="#laChau"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laChauNgoai"/>
+        <ObjectProperty IRI="#laChau"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laChauNoi"/>
+        <ObjectProperty IRI="#laChau"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laChauRe"/>
+        <ObjectProperty IRI="#laChau"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laChiChong"/>
+        <ObjectProperty IRI="#laAnhChiEmChong"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laChiDau"/>
+        <ObjectProperty IRI="#laAnhChiEm"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laChiHo"/>
+        <ObjectProperty IRI="#laAnhChiEmHo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laChiRuot"/>
+        <ObjectProperty IRI="#laAnhChiEmRuot"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laChiVo"/>
+        <ObjectProperty IRI="#laAnhChiEmVo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laChu"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laConDau"/>
+        <ObjectProperty IRI="#laCon"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laConGai"/>
+        <ObjectProperty IRI="#laConRuot"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laConRe"/>
+        <ObjectProperty IRI="#laCon"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laConRuot"/>
+        <ObjectProperty IRI="#laCon"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laConTrai"/>
+        <ObjectProperty IRI="#laConRuot"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laEmChong"/>
+        <ObjectProperty IRI="#laAnhChiEmChong"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laEmDau"/>
+        <ObjectProperty IRI="#laAnhChiEm"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laEmGaiRuot"/>
+        <ObjectProperty IRI="#laEmRuot"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laEmHo"/>
+        <ObjectProperty IRI="#laAnhChiEmHo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laEmRe"/>
+        <ObjectProperty IRI="#laAnhChiEm"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laEmRuot"/>
+        <ObjectProperty IRI="#laAnhChiEmRuot"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laEmTraiRuot"/>
+        <ObjectProperty IRI="#laEmRuot"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laEmVo"/>
+        <ObjectProperty IRI="#laAnhChiEmVo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laMe"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laMeChong"/>
+        <ObjectProperty IRI="#laMe"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laMeRuot"/>
+        <ObjectProperty IRI="#laBoMeRuot"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laMeRuot"/>
+        <ObjectProperty IRI="#laMe"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laMeVo"/>
+        <ObjectProperty IRI="#laMe"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laOng"/>
+        <ObjectProperty IRI="#laOngBa"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laOngNgoai"/>
+        <ObjectProperty IRI="#laOng"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#laOngNoi"/>
+        <ObjectProperty IRI="#laOng"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#laAnhHo"/>
+        <ObjectProperty IRI="#laEmHo"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#laAnhRuot"/>
+        <ObjectProperty IRI="#laEmRuot"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#laBoMeRuot"/>
+        <ObjectProperty IRI="#laConRuot"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#laChau"/>
+        <ObjectProperty IRI="#laOngBa"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#laChiHo"/>
+        <ObjectProperty IRI="#laEmHo"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#laChiRuot"/>
+        <ObjectProperty IRI="#laEmRuot"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#laChong"/>
+        <ObjectProperty IRI="#laVo"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#laAnhChiEm"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#laAnhChiEmChong"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#laAnhChiEmHo"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#laAnhChiEmRuot"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laAnhChiEmVo"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laAnhChong"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laAnhHo"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laAnhRe"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laAnhRuot"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laAnhVo"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laBa"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laBaNgoai"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laBaNoi"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laBac"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laBo"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laBoChong"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laBoMe"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laBoMeRuot"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laBoRuot"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laBoVo"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laCau"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laChau"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laChauDau"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laChauNgoai"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laChauNoi"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laChauRe"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laChiChong"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laChiDau"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laChiHo"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laChiRuot"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laChiVo"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laChu"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laCo"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laCon"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laConDau"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laConGai"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laConRe"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laConRuot"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laConTrai"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laDi"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laEmChong"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laEmDau"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laEmGaiRuot"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laEmHo"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laEmRe"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laEmRuot"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laEmTraiRuot"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laEmVo"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laMe"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laMeChong"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laMeRuot"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laMeVo"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laMo"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laOng"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laOngBa"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laOngNgoai"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laOngNoi"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#laVo"/>
+    </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#laAnhChiEm"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#laAnhChiEmChong"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#laAnhChiEmHo"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#laAnhChiEmRuot"/>
+    </TransitiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laAnhChiEmVo"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laAnhChong"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laAnhHo"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laAnhRe"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laAnhRuot"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laAnhVo"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laBa"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laBaNgoai"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laBaNoi"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laBac"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laBo"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laBoChong"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laBoMe"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laBoMeRuot"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laBoRuot"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laBoVo"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laCau"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laChau"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laChauDau"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laChauNgoai"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laChauNoi"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laChauRe"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laChiChong"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laChiDau"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laChiHo"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laChiRuot"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laChiVo"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laChu"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laCo"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laCon"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laConDau"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laConGai"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laConRe"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laConRuot"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laConTrai"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laDi"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laEmChong"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laEmDau"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laEmGaiRuot"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laEmHo"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laEmRe"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laEmRuot"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laEmTraiRuot"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laEmVo"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laMe"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laMeChong"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laMeRuot"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laMeVo"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laMo"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laOng"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laOngBa"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laOngNgoai"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laOngNoi"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#laVo"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laAnhChiEm"/>
+        <Class IRI="#AnhChiEm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laAnhChiEmChong"/>
+        <Class IRI="#AnhChiEmChong"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laAnhChiEmHo"/>
+        <Class IRI="#AnhChiEmHo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laAnhChiEmRuot"/>
+        <Class IRI="#AnhChiEmRuot"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laAnhChiEmVo"/>
+        <Class IRI="#AnhChiEmVo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laAnhChong"/>
+        <Class IRI="#AnhChong"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laAnhHo"/>
+        <Class IRI="#AnhHo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laAnhRe"/>
+        <Class IRI="#AnhRe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laAnhRuot"/>
+        <Class IRI="#AnhRuot"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laAnhVo"/>
+        <Class IRI="#AnhVo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laBa"/>
+        <Class IRI="#Ba"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laBaNgoai"/>
+        <Class IRI="#BaNgoai"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laBaNoi"/>
+        <Class IRI="#BaNoi"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laBac"/>
+        <Class IRI="#Bac"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laBo"/>
+        <Class IRI="#Bo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laBoChong"/>
+        <Class IRI="#BoChong"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laBoMeRuot"/>
+        <Class IRI="#BoMeRuot"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laBoVo"/>
+        <Class IRI="#BoVo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laCau"/>
+        <Class IRI="#Cau"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laChauDau"/>
+        <Class IRI="#ChauDau"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laChauNgoai"/>
+        <Class IRI="#ChauNgoai"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laChauNoi"/>
+        <Class IRI="#ChauNoi"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laChauRe"/>
+        <Class IRI="#ChauRe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laChiChong"/>
+        <Class IRI="#ChiChong"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laChiDau"/>
+        <Class IRI="#ChiDau"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laChiHo"/>
+        <Class IRI="#ChiHo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laChiRuot"/>
+        <Class IRI="#ChiRuot"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laChiVo"/>
+        <Class IRI="#ChiVo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laChong"/>
+        <Class IRI="#Chong"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laChu"/>
+        <Class IRI="#Chu"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laCo"/>
+        <Class IRI="#Co"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laCon"/>
+        <Class IRI="#Con"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laConDau"/>
+        <Class IRI="#ConDau"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laConGai"/>
+        <Class IRI="#ConGai"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laConRe"/>
+        <Class IRI="#ConRe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laConRuot"/>
+        <Class IRI="#ConRuot"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laConTrai"/>
+        <Class IRI="#ConTrai"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laDi"/>
+        <Class IRI="#Di"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laEmChong"/>
+        <Class IRI="#EmChong"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laEmDau"/>
+        <Class IRI="#EmDau"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laEmGaiRuot"/>
+        <Class IRI="#EmGaiRuot"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laEmHo"/>
+        <Class IRI="#EmHo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laEmRe"/>
+        <Class IRI="#EmRe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laEmRuot"/>
+        <Class IRI="#AnhChiEmRuot"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laEmTraiRuot"/>
+        <Class IRI="#EmTraiRuot"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laEmVo"/>
+        <Class IRI="#EmVo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laMe"/>
+        <Class IRI="#Me"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laMeChong"/>
+        <Class IRI="#MeChong"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laMeVo"/>
+        <Class IRI="#MeVo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laMo"/>
+        <Class IRI="#Mo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laOng"/>
+        <Class IRI="#Ong"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laOngBa"/>
+        <Class IRI="#Nguoi"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laOngNgoai"/>
+        <Class IRI="#OngNgoai"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laOngNoi"/>
+        <Class IRI="#OngNoi"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#laVo"/>
+        <Class IRI="#Vo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laAnhChiEm"/>
+        <Class IRI="#AnhChiEm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laAnhChiEmChong"/>
+        <Class IRI="#AnhChiEmChong"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laAnhChiEmHo"/>
+        <Class IRI="#AnhChiEmHo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laAnhChiEmRuot"/>
+        <Class IRI="#AnhChiEmRuot"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laAnhChiEmVo"/>
+        <Class IRI="#AnhChiEmVo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laAnhRe"/>
+        <Class IRI="#AnhChiEm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laBa"/>
+        <Class IRI="#Chau"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laBaNgoai"/>
+        <Class IRI="#ChauNgoai"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laBaNoi"/>
+        <Class IRI="#ChauNoi"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laBac"/>
+        <Class IRI="#Chau"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laBo"/>
+        <Class IRI="#Con"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laBoChong"/>
+        <Class IRI="#ConDau"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laBoMeRuot"/>
+        <Class IRI="#ConRuot"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laBoRuot"/>
+        <Class IRI="#ConRuot"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laBoVo"/>
+        <Class IRI="#ConRe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laCau"/>
+        <Class IRI="#Chau"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laChau"/>
+        <Class IRI="#Chau"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laChiDau"/>
+        <Class IRI="#AnhChiEm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laChong"/>
+        <Class IRI="#Vo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laChu"/>
+        <Class IRI="#Chau"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laCo"/>
+        <Class IRI="#Chau"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laConRuot"/>
+        <Class IRI="#BoMe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laDi"/>
+        <Class IRI="#Chau"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laEmDau"/>
+        <Class IRI="#AnhChiEm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laEmRe"/>
+        <Class IRI="#AnhChiEm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laEmRuot"/>
+        <Class IRI="#AnhChiEmRuot"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laMe"/>
+        <Class IRI="#Con"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laMeChong"/>
+        <Class IRI="#ConDau"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laMeRuot"/>
+        <Class IRI="#ConRuot"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laMeVo"/>
+        <Class IRI="#ConRe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laMo"/>
+        <Class IRI="#Chau"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laOng"/>
+        <Class IRI="#Chau"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laOngBa"/>
+        <Class IRI="#Chau"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laOngNgoai"/>
+        <Class IRI="#ChauNgoai"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laOngNoi"/>
+        <Class IRI="#ChauNoi"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#laVo"/>
+        <Class IRI="#Chong"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#laNam"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#laNu"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#tuoi"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#laNam"/>
+        <Class IRI="#Nguoi"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#laNu"/>
+        <Class IRI="#Nguoi"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tuoi"/>
+        <Class IRI="#Nguoi"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#laNam"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#laNu"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tuoi"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-AnhChiEmHoLaNamVaHonTuoi</Literal>
+        </Annotation>
+        <Body>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="#t1"/>
+                <Variable IRI="#t2"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tuoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#t1"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tuoi"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#t2"/>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmHo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Nam"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhHo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-AnhChiEmRuotLaNamHonTuoi</Literal>
+        </Annotation>
+        <Body>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="#t1"/>
+                <Variable IRI="#t2"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tuoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#t1"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tuoi"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#t2"/>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Nam"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-AnhChiEmRuotLaNamVaKemTuoi</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tuoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#t1"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tuoi"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#t2"/>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:lessThan">
+                <Variable IRI="#t1"/>
+                <Variable IRI="#t2"/>
+            </BuiltInAtom>
+            <ClassAtom>
+                <Class IRI="#Nam"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmTraiRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-laBoRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoMeRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Nam"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ConRuotChongLaNam</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Nam"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConTrai"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ConRuotCuaVoLaNam</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Nam"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConTrai"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-AnhChiEmHoLaNuVaHonTuoi</Literal>
+        </Annotation>
+        <Body>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="#t1"/>
+                <Variable IRI="#t2"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tuoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#t1"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tuoi"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#t2"/>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmHo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Nu"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChiHo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-AnhChiEmRuotLaNuVaHonTuoi</Literal>
+        </Annotation>
+        <Body>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="#t1"/>
+                <Variable IRI="#t2"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tuoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#t1"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tuoi"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#t2"/>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Nu"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChiRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-AnhChiEmRuotLaNuVaKemTuoi</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tuoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#t1"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tuoi"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#t2"/>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Nu"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:lessThan">
+                <Variable IRI="#t1"/>
+                <Variable IRI="#t2"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmGaiRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-laMeRuot</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Nu"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoMeRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ConRuotChongLaNu</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Nu"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConGai"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ConRuotVoLaNu</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Nu"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConGai"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-AnhChiEmHoCuaAnhChiEmRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmHo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmHo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-AnhChiEmHoKemTuoi</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tuoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#t1"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tuoi"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#t2"/>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmHo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:lessThan">
+                <Variable IRI="#t1"/>
+                <Variable IRI="#t2"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmHo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-AnhChiEmRuotCuaBoHonTuoiBo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="#t1"/>
+                <Variable IRI="#t2"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tuoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#t1"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tuoi"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#t2"/>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBac"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-AnhChiEmRuotCuaChong</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-AnhChiEmCuaMeHonTuoiMe</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMe"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="#t1"/>
+                <Variable IRI="#t2"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tuoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#t1"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#tuoi"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#t2"/>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBac"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-AnhChiEmCuaVo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-BaNgoaiAnhChiEmRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBaNgoai"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBaNgoai"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-BaNoiAnhChiEmRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBaNoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBaNoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-BoRuotAnhChiEmRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ConCuaAnhChiEmRuotCuaBo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoRuot"/>
+                <Variable IRI="#z"/>
+                <Variable IRI="#r"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmHo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#r"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ConCuaAnhChiEmRuotCuaMe</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeRuot"/>
+                <Variable IRI="#z"/>
+                <Variable IRI="#r"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmHo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#r"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-MeRuotAnhChiEmRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-OngNgoaiCuaAnhChiEmRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laOngNgoai"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laOngNgoai"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-OngNoiCuaAnhChiEmRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laOngNoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laOngNoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-VoCuaAnhHo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhHo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChiDau"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-AnhTraiCuaChong</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-AnhTraiVo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-VoCuaAnhRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChiDau"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ChongCuaBaNgoai</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBaNgoai"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laOngNgoai"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ChongCuaBaNoi</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBaNoi"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laOngNoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-EmGaiCuaBo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmGaiRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laCo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-EmTraiBo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmTraiRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChu"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-VoCuaBoChong</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoChong"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-BoRuotCuaBoRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laOngNoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-BoRuotCuaChong</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-BoRuotCuaMe</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laOngNgoai"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-BoRuotCuaVo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ConRuotCuaBo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-MeRuotCuaBoRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBaNoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-VoCuaBoRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-MeRuotCuaConRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoRuot"/>
+                <Variable IRI="#z"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-VoCuaBoVo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoVo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-VoCuaCau</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laCau"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ChauNgoaiCuaChong</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChauNgoai"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChauNgoai"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ChauNgoaiCuaVo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChauNgoai"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChauNgoai"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ChauNoiCuaChong</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChauNoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChauNoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ChauNoiCuaVo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChauNoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChauNoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ChongCuaChiHo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChiHo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhRe"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ChiCuaChong</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChiRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChiChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ChiGaiVo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChiRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChiVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ChongCuaChiRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChiRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhRe"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ChongCuaCo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laCo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChu"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ChongCuaConGai</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConGai"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConRe"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ChongCuaEmGaiRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmGaiRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmRe"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ChongCuaEmHo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmHo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmRe"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ChongCuaEmRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmRe"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ChongCuaMeChong</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeChong"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ChongCuaMeVo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeVo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBoVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-EmRuotCuaChong</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-MeRuotCuaChong</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChong"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeChong"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-VoCuaChu</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChu"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laCo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ConRuotCuaConDau</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConDau"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChauNoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ConRuotCuaConGai</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConGai"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChauNgoai"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ConRuotCuaConRe</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConRe"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChauNgoai"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ConRuotCuaConTraiRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConTrai"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laChauNoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-ConRuotCuaMe</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laAnhChiEmRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-VoCuaConTrai</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConTrai"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laConDau"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-EmGaiCuaMe</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMe"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmGaiRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laDi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-VoCuaEmHo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmHo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmDau"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-EmCuaVo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-VoCuaEmRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmDau"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-EmTraiCuaMe</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMe"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laEmTraiRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laCau"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-MeRuotCuaMeRuot</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeRuot"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBaNgoai"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-MeRuotCuaVo</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeRuot"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laMeVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-VoCuaOngNgoai</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laOngNgoai"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBaNgoai"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>def-VoCuaOngNoi</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laVo"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laOngNoi"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#laBaNoi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
